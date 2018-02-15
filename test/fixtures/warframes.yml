@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  imageUrl: MyString
+  whereToGet: MyString
+  neuropticsDropChance: 
+  chassisDropChance: 
+  systemsDropChance: 
+  blueprintDropChance: 
+
+two:
+  name: MyString
+  imageUrl: MyString
+  whereToGet: MyString
+  neuropticsDropChance: 
+  chassisDropChance: 
+  systemsDropChance: 
+  blueprintDropChance: 

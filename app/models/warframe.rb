@@ -1,0 +1,2 @@
+class Warframe < ApplicationRecord
+end
