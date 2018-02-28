@@ -4,10 +4,10 @@ class CreateWarframes < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :imageUrl
       t.string :whereToGet
-      t.double :neuropticsDropChance
-      t.double :chassisDropChance
-      t.double :systemsDropChance
-      t.double :blueprintDropChance
+      t.float :neuropticsDropChance
+      t.float :chassisDropChance
+      t.float :systemsDropChance
+      t.float :blueprintDropChance
 
       t.timestamps
     end

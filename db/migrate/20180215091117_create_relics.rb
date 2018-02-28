@@ -4,7 +4,7 @@ class CreateRelics < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :imageUrl
       t.string :whereToGet
-      t.double :dropChance
+      t.float :dropChance
 
       t.timestamps
     end
