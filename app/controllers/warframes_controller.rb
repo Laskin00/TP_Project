@@ -1,0 +1,2 @@
+class WarframesController < ApplicationController
+end
