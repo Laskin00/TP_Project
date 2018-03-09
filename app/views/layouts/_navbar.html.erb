@@ -79,13 +79,21 @@
 	    	<a href="#">Axi</a>
 	    </div>
 	</li>
+	<%if !logged_in? %>
+		<li class="droppdown" id = "sign">
+			<a href ="/login">Log in</a>
+		</li>
+
+		<li class="droppdown" id = "sign">
+			<a href ="/signup">Sign up</a>
+		</li>
+	<%else%>
 	<li class="droppdown" id = "sign">
-		<a href ="/login">Log in</a>
+		<%= link_to "Profile", current_user %>
+	</li>	<li class="droppdown" id = "sign">
+			<%= link_to "Log out", logout_path, method: :delete %>
 	</li>
-	
-	<li class="droppdown" id = "sign">
-		<a href ="/signup">Sign up</a>
-	</li>
+	<%end%>
 
 
 </ul>
