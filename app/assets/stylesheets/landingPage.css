@@ -29,8 +29,12 @@ li a {
     padding: 0 5px;
     font-size: 20px;
     /*padding: 15px 20px;*/
-    font-family: "Impact";
+    font-family: "Lato";
     color: #e0e0e0;
+}
+
+.logoo:hover {
+    background-color: #111;
 }
 /*
 .logo {
@@ -45,13 +49,12 @@ span {
 }*/
 
 li {
-    font-family: "Microsoft Tai Le";
+    font-family: "Lato";
 }
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
     background-color: #111;
-
 }
 
 .navv{
