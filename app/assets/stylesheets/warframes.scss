@@ -1,3 +1,31 @@
 // Place all the styles related to the Warframes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.warframes-list_ {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    width: 20%;
+}
+
+.warframes-list-element_ {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 25px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+img {
+    // background-color: #333;
+    border:3px dashed #e0e0e0;
+    // margin-left: 5px;
+    border-radius: 5px;
+    // display: inline;
+    // float: right;
+    width: 64px;
+    height: 65px;
+}
