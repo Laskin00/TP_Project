@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     defaultImage = "https://img-fanburst.freetls.fastly.net/pjbL8r-DgAVxsfgA0ijKasVEae8=/400x400/cx2.fanburst.com/artwork/560cebff-1cf1-4bf0-9ab7-15623ffba8da.png"
     @user.image_url = defaultImage
     if @user.save
+      log_in @user
       flash[:success] = "Welcome to the Warframe Loot Wiki!"
       redirect_to @user
     else
