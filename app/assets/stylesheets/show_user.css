@@ -20,10 +20,13 @@ aside{
       letter-spacing: -1px;
       margin-bottom: 3px;
       margin-top: 0px;
+      color: white;
     }
   }
 }
-
+#profile_name{
+  color:white;
+}
 .gravatar{
   float:left;
   margin-right: 10px;
