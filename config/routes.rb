@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get '', to: 'users#landing'
+  root'users#landing'
   get '/signup', to: 'users#new'
+  post '/signup',  to: 'users#create'
   resources :users
   resources :warframes
   resources :mods
