@@ -1,0 +1,47 @@
+<!-- <script type="text/javascript">
+    $("#slideshow > div:gt(0)").hide();
+
+    setInterval(function() {
+      $('#slideshow > div:first')
+        .fadeOut(1000)
+        .next()
+        .fadeIn(1000)
+        .end()
+        .appendTo('#slideshow');
+    },  3000);
+</script>
+
+<div id="slideshow">
+    <div>
+        <img src="https://n8k6e2y6.ssl.hwcdn.net/images/_newsImages/2017/Aug/22/HydroidPrime_1080p.jpg" style="width:640px;height:360px;">
+    </div>
+
+    <div>
+        <img src="http://vignette99.wikia.nocookie.net/warframe/images/a/aa/PrimeTigris342.png/revision/latest?cb=20160820032128">
+    </div>
+
+    <div>
+        <img src="http://vignette99.wikia.nocookie.net/warframe/images/b/b8/PrimedFlow.png/revision/latest?cb=20171007153729">
+    </div>
+
+    <div>
+        <img src="https://questwftrading.files.wordpress.com/2016/08/img_0886-1.png?w=880">
+    </div>
+</div> -->
+<script type="text/javascript">
+    $(function(){
+    $('.fadein img:gt(0)').hide();
+    setInterval(function(){
+      $('.fadein :first-child').fadeOut()
+         .next('img').fadeIn()
+         .end().appendTo('.fadein');},
+      3000);
+    });
+</script>
+
+<div class="fadein">
+  <img src="https://n8k6e2y6.ssl.hwcdn.net/images/_newsImages/2017/Aug/22/HydroidPrime_1080p.jpg" style="width:640px;height:360px;">
+  <img src="http://vignette99.wikia.nocookie.net/warframe/images/a/aa/PrimeTigris342.png/revision/latest?cb=20160820032128">
+  <img src="http://vignette99.wikia.nocookie.net/warframe/images/b/b8/PrimedFlow.png/revision/latest?cb=20171007153729">
+  <img src="https://questwftrading.files.wordpress.com/2016/08/img_0886-1.png?w=880">
+</div>

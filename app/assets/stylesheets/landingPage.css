@@ -103,3 +103,37 @@ li.droppdown {
 .droppdown:hover .droppdown-content {
     display: block;
 }
+
+.fadein {
+    margin: 5% auto;
+    position: relative;
+    width: 640px;
+    height: 360px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.fadein img {
+    display: block;
+    /* position: absolute; */
+    margin-left: auto;
+    margin-right: auto;
+    left:0;
+    top:0;
+}
+
+/* #slideshow {
+    margin: 50px auto;
+    position: relative;
+    width: 700px;
+    height: 420px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#slideshow > div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+} */
