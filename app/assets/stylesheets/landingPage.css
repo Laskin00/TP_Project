@@ -121,6 +121,30 @@ li.droppdown {
     top:0;
 }
 
+/* .landing-page-div_ {
+    position: relative;
+    display: inline-block;
+    margin-left: 1.5%;
+    margin-bottom: 1.5%;
+}
+
+.landing-page-span_ {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.landing-page-names-span_ {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    font-size: 20px;
+    background: rgba(0,0,0,0.6);
+    padding: 0px 2px;
+    line-height: 15px;
+} */
+
 /* #slideshow {
     margin: 50px auto;
     position: relative;
