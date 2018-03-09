@@ -1,5 +1,5 @@
 all:
 	git pull
 	git add .
-	git commit -m "Work in proggress"
+	git commit
 	git push origin master
