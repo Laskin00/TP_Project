@@ -7,8 +7,11 @@
     <title>WarframeLootWiki</title>
   </head>
   <body>
-      <%= render 'layouts/navbar' %>
+    <%= render 'layouts/navbar' %>
+    <div class = "container">
       <%= yield %>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
 
   </body>
 </html>

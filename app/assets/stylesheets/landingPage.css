@@ -16,15 +16,17 @@ li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 15px 20px;
+    padding: 5px 25px;
     text-decoration: none;
 }
-
-.logo {
+#sign{
+  float:right;
+}
+.logoo {
     float: left;
     margin-top: 10px;
     margin-left: 10px;
-    padding: 5px 5px;
+    padding: 0 5px;
     font-size: 20px;
     /*padding: 15px 20px;*/
     font-family: "Impact";
@@ -52,25 +54,23 @@ li a:hover {
 
 }
 
-body {
-    background-color: #1e1e1e;
-}
-
-.nav{
+.navv{
     text-align:center;
 }
-.nav li{
+.navv li{
     display:inline;
 }
-.nav a{
+.navv a{
     display:inline-block;
 }
 
-li.dropdown {
+li.droppdown {
+    font-size: 13pt;
+    padding: 9px 0;
     display: inline-block;
 }
 
-.dropdown-content {
+.droppdown-content {
     display: none;
     position: absolute;
     background-color: #e0e0e0;
@@ -81,7 +81,7 @@ li.dropdown {
     overflow:auto;
 }
 
-.dropdown-content a {
+.droppdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -89,10 +89,10 @@ li.dropdown {
     text-align: left;
 }
 
-.dropdown-content a:hover {
+.droppdown-content a:hover {
     background-color: #bdbdbd;
 }
 
-.dropdown:hover .dropdown-content {
+.droppdown:hover .droppdown-content {
     display: block;
 }
