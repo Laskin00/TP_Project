@@ -21,6 +21,7 @@ li a {
 }
 #sign{
   float:right;
+  margin-right: 5px;
 }
 .logoo {
     float: left;
