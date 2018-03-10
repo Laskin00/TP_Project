@@ -82,17 +82,29 @@
 	</li>
 	<%if !logged_in? %>
 		<li class="droppdown" id = "sign">
-			<a href ="/signup">Sign up</a>
-		</li>
-		<li class="droppdown" id = "sign">
-			<a href ="/login">Log in</a>
+			<a href="javascript:void(0)" class="droppbtn">Account</a>
+			<div class = "droppdown-content">
+				<div id = "sign_dropdown">
+						<a href ="/signup">Sign up</a>
+						<a href ="/login">Log in</a>
+					</div>
+			</div>
 		</li>
 	<%else%>
 		<li class="droppdown" id = "sign">
-			<%= link_to "Log out", logout_path, method: :delete %>
-		</li>
-		<li class="droppdown" id = "sign">
-			<%= link_to "Profile", current_user %>
+			<a href="javascript:void(0)" class="droppbtn">Account</a>
+			<div class = "droppdown-content">
+				<div id = "sign_dropdown">
+							<%= link_to "Profile", current_user %>
+							<%= link_to "Log out", logout_path, method: :delete %>
+						<%if current_user.permissions == 2  || current_user.permissions == 3%>
+							<%= link_to "Moderator panel", "/moderator" %>
+						<%end%>
+						<%if current_user.permissions == 3 %>
+							<%= link_to "Admin panel", "/admin" %>
+						<%end%>
+				</div>
+			</div>
 		</li>
 	<%end%>
 

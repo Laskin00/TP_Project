@@ -1,0 +1,9 @@
+<ul id = "moderator_ul">
+  <li><a href = "/warframes/change">Warframes</a></li>
+  <li><a href = "/weapons/change">Weapons</a></li>
+  <li><a href = "/mods/change">Mods</a></li>
+  <li><a href = "/relics/change">Relics</a></li>
+  <% if current_user.permissions == 3 %>
+    <li><a href = "/accounts/change">Accounts</a></li>
+  <% end %>
+</ul>
