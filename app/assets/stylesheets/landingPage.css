@@ -12,6 +12,13 @@ ul {
     float: left;
 }*/
 
+.droppbtn {
+    /* margin-right: 5%; */
+    list-style-type: none;
+    display: inline-block;
+    text-shadow: 1px 1px black;
+}
+
 li a {
     display: block;
     color: white;
@@ -30,6 +37,7 @@ li a {
     text-align: center;
     padding: 0 5px;
     font-size: 20px;
+    text-shadow: 2px 2px black;
     /*padding: 15px 20px;*/
     font-family: "Lato";
     color: #e0e0e0;
@@ -38,6 +46,14 @@ li a {
 .logoo:hover {
     background-color: #111;
 }
+
+#landing-page-paragraph_ {
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px black;
+    font-size: 17px;
+}
+
 /*
 .logo {
     background-color:#fff;
@@ -117,8 +133,16 @@ li.droppdown {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    left:0;
-    top:0;
+    width: 640px;
+    height: 360px;
+    left: 0;
+    top: 0;
+    box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
+}
+
+#landing-page-header_ {
+    text-align: center;
+    text-shadow: 3px 2px black;
 }
 
 /* .landing-page-div_ {
