@@ -12,6 +12,10 @@
           <% if (current_user.permissions == 3) && !current_user?(user) %>
               <%= link_to "Delete", user, method: :delete,
                                           data: { confirm: "You sure?" } %>
+              <%= link_to "Make Admin", user, method: :make_admin,
+                                          data: { confirm: "You sure?" } %>
+              <%= link_to "Make moderator", user, method: :make_moderator,
+                                          data: { confirm: "You sure?" } %>
           <% end %>
       </li>
   <%end%>

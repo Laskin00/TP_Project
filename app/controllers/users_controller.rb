@@ -51,6 +51,18 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  def make_admin
+    User.find(params[:id]).update_attribute(permissions: 3)
+    flash[:success] = "User is now admin"
+    redirect_to users_url
+  end
+
+  def make_moderator
+    User.find(params[:id]).update_attribute(permissions: 2)
+    flash[:success] = "User is now moderator"
+    redirect_to users_url
+  end
+
   private
 
     def user_params
