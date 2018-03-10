@@ -22,9 +22,22 @@ width: 40%;
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  background-color:#111;
-  border-color:#333;
+  background-color:#333;
+  border-color:#111;
   color:white;
   cursor:pointer;
   z-index:2;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    line-height: 1.428571429;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-left: -1px;
 }
