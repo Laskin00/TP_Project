@@ -1,0 +1,17 @@
+
+<% provide(:title, 'All users') %>
+<h1>All users</h1>
+<div id = "paginate">
+  <%= will_paginate %>
+</div>
+  <ul class= "users" id = "users_ul">
+    <% @users.each do |user| %>
+      <li id = "all_users_li">
+          <div id = "user_image_all"><%= image_tag(user.image_url, height: '32', width: '32') %><div>
+          <%= link_to user.name, user %>
+      </li>
+  <%end%>
+<div id = "paginate">
+  <%= will_paginate %>
+</div>
+</ul>
