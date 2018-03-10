@@ -9,9 +9,15 @@
         </div>
         <table id = "show_table">
           <tr id = "show_tr">
-            <th id = "show_th"><%= link_to "• Delete account", @user, method: :delete, data: { confirm: "You sure?"}%></th>
           <% if (current_user.permissions == 3) && !current_user?(@user) %>
+            <th id = "show_th"><%= link_to "• Delete account", @user, method: :delete, data: { confirm: "You sure?"}%></th>
             <th id = "show_th"><%= link_to "• Promote", @user, method: :promote, data: { confirm: "You sure?" }%></th>
+            <%if Rails.env.development?%>
+              <th id = "show_th"><%= link_to "• Demote", 'http://localhost:3000/users/demote/' + user.id.to_s, method: :post, data: { confirm: "You sure?" }%></th>
+            <!-- <th  id = "index_th"><%= link_to "• Make Moderator", user, method: :make_moderator, data: { confirm: "You sure?" } %></th> -->
+            <%else%>
+              <th id = "show_th"><%= link_to "• Demote", 'https://warframe-loot-wiki.herokuapp.com/users/demote/' + user.id.to_s, method: :post%></th>
+            <%end%>
           <% end %>
           <% if current_user.permissions == 3 %>
             <% if @user.permissions == 3 %>

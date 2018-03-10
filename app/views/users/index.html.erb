@@ -8,6 +8,9 @@
       <tr id = "index_tr">
           <th id = "index_th"><%= image_tag(user.image_url, height: '32', width: '32', id: 'user_image_') %><th>
           <th  id = "index_th"><%= link_to user.name, user %><th>
+          <!-- <%if current_user?(user) %>
+              <th  id = "index_th"><%= link_to "• Delete", user, method: :delete, data: { confirm: "You sure?"}%></th>
+          <%end%> -->
           <% if (current_user.permissions == 3) && !current_user?(user) %>
               <th  id = "index_th"><%= link_to "• Delete", user, method: :delete, data: { confirm: "You sure?"}%></th>
               <th  id = "index_th"><%= link_to "• Promote", user, method: :promote, data: { confirm: "You sure?" }%></th>
