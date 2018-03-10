@@ -1,20 +1,37 @@
 #all_users_li {
+    /* float: left; */
     font-size: 15px;
     margin: auto;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 #user_image_all {
-    display: block;
+    /* display: inline; */
+    /* float: left; */
     margin-left: auto;
     margin-right: auto;
-    /* width: 50%; */
+    width: 50%;
 }
+
+/* #user_image_ {
+    float: left;
+} */
+
+/* #username_ {
+    display: block;
+    margin-left: 25%;
+    float: right;
+} */
+
+/* .users {
+    float: left;
+} */
 
 #users_ul {
     width: 50%;
     text-align: center;
     margin: auto;
+    /* float: left; */
 }
 
 #paginate{
