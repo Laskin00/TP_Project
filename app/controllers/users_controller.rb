@@ -21,6 +21,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     defaultImage = "https://img-fanburst.freetls.fastly.net/pjbL8r-DgAVxsfgA0ijKasVEae8=/400x400/cx2.fanburst.com/artwork/560cebff-1cf1-4bf0-9ab7-15623ffba8da.png"
+    @user.permissions = 0;
     @user.image_url = defaultImage
     if @user.save
       log_in @user
@@ -51,22 +52,27 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
-  def make_admin
-    User.find(params[:id]).update_attribute(permissions: 3)
-    flash[:success] = "User is now admin"
-    redirect_to users_url
-  end
-
-  def make_moderator
-    User.find(params[:id]).update_attribute(permissions: 2)
-    flash[:success] = "User is now moderator"
+  def promote
+    user = User.find(params[:id])
+    if user.permissions == nil
+      user.permissions = 0
+    end
+    user.permissions += 1
+    user.save
+    if user.permissions == 1
+      flash[:success] = "User is now Paid"
+    elsif user.permissions == 2
+      flash[:success] = "User is now Moderator"
+    else
+      flash[:success] = "User is now Admin"
+    end
     redirect_to users_url
   end
 
   private
 
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation, :image_url)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :image_url, :permissions)
     end
 
     def logged_in_user

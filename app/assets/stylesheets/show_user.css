@@ -28,3 +28,17 @@ aside{
   color:white;
   alignment:center;
 }
+#show_table{
+  width: 100%;
+}
+#show_th{
+  text-align: center;
+  padding-right: 5%;
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  text-decoration: none;
+  color: white;
+  background-color: #555;
+}

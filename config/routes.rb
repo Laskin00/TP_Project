@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+  post '/users/:id', to: 'users#promote'
   get '/admin', to: 'admin#new'
   get '/moderator', to: 'moderator#new'
   resources :users

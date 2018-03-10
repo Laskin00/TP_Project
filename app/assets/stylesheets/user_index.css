@@ -63,3 +63,22 @@
     border: 1px solid #ddd;
     margin-left: -1px;
 }
+
+#index_table{
+  alignment:center;
+  width: 70%;
+}
+
+#index_th{
+  text-align: left;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid white;
+  padding-top: 2%;
+}
+a:hover{
+  text-decoration: none;
+  color: white;
+  text-align:center;
+  background-color: #555;
+}
