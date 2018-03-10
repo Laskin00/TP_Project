@@ -1,21 +1,26 @@
+#all_users_li {
+    font-size: 15px;
+    margin: auto;
+    display: inline-block;
+}
 
-#all_users_li{
-  font-size: 15px;
+#user_image_all {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
 }
-#user_image_all{
-  display: block;
-margin-left: auto;
-margin-right: auto;
-width: 40%;
+
+#users_ul {
+    width: 50%;
+    text-align: center;
+    margin: auto;
 }
-#users_ul{
-  width:50%;
-  text-align: center;
-  margin:auto;
-}
+
 #paginate{
   text-align: center;
 }
+
 .pagination > .active > a,
 .pagination > .active > span,
 .pagination > .active > a:hover,

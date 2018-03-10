@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20180310080023) do
 
   create_table "warframes", force: :cascade do |t|
     t.string "name"
-    t.string "image_url"
+    t.string "imageUrl"
     t.string "whereToGet"
     t.float "neuropticsDropChance"
     t.float "chassisDropChance"
