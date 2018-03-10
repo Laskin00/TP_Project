@@ -54,17 +54,42 @@ class UsersController < ApplicationController
 
   def promote
     user = User.find(params[:id])
+    if user.permissions == nil || user.permissions < 3
+      if user.permissions == nil
+        user.permissions = 0
+      end
+      user.permissions += 1
+      user.save
+      if user.permissions == 1
+        flash[:success] = "User is now Paid"
+      elsif user.permissions == 2
+        flash[:success] = "User is now Moderator"
+      else
+        flash[:success] = "User is now Admin"
+      end
+    else
+      flash[:danger] = "Oops, " + user.name + " is already at the highest rank."
+    end
+    redirect_to users_url
+  end
+
+  def demote
+    user = User.find(params[:id])
     if user.permissions == nil
       user.permissions = 0
     end
-    user.permissions += 1
-    user.save
-    if user.permissions == 1
-      flash[:success] = "User is now Paid"
-    elsif user.permissions == 2
-      flash[:success] = "User is now Moderator"
+    if user.permissions > 0
+      user.permissions -= 1
+      user.save
+      if user.permissions == 1
+        flash[:success] = "User is now Paid"
+      elsif user.permissions == 2
+        flash[:success] = "User is now Moderator"
+      else
+        flash[:success] = "User is now Free"
+      end
     else
-      flash[:success] = "User is now Admin"
+      flash[:danger] = "Oops, " + user.name + " is already at the lowest rank."
     end
     redirect_to users_url
   end
