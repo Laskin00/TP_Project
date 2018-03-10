@@ -9,6 +9,10 @@
       <li id = "all_users_li">
           <div id = "user_image_all"><%= image_tag(user.image_url, height: '32', width: '32') %><div>
           <%= link_to user.name, user %>
+          <% if (current_user.permissions == 3) && !current_user?(user) %>
+              <%= link_to "Delete", user, method: :delete,
+                                          data: { confirm: "You sure?" } %>
+          <% end %>
       </li>
   <%end%>
 <div id = "paginate">
