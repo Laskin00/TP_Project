@@ -6,7 +6,6 @@ class WarframesController < ApplicationController
     def show
       @arframe = Warframe.find_by(name: params[:id])
       if @arframe == nil
-        render "404"
       end
     end
 
