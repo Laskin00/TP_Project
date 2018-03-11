@@ -4,21 +4,21 @@ class WarframesController < ApplicationController
     end
 
     def show
-      @warframe = Warframe.find_by(name: params[:id])
-      if @warframe == nil
+      @arframe = Warframe.find_by(name: params[:id])
+      if @arframe == nil
         render "404"
       end
     end
 
     def new
-      @warframe = Warframe.new
+      @arframe = Warframe.new
     end
 
     def create
-      @warframe = Warframe.new(warframe_params)
-      if @warframe.save
+      @arframe = Warframe.new(warframe_params)
+      if @arframe.save
         flash[:success] = "You have successfully added a warframe!"
-        redirect_to current_link + 'warframes/' + @warframe.name
+        redirect_to current_link + 'warframes/' + @arframe.name
       else
         render 'new'
       end

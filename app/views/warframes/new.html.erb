@@ -4,7 +4,7 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@warframe) do |w| %>
+    <%= form_for(@arframe) do |w| %>
 
       <%= w.label :name %>
       <%= w.text_field :name, class: 'form-control' %>
@@ -14,6 +14,18 @@
 
       <%= w.label :whereToGet , "Where To Get"%>
       <%= w.text_area :whereToGet, class: 'form-control' %>
+
+      <%= w.label :blueprintDropChance, "Blueprint Drop Chance" %>
+      <%= w.text_field :blueprintDropChance, class: 'form-control' %>
+
+      <%= w.label :systemsDropChance, "Systems Drop Chance" %>
+      <%= w.text_field :systemsDropChance, class: 'form-control' %>
+
+      <%= w.label :chassisDropChance, "Chassis Drop Chance" %>
+      <%= w.text_field :chassisDropChance, class: 'form-control' %>
+
+      <%= w.label :neuropticsDropChance, "Neuroptics Drop Chance" %>
+      <%= w.text_field :neuropticsDropChance, class: 'form-control' %>
 
 
       <%= w.submit "Add Warframe", class: "btn btn-primary" %>
