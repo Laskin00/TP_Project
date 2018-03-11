@@ -17,9 +17,9 @@ class RelicsController < ApplicationController
         @relic = Relic.new(relic_params)
         if @relic.save
           flash[:success] = "You have successfully added a relic!"
-          redirect_to current_link + 'relics/' + @relic.name
+          redirect_to current_link + 'relics/new'
         else
-          render 'new'
+          redirect_to current_link + 'relics/new'
         end
       end
 
