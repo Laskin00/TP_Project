@@ -5,20 +5,25 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@relic) do |w| %>
-
-      <%= w.label :name %>
-      <%= w.text_field :name, class: 'form-control' %>
-
-      <%= w.label :image_url, "Image Url" %>
-      <%= w.text_field :image_url, class: 'form-control' %>
-
-      <%= w.label :whereToGet , "Where To Get"%>
-      <%= w.text_area :whereToGet, class: 'form-control' %>
-
-      <%= w.label :dropChance, "Drop Chance" %>
-      <%= w.text_field :dropChance, class: 'form-control' %>
-
-      <%= w.submit "Add Relic", class: "btn btn-primary" %>
+      <div id = "button">
+        <%= w.label :name %>
+        <%= w.text_field :name, class: 'form-control' %>
+      </div>
+      <div id = "button">
+        <%= w.label :image_url, "Image Url" %>
+        <%= w.text_field :image_url, class: 'form-control' %>
+      </div>
+      <div id = "button">
+        <%= w.label :whereToGet , "Where To Get"%>
+        <%= w.text_area :whereToGet, class: 'form-control' %>
+      </div>
+      <div id = "button">
+        <%= w.label :dropChance, "Drop Chance" %>
+        <%= w.text_field :dropChance, class: 'form-control' %>
+      </div>
+      <div id = "button">
+        <%= w.submit "Add Relic", class: "btn btn-primary" %>
+      </div>
     <% end %>
   </div>
 </div>
