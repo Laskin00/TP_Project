@@ -92,7 +92,11 @@
 		</li>
 	<%else%>
 		<li class="droppdown" id = "sign">
-			<a href="javascript:void(0)" class="droppbtn">Account</a>
+			<a href="javascript:void(0)" class="droppbtn" id = "current_user_navbar">
+				<%= image_tag(current_user.image_url, height: '32', width: '32') %>
+				<%= current_user.name %>
+			</a>
+
 			<div class = "droppdown-content">
 				<div id = "sign_dropdown">
 							<%= link_to "Profile", current_user %>

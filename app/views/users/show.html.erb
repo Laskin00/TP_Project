@@ -16,7 +16,7 @@
           <% if (current_user.permissions == 3) && !current_user?(@user) %>
             <tr id = "show_tr"><th id = "show_th"><%= link_to "• Promote", @user, method: :promote, data: { confirm: "You sure?" }%></th></tr>
             <tr id = "show_tr"><th id = "show_th"><%= link_to "• Demote", current_link + 'users/demote/' + @user.id.to_s, method: :post, data: { confirm: "You sure?" }%></th></tr>
-              <tr id = "show_tr"><th id = "show_th"><%= link_to "• Delete account", @user, method: :delete, data: { confirm: "You sure?"}%></th></tr></tr>
+            <tr id = "show_tr"><th id = "show_th"><%= link_to "• Delete account", @user, method: :delete, data: { confirm: "You sure?"}%></th></tr></tr>
           <% end %>
           <% if current_user?(user) %>
             <th id = "show_th">(You)</th>
