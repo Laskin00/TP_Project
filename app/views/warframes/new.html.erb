@@ -3,7 +3,7 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@warframe, url: current_link + 'warframes/new') do |f| %>
+    <%= form_for(@warframe, url: warframes) do |f| %>
 
       <%= f.label :image_url, "Image Url" %>
       <%= f.text_field :image_url, class: 'form-control' %>
