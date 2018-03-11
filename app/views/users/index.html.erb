@@ -17,6 +17,9 @@
               <th id = "index_th"><%= link_to "• Demote", current_link + 'users/demote/' + user.id.to_s, method: :post, data: { confirm: "You sure?" }%></th>
               <th  id = "index_th"><%= link_to "• Delete", user, method: :delete, data: { confirm: "You sure?"}%></th>
           <% end %>
+          <% if current_user?(user) %>
+            <th id = "index_th">(You)</th>
+          <%end%>
         </tr>
   <%end%>
   </table>
