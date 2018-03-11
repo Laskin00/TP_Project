@@ -5,25 +5,25 @@
     <%= form_for(@warframe) do |w| %>
 
       <%= w.label :name %>
-      <%= w.text_field :name, class: 'form-control' %>
+      <%= w.text_field :name %>
 
       <%= w.label :image_url, "Image Url" %>
-      <%= w.text_field :image_url, class: 'form-control' %>
+      <%= w.text_field :image_url %>
 
       <%= w.label :whereToGet , "Where To Get"%>
-      <%= w.text_area :whereToGet, class: 'form-control' %>
+      <%= w.text_area :whereToGet %>
 
       <%= w.label :blueprintDropChance, "Blueprint Drop Chance" %>
-      <%= w.text_field :blueprintDropChance, class: 'form-control' %>
+      <%= w.text_field :blueprintDropChance %>
 
       <%= w.label :systemsDropChance, "Systems Drop Chance" %>
-      <%= w.text_field :systemsDropChance, class: 'form-control' %>
+      <%= w.text_field :systemsDropChance %>
 
       <%= w.label :chassisDropChance, "Chassis Drop Chance" %>
-      <%= w.text_field :chassisDropChance, class: 'form-control' %>
+      <%= w.text_field :chassisDropChance %>
 
       <%= w.label :neuropticsDropChance, "Neuroptics Drop Chance" %>
-      <%= w.text_field :neuropticsDropChance, class: 'form-control' %>
+      <%= w.text_field :neuropticsDropChance %>
 
 
       <%= w.submit "Add Warframe", class: "btn btn-primary" %>
