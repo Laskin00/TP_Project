@@ -1,6 +1,6 @@
 class WarframesController < ApplicationController
     def index
-        render :warframeView
+      render :warframeView
     end
 
     def show

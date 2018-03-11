@@ -19,9 +19,10 @@ class ModsController < ApplicationController
       if @mod.save
         flash[:success] = "You have successfully added a mod!"
         # redirect_to current_link + 'mods/' + @mod.name ##da se razkomentira Todo kato napravi mod vu
-        redirect_to current_link + 'mods/new'#a tva da se mahne
+        redirect_to 'new'#a tva da se mahne
       else
-        redirect_to current_link + 'mods/new'
+        flash[:danger] = "You have entered something wrong. Try again."
+        redirect_to 'new'
       end
     end
 
