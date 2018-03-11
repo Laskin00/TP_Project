@@ -3,7 +3,6 @@
 <h1 class = "white">Add Warframe</h1>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
     <%= form_for(@warframe) do |w| %>
 
       <%= w.label :name %>
@@ -30,5 +29,4 @@
 
       <%= w.submit "Add Warframe", class: "btn btn-primary" %>
     <% end %>
-  </div>
 </div>
