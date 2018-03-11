@@ -4,40 +4,21 @@
     <section class = "user_info">
       <h1>
         <%= image_tag(@user.image_url, height: '128', width: '128') %>
+
         <div id = "profile_name">
           <%= @user.name %>
         </div>
+
         <table id = "show_table">
-          <tr id = "show_tr">
-          <% if (current_user.permissions == 3) && !current_user?(@user) %>
-            <th id = "show_th"><%= link_to "• Delete account", @user, method: :delete, data: { confirm: "You sure?"}%></th>
-            <th id = "show_th"><%= link_to "• Promote", @user, method: :promote, data: { confirm: "You sure?" }%></th>
-            <%if Rails.env.development?%>
-              <th id = "show_th"><%= link_to "• Demote", 'http://localhost:3000/users/demote/' + user.id.to_s, method: :post, data: { confirm: "You sure?" }%></th>
-            <!-- <th  id = "index_th"><%= link_to "• Make Moderator", user, method: :make_moderator, data: { confirm: "You sure?" } %></th> -->
-            <%else%>
-              <th id = "show_th"><%= link_to "• Demote", 'https://warframe-loot-wiki.herokuapp.com/users/demote/' + user.id.to_s, method: :post%></th>
-            <%end%>
-          <% end %>
           <% if current_user.permissions == 3 %>
-            <% if @user.permissions == 3 %>
-              <th id = "show_th">Admin</th>
-            <%end%>
-
-            <% if @user.permissions == 2 %>
-              <th id = "show_th">Moderator</th>
-            <%end%>
-
-            <% if @user.permissions == 1 %>
-              <th id = "show_th">Paid</th>
-            <%end%>
-
-            <% if @user.permissions == nil || @user.permissions == 0%>
-              <th id = "show_th">Free</th>
-            <%end%>
-        <%end%>
+            <tr id = "show_tr"><th id = "show_th"><%= user_rank(@user) %></th></tr>
+          <%end%>
+          <% if (current_user.permissions == 3) && !current_user?(@user) %>
+            <tr id = "show_tr"><th id = "show_th"><%= link_to "• Promote", @user, method: :promote, data: { confirm: "You sure?" }%></th></tr>
+            <tr id = "show_tr"><th id = "show_th"><%= link_to "• Demote", current_link + 'users/demote/' + @user.id.to_s, method: :post, data: { confirm: "You sure?" }%></th></tr>
+              <tr id = "show_tr"><th id = "show_th"><%= link_to "• Delete account", @user, method: :delete, data: { confirm: "You sure?"}%></th></tr></tr>
+          <% end %>
             <!-- <th id = "show_th"><%= link_to "• Make Moderator", @user, method: :make_moderator, data: { confirm: "You sure?" } %></th> -->
-          </tr>
         </table>
       </h1>
     </section>

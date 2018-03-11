@@ -1,0 +1,28 @@
+<% provide(:title, 'Add Relic') %>
+<h1 class = "white">Add Relic</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@mod, url: current_link + 'mods/new') do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :image_url, "Image Url" %>
+      <%= f.text_field :image_url, class: 'form-control' %>
+
+      <%= f.label :whereToGet , "Where To Get"%>
+      <%= f.text_area :whereToGet, class: 'form-control' %>
+
+      <%= f.label :dropChance, "Drop Chance" %>
+      <%= f.text_field :dropChance, class: 'form-control' %>
+
+      <%= f.submit "Add Relic", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+<!-- t.string :name
+t.string :imageUrl
+t.string :whereToGet
+t.float :dropChance -->

@@ -12,29 +12,10 @@
               <th  id = "index_th"><%= link_to "• Delete", user, method: :delete, data: { confirm: "You sure?"}%></th>
           <%end%> -->
           <% if (current_user.permissions == 3) && !current_user?(user) %>
-              <th  id = "index_th"><%= link_to "• Delete", user, method: :delete, data: { confirm: "You sure?"}%></th>
+              <th id = "index_th"><%= user_rank(user) %></th>
               <th  id = "index_th"><%= link_to "• Promote", user, method: :promote, data: { confirm: "You sure?" }%></th>
-              <%if Rails.env.development?%>
-                <th id = "index_th"><%= link_to "• Demote", 'http://localhost:3000/users/demote/' + user.id.to_s, method: :post, data: { confirm: "You sure?" }%></th>
-              <!-- <th  id = "index_th"><%= link_to "• Make Moderator", user, method: :make_moderator, data: { confirm: "You sure?" } %></th> -->
-              <%else%>
-                <th id = "index_th"><%= link_to "• Demote", 'https://warframe-loot-wiki.herokuapp.com/users/demote/' + user.id.to_s, method: :post%></th>
-              <%end%>
-              <% if user.permissions == 3 %>
-                <th id = "index_th">Admin</th>
-              <%end%>
-
-              <% if user.permissions == 2 %>
-                <th id = "index_th">Moderator</th>
-              <%end%>
-
-              <% if user.permissions == 1 %>
-                <th id = "index_th">Paid</th>
-              <%end%>
-
-              <% if user.permissions == nil || user.permissions == 0%>
-                <th id = "index_th">Free</th>
-              <%end%>
+              <th id = "index_th"><%= link_to "• Demote", current_link + 'users/demote/' + user.id.to_s, method: :post, data: { confirm: "You sure?" }%></th>
+              <th  id = "index_th"><%= link_to "• Delete", user, method: :delete, data: { confirm: "You sure?"}%></th>
           <% end %>
         </tr>
   <%end%>

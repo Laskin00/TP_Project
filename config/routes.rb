@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   post '/users/demote/:id', to: 'users#demote'
   get '/admin', to: 'admin#new'
   get '/moderator', to: 'moderator#new'
+  post '/warframes/new', to: 'warframes#create'
+  post '/relics/new', to: 'relics#create'
+  post '/mods/new', to: 'mods#create'
+  post '/weapons/new', to: 'weapons#create'
   resources :users
   resources :warframes
   resources :mods

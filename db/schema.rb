@@ -10,22 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180310080023) do
+ActiveRecord::Schema.define(version: 20180311085552) do
 
   create_table "mods", force: :cascade do |t|
     t.string "name"
-    t.string "imageUrl"
+    t.string "image_url"
     t.string "whereToGet"
-    t.float "dropChance"
+    t.string "dropChance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "relics", force: :cascade do |t|
     t.string "name"
-    t.string "imageUrl"
+    t.string "image_url"
     t.string "whereToGet"
-    t.float "dropChance"
+    t.string "dropChance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -44,23 +44,24 @@ ActiveRecord::Schema.define(version: 20180310080023) do
 
   create_table "warframes", force: :cascade do |t|
     t.string "name"
-    t.string "imageUrl"
+    t.string "image_url"
     t.string "whereToGet"
-    t.float "neuropticsDropChance"
-    t.float "chassisDropChance"
-    t.float "systemsDropChance"
-    t.float "blueprintDropChance"
+    t.string "neuropticsDropChance"
+    t.string "chassisDropChance"
+    t.string "systemsDropChance"
+    t.string "blueprintDropChance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "weapons", force: :cascade do |t|
     t.string "name"
-    t.string "imageUrl"
+    t.string "image_url"
     t.string "whereToGet"
-    t.float "dropChance"
+    t.string "dropChance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "type"
   end
 
 end
