@@ -18,7 +18,7 @@
             <tr id = "show_tr"><th id = "show_th"><%= link_to "• Demote", current_link + 'users/demote/' + @user.id.to_s, method: :post, data: { confirm: "You sure?" }%></th></tr>
             <tr id = "show_tr"><th id = "show_th"><%= link_to "• Delete account", @user, method: :delete, data: { confirm: "You sure?"}%></th></tr></tr>
           <% end %>
-          <% if current_user?(user) %>
+          <% if current_user?(@user) %>
             <th id = "show_th">(You)</th>
           <%end%>
             <!-- <th id = "show_th"><%= link_to "• Make Moderator", @user, method: :make_moderator, data: { confirm: "You sure?" } %></th> -->
