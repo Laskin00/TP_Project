@@ -151,7 +151,13 @@ li.droppdown {
     top: 0;
     box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
 } */
-
+#current_user_navbar:hover{
+  background-color: #111;
+}
+#current_user_navbar{
+  text-decoration: none;
+  color:white;
+}
 .fadein img {
     display: block;
     position: absolute;
