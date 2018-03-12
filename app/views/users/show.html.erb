@@ -1,29 +1,31 @@
 <% provide(:title, @user.name) %>
-<div class = "row" >
-  <aside class = "col-md-4">
-    <section class = "user_info">
-      <h1>
-        <%= image_tag(@user.image_url, height: '128', width: '128') %>
+<div class = "user_show">
+  <div class = "row" >
+    <aside class = "col-md-4">
+      <section class = "user_info">
+        <h1>
+          <div id = "profile_name">
+            <%= image_tag(@user.image_url, height: '128', width: '128') %>
+            <br>
+            <%= @user.name %>
+          </div>
 
-        <div id = "profile_name">
-          <%= @user.name %>
-        </div>
-
-        <table id = "show_table">
-          <% if current_user.permissions == 3 %>
-            <tr id = "show_tr"><th id = "show_th"><%= user_rank(@user) %></th></tr>
-          <%end%>
-          <% if (current_user.permissions == 3) && !current_user?(@user) %>
-            <tr id = "show_tr"><th id = "show_th"><%= link_to "• Promote", @user, method: :promote, data: { confirm: "You sure?" }%></th></tr>
-            <tr id = "show_tr"><th id = "show_th"><%= link_to "• Demote", current_link + 'users/demote/' + @user.id.to_s, method: :post, data: { confirm: "You sure?" }%></th></tr>
-            <tr id = "show_tr"><th id = "show_th"><%= link_to "• Delete account", @user, method: :delete, data: { confirm: "You sure?"}%></th></tr></tr>
-          <% end %>
-          <% if current_user?(@user) %>
-            <th id = "show_th">(You)</th>
-          <%end%>
-            <!-- <th id = "show_th"><%= link_to "• Make Moderator", @user, method: :make_moderator, data: { confirm: "You sure?" } %></th> -->
-        </table>
-      </h1>
-    </section>
-  </aside>
+          <table id = "show_table">
+            <% if current_user.permissions == 3 %>
+              <tr id = "show_tr"><th id = "show_th"><%= user_rank(@user) %></th></tr>
+            <%end%>
+            <% if (current_user.permissions == 3) && !current_user?(@user) %>
+              <tr id = "show_tr"><th id = "show_th"><%= link_to "• Promote", @user, method: :promote, data: { confirm: "You sure?" }%></th></tr>
+              <tr id = "show_tr"><th id = "show_th"><%= link_to "• Demote", current_link + 'users/demote/' + @user.id.to_s, method: :post, data: { confirm: "You sure?" }%></th></tr>
+              <tr id = "show_tr"><th id = "show_th"><%= link_to "• Delete account", @user, method: :delete, data: { confirm: "You sure?"}%></th></tr></tr>
+            <% end %>
+            <% if current_user?(@user) %>
+              <th id = "show_th">(You)</th>
+            <%end%>
+              <!-- <th id = "show_th"><%= link_to "• Make Moderator", @user, method: :make_moderator, data: { confirm: "You sure?" } %></th> -->
+          </table>
+        </h1>
+      </section>
+    </aside>
+  </div>
 </div>
