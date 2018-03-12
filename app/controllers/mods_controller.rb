@@ -4,7 +4,7 @@ class ModsController < ApplicationController
     end
 
     def show
-      @mod = Mod.find_by(name: params[:id])
+      @mod = Mod.find(params[:id])
       if @mod == nil
             render "404"
       end
@@ -26,6 +26,25 @@ class ModsController < ApplicationController
       end
     end
 
+    def edit
+      @mod = Mod.find(params[:id])
+    end
+
+    def update
+      @mod = Mod.find(params[:id])
+      if @mod.update_attributes(mod_params)
+        flash[:success] = "Mod updated"
+        redirect_to @mod
+      else
+        render 'edit'
+      end
+    end
+
+    def destroy
+      Mod.find(params[:id]).destroy
+      flash[:success] = "Mod deleted"
+      render current_link + '/mods'
+    end
 
 
 private

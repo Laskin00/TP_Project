@@ -24,6 +24,26 @@ class WarframesController < ApplicationController
       end
     end
 
+    def edit
+      @warframe = Warframe.find(params[:id])
+    end
+
+    def update
+      @warframe = Warframe.find(params[:id])
+      if @warframe.update_attributes(warframe_params)
+        flash[:success] = "Warframe updated"
+        redirect_to @warframe
+      else
+        flash[:danger] = "Oops, an error occured. Please try again."
+        render 'edit'
+      end
+    end
+
+    def destroy
+      Warframe.find(params[:id]).destroy
+      flash[:success] = "Warframe deleted"
+      render current_link + '/warframes'
+    end
 
 
     private

@@ -5,7 +5,10 @@
 	<li class="droppdown" id = "landing_li">
     <a href="/warframes" class="droppbtn">Warframes</a>
 	    <div class="droppdown-content">
-	    	<a href="/warframes/Ash">Ash</a>
+				<% Warframe.all.each do |warframe| %>
+					<a href= <%=current_warframe_link(warframe)%>><%= warframe.name %></a>
+				<%end%>
+	    	<!-- <a href="/warframes/Ash">Ash</a>
 	    	<a href="/warframes/Ash">Atlas</a>
 	    	<a href="/warframes/Ash">Banshee</a>
 	    	<a href="/warframes/Ash">Chroma</a>
@@ -38,7 +41,7 @@
 	    	<a href="/warframes/Ash">Vauban</a>
 	    	<a href="/warframes/Ash">Volt</a>
 	    	<a href="/warframes/Ash">Wukong</a>
-	    	<a href="/warframes/Ash">Zephyr</a>
+	    	<a href="/warframes/Ash">Zephyr</a> -->
 	    </div>
 	</li>
 
@@ -48,7 +51,7 @@
 	    	<a href="/weapons/Primary">Primary</a>
 	    	<a href="/weapons/Secondary">Secondary</a>
 	    	<a href="/weapons/Melee">Melee</a>
-	    	<a href="/weapons/Companion">Companion</a>
+	    	<!-- <a href="/weapons/Companion">Companion</a> -->
 	    </div>
 	</li>
 
@@ -57,7 +60,7 @@
 	    <div class="droppdown-content">
 	    	<a href="/mods/Warframe">Warframe Mods</a>
 	    	<a href="/mods/Weapon">Weapon Mods</a>
-	    	<a href="/mods/Companion">Companion Mods</a>
+	    	<!-- <a href="/mods/Companion">Companion Mods</a> -->
 	    </div>
 	</li>
 	<!-- Disabled for now -->
@@ -94,7 +97,7 @@
 		<li class="droppdown" id = "sign">
 			<a href="javascript:void(0)" class="droppbtn" id = "current_user_navbar">
 				<%= image_tag(current_user.image_url, height: '32', width: '32') %>
-				<%= current_user.name %>
+				<%= current_user.name.split.first %>
 			</a>
 
 			<div class = "droppdown-content">

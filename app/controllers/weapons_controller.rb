@@ -4,7 +4,7 @@ class WeaponsController < ApplicationController
     end
 
     def show
-      @weapon = Weapon.find_by(name: params[:id])
+      @weapon = Weapon.find(params[:id])
       if @weapon == nil
             render "404"
       end
@@ -26,6 +26,26 @@ class WeaponsController < ApplicationController
       end
     end
 
+
+    def edit
+      @weapon = Weapon.find(params[:id])
+    end
+
+    def update
+      @weapon = Weapon.find(params[:id])
+      if @weapon.update_attributes(weapon_params)
+        flash[:success] = "Weapon updated"
+        redirect_to @weapon
+      else
+        render 'edit'
+      end
+    end
+
+    def destroy
+      Weapon.find(params[:id]).destroy
+      flash[:success] = "Weapon deleted"
+      render current_link + '/weapons'
+    end
 
 
 private

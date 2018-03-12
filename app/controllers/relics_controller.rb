@@ -3,7 +3,7 @@ class RelicsController < ApplicationController
         render :relicView
     end
     def show
-        @relic = Relic.find_by(name: params[:id])
+        @relic = Relic.find_by(params[:id])
         if @relic == nil
               render "404"
         end
@@ -24,6 +24,25 @@ class RelicsController < ApplicationController
       end
 
 
+    def edit
+      @relic = Relic.find(params[:id])
+    end
+
+    def update
+      @relic = Relic.find(params[:id])
+      if @relic.update_attributes(relic_params)
+        flash[:success] = "Relic updated"
+        redirect_to @relic
+      else
+        render 'edit'
+      end
+    end
+
+    def destroy
+      Relic.find(params[:id]).destroy
+      flash[:success] = "Relic deleted"
+      render current_link + '/relics'
+    end
 
   private
       def relic_params

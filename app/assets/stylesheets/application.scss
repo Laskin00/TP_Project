@@ -23,3 +23,8 @@ a{
 #current_user_navbar{
   text-align: left;;
 }
+.no_line li a:hover{
+  text-decoration: none;
+  color: white;
+  background-color: #111;
+}

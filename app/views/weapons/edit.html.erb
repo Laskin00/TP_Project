@@ -1,0 +1,26 @@
+<% provide(:title, "Edit weapon") %>
+<h1 class = "white">Update weapon</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@weapon) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :image_url, "Image Url" %>
+      <%= f.text_field :image_url, class: 'form-control' %>
+
+      <%= f.label :whereToGet, "Where to get" %>
+      <%= f.text_field :whereToGet, class: 'form-control' %>
+
+      <%= f.label :dropChance, "Drop Chance" %>
+      <%= f.text_field :dropChance, class: 'form-control' %>
+
+      <%= f.label :weapon_type, "Weapon Type" %>
+      <%= f.text_field :weapon_type, class: 'form-control' %>
+
+      <%= f.submit "Save changes", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

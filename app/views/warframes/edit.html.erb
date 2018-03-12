@@ -1,0 +1,32 @@
+<% provide(:title, "Edit warframe") %>
+<h1 class = "white">Update warframe</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@warframe) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :image_url, "Image Url" %>
+      <%= f.text_field :image_url, class: 'form-control' %>
+
+      <%= f.label :whereToGet, "Where to get" %>
+      <%= f.text_field :whereToGet, class: 'form-control' %>
+
+      <%= f.label :neuropticsDropChance, "Neuroptics Drop Chance" %>
+      <%= f.text_field :neuropticsDropChance, class: 'form-control' %>
+
+      <%= f.label :systemsDropChance, "Systems Drop Chance" %>
+      <%= f.text_field :systemsDropChance, class: 'form-control' %>
+
+      <%= f.label :blueprintDropChance, "Blueprint Drop Chance" %>
+      <%= f.text_field :blueprintDropChance, class: 'form-control' %>
+
+      <%= f.label :chassisDropChance, "Chassis Drop Chance" %>
+      <%= f.text_field :chassisDropChance, class: 'form-control' %>
+
+      <%= f.submit "Save changes", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
