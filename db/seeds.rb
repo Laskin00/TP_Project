@@ -13,3 +13,11 @@ User.create!(name: "Example User", email: "ale.laskin@gmail.com", password: "123
   image_url = "https://www.mobafire.com/images/champion/square/master-yi.png"
   User.create!(name:name, email:email, password: password, password_confirmation: password, image_url: image_url)
 end
+
+Warframe.create!(name: "Ash",whereToGet: "Everywhere", image_url: "https://www.mobafire.com/images/champion/square/master-yi.png")
+20.times do |n|
+  name = Faker::Name.name
+  whereToGet = "Everywhere"
+  image_url = "https://www.mobafire.com/images/champion/square/master-yi.png"
+  Warframe.create!(name:name, whereToGet:whereToGet, image_url: image_url)
+end

@@ -1,10 +1,10 @@
 class WarframesController < ApplicationController
     def index
-      render :warframeView
+      @warframes = Warframe.all
     end
 
     def show
-      @warframe = Warframe.find_by(name: params[:id])
+      @warframe = Warframe.find(params[:id])
       if @warframe == nil
         render '404'
       end

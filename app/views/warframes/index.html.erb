@@ -1,6 +1,6 @@
 <h1 class="warframes-header_"> Warframes </h1>
 
-<div class="warframes-div_">
+<!-- <div class="warframes-div_">
     <a href="/warframes/Ash" title="Ash">
         <img class="warframe-image_" src="https://vignette.wikia.nocookie.net/warframe/images/a/ac/AshIcon64.png/revision/latest?cb=20170920180516" alt="ash">
         <span class="warframes-names-span_">
@@ -111,10 +111,22 @@
 </a>
 <a href="/warframes/Zephyr">
     <img class="warframe-image_" src="https://vignette.wikia.nocookie.net/warframe/images/6/69/ZephyrIcon64.png/revision/latest?cb=20170920181511" alt="zephyr">
-</a>
+</a> -->
 
-<p class="warframes-paragraph_">
-    The Warframe is an advanced weapons system used exclusively by the Tenno in their missions throughout the Origin System.
-    The Warframes possess regenerative shields, greatly enhanced mobility, and enable the use of an array of supernatural abilities – all of which further
-    augment the Tenno's deadly use of traditional combat arts.
-</p>
+
+  <% @warframes.each do |warframe| %>
+  <<div class="warframes-div_">
+          <a href= <%= current_warframe_link(warframe) %> title=<%= warframe.name %>>
+          <img class="warframe-image_" src=<%= warframe.image_url%> alt=<%= warframe.name%>>
+          <span class="warframes-names-span_">
+                  <span class="warframes-span_"><%= warframe.name%></span>
+          </span>
+      </a>
+  </div>
+  <% end %>
+
+  <p class="warframes-paragraph_">
+      The Warframe is an advanced weapons system used exclusively by the Tenno in their missions throughout the Origin System.
+      The Warframes possess regenerative shields, greatly enhanced mobility, and enable the use of an array of supernatural abilities – all of which further
+      augment the Tenno's deadly use of traditional combat arts.
+  </p>
