@@ -18,7 +18,7 @@ class WarframesController < ApplicationController
       @warframe = Warframe.new(warframe_params)
       if @warframe.save
         flash[:success] = "You have successfully added a warframe!"
-        redirect_to current_link + 'warframes/' + @warframe.name
+        redirect_to current_link + 'warframes/' + @warframe.id
       else
         render 'new'
       end
