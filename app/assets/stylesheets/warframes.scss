@@ -1,41 +1,56 @@
 // Place all the styles related to the Warframes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.warframes-header_ {
-    text-align: center;
-    color: white;
+.warframes-header_
+{
     margin-bottom: 2.5%;
-}
 
-.warframes-div_ {
-    position: relative;
-    width: 64px;
-    display: inline-block;
-    margin-left: 1.5%;
-    margin-bottom: 1.5%;
-}
+    text-align: center;
 
-.warframes-span_ {
     color: white;
-    margin-bottom: 5px;
 }
 
-.warframes-names-span_ {
+.warframes-div_
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 64px;
+    margin-bottom: 1.5%;
+    margin-left: 1.5%;
+}
+
+.warframes-span_
+{
+    margin-bottom: 5px;
+
+    color: white;
+}
+
+.warframes-names-span_
+{
+    font-size: 11px;
+    line-height: 15px;
+
     position: absolute;
-    left: 0px;
-    bottom: 0px;
+    bottom: 0;
+    left: 0;
+
     margin-bottom: 2%;
     margin-left: 5%;
-    font-size: 11px;
-    background: rgba(0,0,0,0.6);
-    padding: 0px 2px;
-    line-height: 15px;
+    padding: 0 2px;
+
+    background: rgba(0,0,0,.6);
 }
 
-.warframes-paragraph_ {
-    color: white;
+.warframes-paragraph_
+{
     margin-top: 5%;
+
     text-align: center;
+
+    color: white;
 }
 
 // .centered {
@@ -46,41 +61,56 @@
 //     transform: translate(-50%, -50%);
 // }
 
-.warframes-list_ {
-    list-style-type: none;
+.warframes-list_
+{
+    overflow: hidden;
+
+    width: 20%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+
+    list-style-type: none;
+
     background-color: #333;
-    width: 20%;
 }
 
-.warframes-list-element_ {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 5px 25px;
-    text-decoration: none;
+.warframes-list-element_
+{
     font-size: 20px;
+
+    display: block;
+
+    padding: 5px 25px;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: white;
 }
 
-.warframe-image_ {
-    // background-color: #333;
-    // border:2px dashed #e0e0e0;
-    border:2px solid #e0e0e0;
-    margin-left: 1.5%;
-    // margin-bottom: 1.5%;
-    border-radius: 5px;
+.warframe-image_
+{
     // display: inline;
     // float: right;
     width: 64px;
     height: 65px;
+    margin-left: 1.5%;
+    // background-color: #333;
+    // border:2px dashed #e0e0e0;
+
+    border: 2px solid #e0e0e0;
+    // margin-bottom: 1.5%;
+    border-radius: 5px;
 }
-#warframe_data{
-  font-size: 25pt;
-  color: white;
+#warframe_data
+{
+    font-size: 25pt;
+
+    color: white;
 }
-h2{
-  color:white;
-  text-align: center;
+h2
+{
+    text-align: center;
+
+    color: white;
 }
