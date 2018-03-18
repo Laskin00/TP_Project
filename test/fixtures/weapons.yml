@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  imageUrl: MyString
+  image_url: MyString
   whereToGet: MyString
-  dropChance: 
+  dropChance:
 
 two:
   name: MyString
-  imageUrl: MyString
+  image_url: MyString
   whereToGet: MyString
-  dropChance: 
+  dropChance:

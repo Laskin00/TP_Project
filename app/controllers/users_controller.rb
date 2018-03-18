@@ -4,15 +4,16 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
 
   def index
-    @users = User.paginate(page: params[:page])
-  end
-
-  def new
-    @user = User.new
+    @users = User.where(activated: FILL_IN).paginate(page: params[:page])
   end
 
   def show
     @user = User.find(params[:id])
+    redirect_to root_url and return unless FILL_IN
+  end
+  
+  def new
+    @user = User.new
   end
 
   def landing
@@ -21,13 +22,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    defaultImage = "https://img-fanburst.freetls.fastly.net/pjbL8r-DgAVxsfgA0ijKasVEae8=/400x400/cx2.fanburst.com/artwork/560cebff-1cf1-4bf0-9ab7-15623ffba8da.png"
-    @user.permissions = 0;
-    @user.image_url = defaultImage
     if @user.save
-      log_in @user
-      flash[:success] = "Welcome to the Warframe Loot Wiki!"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
     else
       render 'new'
     end

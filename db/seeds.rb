@@ -11,7 +11,7 @@ User.create!(name: "Example User", email: "ale.laskin@gmail.com", password: "123
   email = "example-#{n+n+1}@railstutorial.org"
   password = "password"
   image_url = "https://www.mobafire.com/images/champion/square/master-yi.png"
-  User.create!(name:name, email:email, password: password, password_confirmation: password, image_url: image_url)
+  User.create!(name:name, email:email, password: password, password_confirmation: password, image_url: image_url,activated: true, activated_at: Time.zone.now)
 end
 
 Warframe.create!(name: "Ash",whereToGet: "Everywhere", image_url: "https://www.mobafire.com/images/champion/square/master-yi.png")

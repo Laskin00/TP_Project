@@ -12,3 +12,6 @@ alex:
   name: Alex Laskin
   email: ale.laskintues19@gmail.com
   password_digest: <%= User.digest('efu311') %>
+  permissions: 3
+  activated: true
+  activated_at: <%= Time.zone.now %>

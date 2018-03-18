@@ -2,18 +2,18 @@
 
 one:
   name: MyString
-  imageUrl: MyString
+  image_url: MyString
   whereToGet: MyString
-  neuropticsDropChance: 
-  chassisDropChance: 
-  systemsDropChance: 
-  blueprintDropChance: 
+  neuropticsDropChance:
+  chassisDropChance:
+  systemsDropChance:
+  blueprintDropChance:
 
 two:
   name: MyString
-  imageUrl: MyString
+  image_url: MyString
   whereToGet: MyString
-  neuropticsDropChance: 
-  chassisDropChance: 
-  systemsDropChance: 
-  blueprintDropChance: 
+  neuropticsDropChance:
+  chassisDropChance:
+  systemsDropChance:
+  blueprintDropChance:
