@@ -1,3 +1,44 @@
 // Place all the styles related to the Relics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.relics_table {
+    margin-top: 5%;
+    width: 83.5%;
+    // border: 1px solid black;
+    text-align: center;
+}
+
+.relics_table td {
+    padding: 1%;
+}
+
+.relics_table th {
+    background-color: #333;
+    padding: 1%;
+    color: white;
+    font-family: "Lato";
+    padding: 2%;
+    font-size: 250%;
+    text-shadow: 2px 2px black;
+    text-align: center;
+}
+
+.relics_table td:hover {
+    cursor: pointer;
+    background-color: #111;
+}
+
+.relics_table th:hover {
+    cursor: pointer;
+    background-color: #111;
+}
+
+.relics_table img {
+    width: 100%;
+}
+
+#relics_paragraph_ {
+    margin-top: 4%;
+    text-align: center;
+    color: white;
+}
