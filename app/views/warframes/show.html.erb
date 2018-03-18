@@ -1,4 +1,17 @@
 <div id ="warframe_data">
-  <h1>Name:  <%= @warframe.name %></h1>
-  <h1>whereToGet:  <%= @warframe.whereToGet %> </h1>
+    <h1 id="warframe-view-header_"> <%= @warframe.name %> </h1>
+    <div id="image-and-text">
+        <img id="warframe-view-image_" src=<%= @warframe.image_url %>  alt=<%= @warframe.name %> title=<%= @warframe.name %> >
+        <!-- <h1>Where To Get: <%= @warframe.whereToGet %> </h1> -->
+
+        <div id="warframe-view-wrapper_">
+            <div id="warframe-view-stats-div_">
+                <h4 class="warframe-view-stats_">Mastery Rank</h4>
+                <h4 class="warframe-view-stats_">Health</h4>
+                <h4 class="warframe-view-stats_">Shield</h4>
+                <h4 class="warframe-view-stats_">Armor</h4>
+                <h4 class="warframe-view-stats_">Energy</h4>
+            </div>
+        </div>
+    </div>
 </div>
