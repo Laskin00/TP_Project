@@ -96,7 +96,7 @@
 	<%else%>
 		<li class="droppdown" id = "sign">
 			<a href="javascript:void(0)" class="droppbtn" id = "current_user_navbar">
-				<%= image_tag(current_user.image_url, height: '32', width: '32') %>
+				<div id="profile-picture"><%= image_tag(current_user.image_url, height: '22', width: '22') %></div>
 				<%= current_user.name.split.first %>
 			</a>
 

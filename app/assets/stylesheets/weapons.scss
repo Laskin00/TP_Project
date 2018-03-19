@@ -134,3 +134,52 @@
     text-align: center;
     color: white;
 }
+
+
+#weapon-view-header_
+{
+    font-size: 50px;
+
+    text-align: center;
+
+    text-shadow: 2px 2px black;
+}
+
+#weapon-view-image_
+{
+    display: block;
+
+    width: 25%;
+    margin-right: auto;
+    margin-left: auto;
+
+    background-color: #333;
+
+    padding-right: 1%;
+    padding-left: 1%;
+}
+
+#weapon-view-stats-div_
+{
+    display: inline-block;
+
+    // margin-top: 2%;
+    padding-right: 1%;
+    padding-left: 1%;
+
+    text-align: left;
+
+    background-color: #333;
+    width: 25%;
+}
+
+.weapon-view-stats_ {
+    color: white;
+    background-color: #111;
+    padding: 3%;
+}
+
+#weapon-view-wrapper_
+{
+    text-align: center;
+}
