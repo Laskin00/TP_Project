@@ -22,9 +22,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    defaultImage = "https://img-fanburst.freetls.fastly.net/pjbL8r-DgAVxsfgA0ijKasVEae8=/400x400/cx2.fanburst.com/artwork/560cebff-1cf1-4bf0-9ab7-15623ffba8da.png"
-    @user.permissions = 0;
-    @user.image_url = defaultImage
     if @user.save
       @user.send_activation_email
       flash[:info] = "Please check your email to activate your account."

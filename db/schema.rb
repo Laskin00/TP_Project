@@ -38,9 +38,9 @@ ActiveRecord::Schema.define(version: 20180318114211) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
-    t.string "image_url"
+    t.string "image_url", default: "https://img-fanburst.freetls.fastly.net/pjbL8r-DgAVxsfgA0ijKasVEae8=/400x400/cx2.fanburst.com/artwork/560cebff-1cf1-4bf0-9ab7-15623ffba8da.png"
     t.string "remember_digest"
-    t.integer "permissions"
+    t.integer "permissions", default: 0
     t.string "activation_digest"
     t.boolean "activated", default: false
     t.datetime "activated_at"
