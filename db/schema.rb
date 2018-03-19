@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180318114211) do
+ActiveRecord::Schema.define(version: 20180319142250) do
 
   create_table "mods", force: :cascade do |t|
     t.string "name"
@@ -57,6 +57,12 @@ ActiveRecord::Schema.define(version: 20180318114211) do
     t.string "blueprintDropChance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "armor"
+    t.string "shield"
+    t.string "mastery_rank"
+    t.string "health"
+    t.string "energy"
+    t.string "description"
   end
 
   create_table "weapons", force: :cascade do |t|

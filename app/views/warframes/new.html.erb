@@ -12,9 +12,6 @@
       <%= w.label :image_url, "Image Url" %>
       <%= w.text_field :image_url, class: 'form-control' %>
 
-      <%= w.label :whereToGet , "Where To Get"%>
-      <%= w.text_area :whereToGet, class: 'form-control' %>
-
       <%= w.label :blueprintDropChance, "Blueprint Drop Chance" %>
       <%= w.text_field :blueprintDropChance, class: 'form-control' %>
 
@@ -26,6 +23,28 @@
 
       <%= w.label :neuropticsDropChance, "Neuroptics Drop Chance" %>
       <%= w.text_field :neuropticsDropChance, class: 'form-control' %>
+
+      <%= w.label :armor, "Armor" %>
+      <%= w.text_field :armor, class: 'form-control' %>
+
+      <%= w.label :energy, "Energy" %>
+      <%= w.text_field :energy, class: 'form-control' %>
+
+      <%= w.label :health, "Health" %>
+      <%= w.text_field :health, class: 'form-control' %>
+
+      <%= w.label :shield, "Shield" %>
+      <%= w.text_field :shield, class: 'form-control' %>
+
+      <%= w.label :mastery_rank, "Mastery Rank" %>
+      <%= w.text_field :mastery_rank, class: 'form-control' %>
+
+      <%= w.label :description, "Description" %>
+      <%= w.text_area :description, class: 'form-control' %>
+
+      <%= w.label :whereToGet , "Where To Get"%>
+      <%= w.text_area :whereToGet, class: 'form-control' %>
+
 
       <div id = "button">
         <%= w.submit "Add Warframe", class: "btn btn-primary" %>

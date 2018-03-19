@@ -48,7 +48,7 @@ class WarframesController < ApplicationController
 
     private
     def warframe_params
-      params.require(:warframe).permit(:name, :image_url, :whereToGet, :neuropticsDropChance, :systemsDropChance, :blueprintDropChance, :chassisDropChance)
+      params.require(:warframe).permit(:name, :image_url, :neuropticsDropChance,:systemsDropChance, :blueprintDropChance, :chassisDropChance,:armor, :energy, :health, :shield, :mastery_rank,:description, :whereToGet)
     end
 
     def current_link

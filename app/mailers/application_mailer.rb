@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'alex_l13@abv.bg'
+  default from: 'WarframeLootWiki@gmail.com'
   layout 'mailer'
 end
