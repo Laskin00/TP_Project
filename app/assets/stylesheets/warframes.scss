@@ -28,25 +28,7 @@
     display: inline-block;
 
     width: 17%;
-
     margin-bottom: 5%;
-
-    padding-right: 1%;
-    padding-left: 1%;
-
-    text-align: left;
-
-    background-color: #333;
-}
-
-#warframe-view-stats-div2_
-{
-    display: inline-block;
-
-    width: 17%;
-
-    margin-left: 1%;
-
     padding-right: 1%;
     padding-left: 1%;
 
@@ -176,19 +158,94 @@
     color: white;
 }
 
-#warframe-description_ {
+#warframe-description_
+{
     display: inline;
+
     margin-top: 5%;
 }
 
-#warframe-description-paragraph_ {
-    display: inline;
-    position: absolute;
-    color: white;
+#warframe-description-paragraph_
+{
+    font-size: 115%;
 
+    position: absolute;
+
+    display: inline;
+
+    max-width: 50%;
     margin-left: 1%;
 
+    color: white;
     text-shadow: 1px 1px black;
+}
 
+#wf-header
+{
+    font-size: 50px;
+
+    text-align: left;
+
+    text-shadow: 2px 2px black;
+}
+
+#wf-image
+{
+    display: inline-block;
+
+    width: 25%;
+    // margin-right: auto;
+    // margin-left: auto;
+    padding-right: 1%;
+    padding-left: 1%;
+
+    background-color: #333;
+}
+
+.wf-stats
+{
+    padding: 3%;
+
+    text-align: left;
+
+    color: white;
+    background-color: #111;
+}
+
+
+#wf-stats-div
+{
+    display: inline-block;
+
+    width: 17%;
+    margin-bottom: 5%;
+    padding-right: 1%;
+    padding-left: 1%;
+
+    text-align: left;
+
+    background-color: #333;
+}
+
+#wf-wrapper
+{
+    display: inline;
+
+    margin-left: 2%;
+
+    text-align: center;
+}
+
+#wf-description-paragraph {
     font-size: 115%;
+
+    position: absolute;
+
+    display: inline;
+
+    max-width: 40%;
+    margin-left: 1%;
+
+    color: white;
+    text-shadow: 1px 1px black;
 }

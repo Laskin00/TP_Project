@@ -1,15 +1,6 @@
-<div id ="warframe_data">
+<!-- <div id ="warframe_data">
     <h1 id="warframe-view-header_"> <%= @warframe.name %> </h1>
-    <!-- <div id="image-and-text"> -->
         <img id="warframe-view-image_" src=<%= @warframe.image_url %>  alt=<%= @warframe.name %> title=<%= @warframe.name %> >
-        <!-- <h1>Where To Get: <%= @warframe.whereToGet %> </h1> -->
-    <!-- </div> -->
-</div>
-
-<div id="warframe-description_">
-    <p id="warframe-description-paragraph_">
-         <%= @warframe.description %>
-    </p>
 </div>
 
 <div id="warframe-view-wrapper_">
@@ -20,13 +11,32 @@
         <h4 class="warframe-view-stats_">Armor:  <%= @warframe.armor %> </h4>
         <h4 class="warframe-view-stats_">Energy:  <%= @warframe.energy %> </h4>
     </div>
-    <!-- <div id="warframe-view-stats-div2_">
-        <h4 class="warframe-view-stats_"> <%= @warframe.mastery_rank %> </h4>
-        <h4 class="warframe-view-stats_"> <%= @warframe.health %> </h4>
-        <h4 class="warframe-view-stats_"> <%= @warframe.shield %> </h4>
-        <h4 class="warframe-view-stats_"> <%= @warframe.armor %> </h4>
-        <h4 class="warframe-view-stats_"> <%= @warframe.energy %> </h4>
-    </div> -->
+</div>
+
+<div id="warframe-description_">
+    <p id="warframe-description-paragraph_">
+        <%= @warframe.description %>
+    </p>
+</div> -->
 
 
+<div id="wf-image-and-title">
+    <h1 id="wf-header"> <%= @warframe.name %> </h1>
+    <img id="wf-image" src=<%= @warframe.image_url %>  alt=<%= @warframe.name %> title=<%= @warframe.name %> align="left">
+</div>
+
+<div id="wf-wrapper">
+    <div id="wf-stats-div">
+        <h4 class="wf-stats">Mastery Rank: <%= @warframe.mastery_rank %> </h4>
+        <h4 class="wf-stats">Health:  <%= @warframe.health %> </h4>
+        <h4 class="wf-stats">Shield:  <%= @warframe.shield %> </h4>
+        <h4 class="wf-stats">Armor:  <%= @warframe.armor %> </h4>
+        <h4 class="wf-stats">Energy:  <%= @warframe.energy %> </h4>
+    </div>
+</div>
+
+<div id="wf-description">
+    <p id="wf-description-paragraph">
+        <%= @warframe.description %>
+    </p>
 </div>
