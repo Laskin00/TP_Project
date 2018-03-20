@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180319142250) do
+ActiveRecord::Schema.define(version: 20180320143230) do
 
   create_table "mods", force: :cascade do |t|
     t.string "name"
@@ -38,9 +38,9 @@ ActiveRecord::Schema.define(version: 20180319142250) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
-    t.string "image_url"
+    t.string "image_url", default: "https://img-fanburst.freetls.fastly.net/pjbL8r-DgAVxsfgA0ijKasVEae8=/400x400/cx2.fanburst.com/artwork/560cebff-1cf1-4bf0-9ab7-15623ffba8da.png"
     t.string "remember_digest"
-    t.integer "permissions"
+    t.integer "permissions", default: 0
     t.string "activation_digest"
     t.boolean "activated", default: false
     t.datetime "activated_at"
@@ -73,6 +73,21 @@ ActiveRecord::Schema.define(version: 20180319142250) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "weapon_type"
+    t.string "mastery_rank"
+    t.string "attack_type"
+    t.string "impact"
+    t.string "puncture"
+    t.string "slash"
+    t.string "elecricity"
+    t.string "fire"
+    t.string "toxin"
+    t.string "cold"
+    t.string "blast"
+    t.string "corrosive"
+    t.string "gas"
+    t.string "magnetic"
+    t.string "radiation"
+    t.string "viral"
   end
 
 end

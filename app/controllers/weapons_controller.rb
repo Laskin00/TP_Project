@@ -4,7 +4,15 @@ class WeaponsController < ApplicationController
     end
 
     def show
-      @weapon = Weapon.find(params[:id])
+        @weapon = Weapon.where(weapon_type: params[:type])
+      i = 0
+      @weapon.each do |w|
+          if i == params[:id].to_i - 1
+              @weapon = w
+              break
+          end
+          i += 1
+      end
       if @weapon == nil
             render "404"
       end
@@ -15,19 +23,21 @@ class WeaponsController < ApplicationController
     end
 
     def primary
-      @primary = Weapon.where(:weapon_type == "primary") || Weapon.where(:weapon_type == "Primary")
+      @primary = Weapon.where(weapon_type: "primary")
     end
 
     def secondary
-      @secondary = Weapon.where(:weapon_type == "secondary") || Weapon.where(:weapon_type == "Secondary")
+      @secondary = Weapon.where(weapon_type: "secondary")
     end
 
     def melee
-      @melee = Weapon.where(:weapon_type == "melee") || Weapon.where(:weapon_type == "Melee")
+      @melee = Weapon.where(weapon_type: "melee")
     end
 
     def create
       @weapon = Weapon.new(weapon_params)
+      @weapon.weapon_type = @weapon.weapon_type.downcase
+      @weapon.name = @weapon.name.capitalize
       if @weapon.save
         flash[:success] = "You have successfully added a weapon!"
         # redirect_to current_link + 'weapons/' + @weapon.name ##da se razkomentira Todo kato napravi weapon vu
@@ -62,7 +72,7 @@ class WeaponsController < ApplicationController
 
 private
     def weapon_params
-          params.require(:weapon).permit(:weapon_type, :name, :image_url, :whereToGet, :dropChance)
+          params.require(:weapon).permit(:weapon_type, :name, :image_url, :whereToGet, :dropChance, :mastery_rank, :attack_type, :impact, :puncture, :slash, :elecricity, :fire, :toxin, :cold, :blast, :corrosive, :gas, :magnetic, :radiation, :viral)
     end
 
     def current_link
