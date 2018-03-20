@@ -14,6 +14,18 @@ class WeaponsController < ApplicationController
         @weapon = Weapon.new
     end
 
+    def primary
+      @primary = Weapon.where(:weapon_type => "primary") && Weapon.where(:weapon_type => "Primary")
+    end
+
+    def secoundary
+      @secoundary = Weapon.where(:weapon_type => "secoundary") && Weapon.where(:weapon_type => "Secoundary")
+    end
+
+    def melee
+      @melee = Weapon.where(:weapon_type => "melee") && Weapon.where(:weapon_type => "Melee")
+    end
+
     def create
       @weapon = Weapon.new(weapon_params)
       if @weapon.save
