@@ -15,15 +15,15 @@ class WeaponsController < ApplicationController
     end
 
     def primary
-      @primary = Weapon.where(:weapon_type == "primary") && Weapon.where(:weapon_type == "Primary")
+      @primary = Weapon.where(:weapon_type == "primary") || Weapon.where(:weapon_type == "Primary")
     end
 
     def secondary
-      @secondary = Weapon.where(:weapon_type == "secondary") && Weapon.where(:weapon_type == "Secondary")
+      @secondary = Weapon.where(:weapon_type == "secondary") || Weapon.where(:weapon_type == "Secondary")
     end
 
     def melee
-      @melee = Weapon.where(:weapon_type == "melee") && Weapon.where(:weapon_type == "Melee")
+      @melee = Weapon.where(:weapon_type == "melee") || Weapon.where(:weapon_type == "Melee")
     end
 
     def create
@@ -62,7 +62,7 @@ class WeaponsController < ApplicationController
 
 private
     def weapon_params
-          params.require(:weapon).permit(:name, :image_url, :whereToGet, :dropChance, :weapon_type)
+          params.require(:weapon).permit(:weapon_type, :name, :image_url, :whereToGet, :dropChance)
     end
 
     def current_link
