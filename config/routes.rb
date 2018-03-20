@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post '/users/demote/:id', to: 'users#demote'
   get '/admin', to: 'admin#new'
   get '/weapons/Primary', to: 'weapons#primary'
-  get '/weapons/Secoundary', to: 'weapons#secoundary'
+  get '/weapons/Secondary', to: 'weapons#secondary'
   get '/weapons/Melee', to: 'weapons#melee'
   get '/moderator', to: 'moderator#new'
   post '/warframes/new', to: 'warframes#create'

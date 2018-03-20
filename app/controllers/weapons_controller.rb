@@ -15,15 +15,15 @@ class WeaponsController < ApplicationController
     end
 
     def primary
-      @primary = Weapon.where(:weapon_type => "primary") && Weapon.where(:weapon_type => "Primary")
+      @primary = Weapon.where(:weapon_type == "primary") && Weapon.where(:weapon_type == "Primary")
     end
 
-    def secoundary
-      @secoundary = Weapon.where(:weapon_type => "secoundary") && Weapon.where(:weapon_type => "Secoundary")
+    def secondary
+      @secondary = Weapon.where(:weapon_type == "secondary") && Weapon.where(:weapon_type == "Secondary")
     end
 
     def melee
-      @melee = Weapon.where(:weapon_type => "melee") && Weapon.where(:weapon_type => "Melee")
+      @melee = Weapon.where(:weapon_type == "melee") && Weapon.where(:weapon_type == "Melee")
     end
 
     def create
