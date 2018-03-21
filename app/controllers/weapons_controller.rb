@@ -19,7 +19,11 @@ class WeaponsController < ApplicationController
     end
 
     def new
+      if current_user.permissions < 2
+        render "Error"
+      else
         @weapon = Weapon.new
+      end
     end
 
     def primary

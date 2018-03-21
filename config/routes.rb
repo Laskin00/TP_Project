@@ -9,17 +9,27 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   post '/users/:id', to: 'users#promote'
   post '/users/demote/:id', to: 'users#demote'
+
   get '/admin', to: 'admin#new'
   get '/weapons/primary', to: 'weapons#primary'
   get '/weapons/secondary', to: 'weapons#secondary'
   get '/weapons/melee', to: 'weapons#melee'
   get '/weapons/:type/:id', to: 'weapons#show'
+
+  get '/mods/warframe', to: 'mods#warframe'
+  get '/mods/weapon', to: 'mods#weapon'
   get '/mods/:type/:id', to: 'mods#show'
+
   get '/moderator', to: 'moderator#new'
+
   post '/warframes/new', to: 'warframes#create'
+
   post '/relics/new', to: 'relics#create'
+
   post '/mods/new', to: 'mods#create'
+
   post '/weapons/new', to: 'weapons#create'
+
   resources :users
   resources :warframes
   resources :mods

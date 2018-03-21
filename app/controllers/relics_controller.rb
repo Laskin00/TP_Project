@@ -10,7 +10,11 @@ class RelicsController < ApplicationController
       end
 
       def new
+        if current_user.permissions < 2
+          render "Error"
+        else
           @relic = Relic.new
+        end
       end
 
       def create

@@ -4,7 +4,7 @@ class ModsController < ApplicationController
     end
 
     def show
-        @mod = Mod.where(mod_type: params[:type])
+      @mod = Mod.where(mod_type: params[:type])
       i = 0
       @mod.each do |w|
           if i == params[:id].to_i - 1
@@ -18,8 +18,20 @@ class ModsController < ApplicationController
       end
     end
 
+    def warframe
+      @mods = Mod.where(mod_type: "warframe")
+    end
+
+    def weapons
+      @mods = Mod.where(mod_type: "weapon")
+    end
+
     def new
-        @mod = Mod.new
+        if current_user.permissions < 2
+          render "Error"
+        else
+          @mod = Mod.new
+        end
     end
 
     def create

@@ -11,7 +11,11 @@ class WarframesController < ApplicationController
     end
 
     def new
-      @warframe = Warframe.new
+      if current_user.permissions < 2
+        render "Error"
+      else
+        @warframe = Warframe.new
+      end
     end
 
     def create

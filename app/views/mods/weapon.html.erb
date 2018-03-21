@@ -1,0 +1,5 @@
+<% @mods.each do |mods| %>
+    <div id="header-div">
+        <h1 onclick="location.href='/mods/warframe/<%= mods.id %>'" id="weapon-h1"> <%= mods.name %> </h1>
+    </div> <!-- this needs to be fixed -->
+<% end %>
