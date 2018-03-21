@@ -1,3 +1,5 @@
 <% @primary.each do |primary| %>
-  <h1> <%= primary.name %> </h1>
+    <div id="header-div">
+        <h1 onclick="location.href='/weapons/primary/<%= primary.id %>'" id="weapon-h1"> <%= primary.name %> </h1>
+    </div> <!-- this needs to be fixed -->
 <% end %>

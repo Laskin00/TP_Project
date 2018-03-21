@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/weapons/secondary', to: 'weapons#secondary'
   get '/weapons/melee', to: 'weapons#melee'
   get '/weapons/:type/:id', to: 'weapons#show'
+  get '/mods/:type/:id', to: 'mods#show'
   get '/moderator', to: 'moderator#new'
   post '/warframes/new', to: 'warframes#create'
   post '/relics/new', to: 'relics#create'

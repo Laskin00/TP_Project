@@ -1,36 +1,50 @@
 // Place all the styles related to the Weapons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#weapons_ul_div_ {
+#weapons_ul_div_
+{
     display: table;
+
     margin: 0 auto;
     margin-left: 4%;
 }
 
-.weapons_ul_ {
-    list-style-type: none;
-    margin: 5%;
+.weapons_ul_
+{
     overflow: hidden;
+
+    margin: 5%;
+
+    list-style-type: none;
+
     text-shadow: 2px 2px black;
 }
 
-.weapons_li_:hover {
+.weapons_li_:hover
+{
     background-color: #111;
 }
 
-.weapons_li_ {
-    float: left;
+.weapons_li_
+{
     display: inline-block;
+    float: left;
+
     text-align: center;
 }
 
-.weapons_li_ a {
+.weapons_li_ a
+{
     font-size: 250%;
+
     display: inline-block;
-    color: white;
-    text-align: center;
+
     padding: 16px;
+
+    text-align: center;
     text-decoration: none;
+
+    color: white;
 }
 
 /////////////////////////////////
@@ -93,45 +107,60 @@
 //     width: 75%;
 // }
 
-.weapons_table {
+.weapons_table
+{
     margin-top: 5%;
     // width: 83.5%;
     // border: 1px solid black;
+
     text-align: center;
 }
 
-.weapons_table td {
+.weapons_table td
+{
     padding: 1%;
 }
 
-.weapons_table th {
-    background-color: #333;
-    padding: 1%;
-    color: white;
-    font-family: "Lato";
-    padding: 2%;
+.weapons_table th
+{
+    font-family: 'Lato';
     font-size: 200%;
-    text-shadow: 2px 2px black;
+
+    padding: 1%;
+    padding: 2%;
+
     text-align: center;
+
+    color: white;
+    background-color: #333;
+    text-shadow: 2px 2px black;
 }
 
-.weapons_table td:hover {
+.weapons_table td:hover
+{
     cursor: pointer;
+
     background-color: #111;
 }
 
-.weapons_table th:hover {
+.weapons_table th:hover
+{
     cursor: pointer;
+
     background-color: #111;
 }
 
-.weapons_table img {
+.weapons_table img
+{
     width: 75%;
 }
 
-#weapons_paragraph_ {
+#weapons_paragraph_
+{
     margin-top: 4%;
+
     text-align: center;
+
     color: white;
 }
 
@@ -152,17 +181,17 @@
     width: 25%;
     margin-right: auto;
     margin-left: auto;
-
-    background-color: #333;
-
     padding-right: 1%;
     padding-left: 1%;
+
+    background-color: #333;
 }
 
 #weapon-view-stats-div_
 {
     display: inline-block;
 
+    width: 25%;
     // margin-top: 2%;
     padding-right: 1%;
     padding-left: 1%;
@@ -170,16 +199,32 @@
     text-align: left;
 
     background-color: #333;
-    width: 25%;
 }
 
-.weapon-view-stats_ {
+.weapon-view-stats_
+{
+    padding: 3%;
+
     color: white;
     background-color: #111;
-    padding: 3%;
 }
 
 #weapon-view-wrapper_
 {
+    text-align: center;
+}
+
+#weapon-h1
+{
+    display: inline-block;
+
+    cursor: pointer;
+    text-align: center;
+}
+
+#header-div
+{
+    display: block;
+
     text-align: center;
 }

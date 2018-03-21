@@ -4,7 +4,15 @@ class ModsController < ApplicationController
     end
 
     def show
-      @mod = Mod.find(params[:id])
+        @mod = Mod.where(mod_type: params[:type])
+      i = 0
+      @mod.each do |w|
+          if i == params[:id].to_i - 1
+              @mod = w
+              break
+          end
+          i += 1
+      end
       if @mod == nil
             render "404"
       end
