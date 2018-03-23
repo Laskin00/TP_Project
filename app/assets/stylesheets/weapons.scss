@@ -47,66 +47,6 @@
     color: white;
 }
 
-/////////////////////////////////
-
-// #weapons_images_ul_div_ {
-//     display: table;
-//     margin: 0 auto;
-//     margin-left: 4%;
-// }
-
-// .weapons_images_ul_ {
-//     list-style-type: none;
-//     margin: 5%;
-//     overflow: hidden;
-//     text-shadow: 2px 2px black;
-// }
-
-// .weapons_images_li_:hover {
-//     background-color: #111;
-// }
-
-// .weapons_images_li_ {
-//     float: left;
-//     display: inline-block;
-//     text-align: center;
-// }
-
-// .weapons_images_li_ a {
-//     font-size: 250%;
-//     display: inline-block;
-//     color: white;
-//     text-align: center;
-//     padding: 16px;
-//     text-decoration: none;
-// }
-
-// .weapons_images_li_ img {
-//     width: 25%;
-//     display: block;
-//     margin-left: auto;
-//     margin-right: auto;
-// }
-
-// .weapons_images {
-//     width: 83.5%;
-//     // border: 1px solid black;
-//     text-align: center;
-// }
-//
-// .weapons_images td {
-//     padding: 1%;
-// }
-//
-// .weapons_images td:hover {
-//     cursor: pointer;
-//     background-color: #111;
-// }
-//
-// .weapons_images img {
-//     width: 75%;
-// }
-
 .weapons_table
 {
     margin-top: 5%;
@@ -134,13 +74,18 @@
     color: white;
     background-color: #333;
     text-shadow: 2px 2px black;
+    border-right: 2px solid #111;
+}
+
+.weapons_table th:last-child {
+    border-right: none;
 }
 
 .weapons_table td:hover
 {
     cursor: pointer;
 
-    background-color: #111;
+    // background-color: #111;
 }
 
 .weapons_table th:hover

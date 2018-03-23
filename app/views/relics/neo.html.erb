@@ -1,0 +1,5 @@
+<% @neo.each do |neo| %>
+    <div id="header-div">
+        <h1 onclick="location.href='/relics/neo/<%= neo.id %>'" id="relics-h1"> <%= neo.name %> </h1>
+    </div>
+<% end %>

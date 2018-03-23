@@ -36,6 +36,8 @@ class ModsController < ApplicationController
 
     def create
       @mod = Mod.new(mod_params)
+      @mod.mod_type = @mod.mod_type.downcase
+      @mod.name = @mod.name.capitalize
       if @mod.save
         flash[:success] = "You have successfully added a mod!"
         # redirect_to current_link + 'mods/' + @mod.name ##da se razkomentira Todo kato napravi mod vu
@@ -69,7 +71,7 @@ class ModsController < ApplicationController
 
 private
     def mod_params
-          params.require(:mod).permit(:name, :image_url, :whereToGet, :dropChance)
+          params.require(:mod).permit(:name, :mod_type, :image_url, :whereToGet, :dropChance)
     end
 
     def current_link

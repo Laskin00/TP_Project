@@ -20,6 +20,12 @@ Rails.application.routes.draw do
   get '/mods/weapon', to: 'mods#weapon'
   get '/mods/:type/:id', to: 'mods#show'
 
+  get '/relics/lith', to: 'relics#lith'
+  get '/relics/meso', to: 'relics#meso'
+  get '/relics/neo', to: 'relics#neo'
+  get '/relics/axi', to: 'relics#axi'
+  get '/relics/:type/:id', to: 'relics#show'
+
   get '/moderator', to: 'moderator#new'
 
   post '/warframes/new', to: 'warframes#create'
