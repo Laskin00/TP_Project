@@ -21,11 +21,25 @@
     font-size: 250%;
     text-shadow: 2px 2px black;
     text-align: center;
+    border-right: 2px solid #111;
+}
+
+.relics_table th:last-child {
+    border-right: none;
+}
+
+.relics_table td {
+    // border-right: 2px solid #111;
+    // border-bottom: 2px solid #111;
+}
+
+.relics_table td:last-child {
+    border-right: none;
 }
 
 .relics_table td:hover {
     cursor: pointer;
-    background-color: #111;
+    // background-color: #111;
 }
 
 .relics_table th:hover {

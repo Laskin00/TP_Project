@@ -21,11 +21,16 @@
     font-size: 250%;
     text-shadow: 2px 2px black;
     text-align: center;
+    border-right: 2px solid #111;
+}
+
+.mods_table th:last-child {
+    border-right: none;
 }
 
 .mods_table td:hover {
     cursor: pointer;
-    background-color: #111;
+    // background-color: #111;
 }
 
 .mods_table th:hover {
@@ -41,4 +46,28 @@
     margin-top: 4%;
     text-align: center;
     color: white;
+}
+
+#mods-view-header_
+{
+    font-size: 50px;
+
+    text-align: center;
+
+    text-shadow: 2px 2px black;
+}
+
+#mods-view-image_
+{
+    display: block;
+
+    width: 20%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+
+    background-color: #333;
 }
