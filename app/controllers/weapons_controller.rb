@@ -4,15 +4,7 @@ class WeaponsController < ApplicationController
     end
 
     def show
-      @weapon = Weapon.where(weapon_type: params[:type])
-      i = 0
-      @weapon.each do |w|
-          if i == params[:id].to_i - 1
-              @weapon = w
-              break
-          end
-          i += 1
-      end
+      @weapon = Weapon.find_by(id: params[:id])
       if @weapon == nil
             render "Error"
       end
