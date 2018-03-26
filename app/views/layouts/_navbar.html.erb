@@ -8,40 +8,6 @@
 				<% Warframe.all.each do |warframe| %>
 					<a href= <%=current_warframe_link(warframe)%>><%= warframe.name %></a>
 				<%end%>
-	    	<!-- <a href="/warframes/Ash">Ash</a>
-	    	<a href="/warframes/Ash">Atlas</a>
-	    	<a href="/warframes/Ash">Banshee</a>
-	    	<a href="/warframes/Ash">Chroma</a>
-	    	<a href="/warframes/Ash">Ember</a>
-	    	<a href="/warframes/Ash">Equinox</a>
-	    	<a href="/warframes/Ash">Excalibur</a>
-	    	<a href="/warframes/Ash">Frost</a>
-	    	<a href="/warframes/Ash">Gara</a>
-	    	<a href="/warframes/Ash">Harrow</a>
-	    	<a href="/warframes/Ash">Hydroid</a>
-	    	<a href="/warframes/Ash">Inaros</a>
-	    	<a href="/warframes/Ash">Ivara</a>
-	    	<a href="/warframes/Ash">Limbo</a>
-	    	<a href="/warframes/Ash">Loki</a>
-	    	<a href="/warframes/Ash">Mag</a>
-	    	<a href="/warframes/Ash">Mesa</a>
-	    	<a href="/warframes/Ash">Mirage</a>
-	    	<a href="/warframes/Ash">Nekros</a>
-	    	<a href="/warframes/Ash">Nezha</a>
-	    	<a href="/warframes/Ash">Nidus</a>
-	    	<a href="/warframes/Ash">Nova</a>
-	    	<a href="/warframes/Ash">Nyx</a>
-	    	<a href="/warframes/Ash">Oberon</a>
-	    	<a href="/warframes/Ash">Octavia</a>
-	    	<a href="/warframes/Ash">Rhino</a>
-	    	<a href="/warframes/Ash">Saryn</a>
-	    	<a href="/warframes/Ash">Titania</a>
-	    	<a href="/warframes/Ash">Trinity</a>
-	    	<a href="/warframes/Ash">Valkyr</a>
-	    	<a href="/warframes/Ash">Vauban</a>
-	    	<a href="/warframes/Ash">Volt</a>
-	    	<a href="/warframes/Ash">Wukong</a>
-	    	<a href="/warframes/Ash">Zephyr</a> -->
 	    </div>
 	</li>
 
@@ -51,7 +17,6 @@
 	    	<a href="/weapons/primary">Primary</a>
 	    	<a href="/weapons/secondary">Secondary</a>
 	    	<a href="/weapons/melee">Melee</a>
-	    	<!-- <a href="/weapons/Companion">Companion</a> -->
 	    </div>
 	</li>
 
@@ -60,27 +25,16 @@
 	    <div class="droppdown-content">
 	    	<a href="/mods/warframe">Warframe Mods</a>
 	    	<a href="/mods/weapon">Weapon Mods</a>
-	    	<!-- <a href="/mods/Companion">Companion Mods</a> -->
 	    </div>
 	</li>
-	<!-- Disabled for now -->
-	<!-- <li class="droppdown">
-    <a href="javascript:void(0)" class="droppbtn">Materials</a>
-	    <div class="droppdown-content">
-	    	<a href="#">Link 1</a>
-	    	<a href="#">Link 2</a>
-	    	<a href="#">Link 3</a>
-	    	<a href="#">Link 4</a>
-	    </div>
-	</li> -->
 
 	<li class="droppdown" id = "landing_li">
     <a href="/relics" class="droppbtn">Relics</a>
 	    <div class="droppdown-content">
-	    	<a href="/relics/Lith">Lith</a>
-	    	<a href="/relics/Meso">Meso</a>
-	    	<a href="/relics/Neo">Neo</a>
-	    	<a href="/relics/Axi">Axi</a>
+	    	<a href="/relics/lith">Lith</a>
+	    	<a href="/relics/meso">Meso</a>
+	    	<a href="/relics/neo">Neo</a>
+	    	<a href="/relics/axi">Axi</a>
 	    </div>
 	</li>
 	<%if !logged_in? %>

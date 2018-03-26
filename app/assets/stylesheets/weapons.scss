@@ -72,12 +72,13 @@
     text-align: center;
 
     color: white;
+    border-right: 2px solid #111;
     background-color: #333;
     text-shadow: 2px 2px black;
-    border-right: 2px solid #111;
 }
 
-.weapons_table th:last-child {
+.weapons_table th:last-child
+{
     border-right: none;
 }
 
@@ -116,6 +117,7 @@
 
     text-align: center;
 
+    color: white;
     text-shadow: 2px 2px black;
 }
 
@@ -165,6 +167,8 @@
 
     cursor: pointer;
     text-align: center;
+
+    color: white;
 }
 
 #header-div

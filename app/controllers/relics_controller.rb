@@ -3,34 +3,26 @@ class RelicsController < ApplicationController
         render :relicView
     end
     def show
-        @relic = Relic.find_by(relic_type: params[:type])
-        i = 0
-        @relic.each do |w|
-            if i == params[:id].to_i - 1
-                @relic = w
-                break
-            end
-            i += 1
-        end
+        @relic = Relic.find_by(id: params[:id])
         if @relic == nil
               render "404"
         end
       end
 
       def lith
-        @relic = Relic.where(relic_type: "lith")
+        @lith = Relic.where(relic_type: "lith")
       end
 
       def meso
-        @relic = Relic.where(relic_type: "meso")
+        @meso = Relic.where(relic_type: "meso")
       end
 
       def neo
-        @relic = Relic.where(relic_type: "neo")
+        @neo = Relic.where(relic_type: "neo")
       end
 
       def axi
-        @relic = Relic.where(relic_type: "axi")
+        @axi = Relic.where(relic_type: "axi")
       end
 
       def new
@@ -44,7 +36,7 @@ class RelicsController < ApplicationController
       def create
         @relic = Relic.new(relic_params)
         @relic.relic_type = @relic.relic_type.downcase
-        @relic.name = @relic.name.capitalize
+        # @relic.name = @relic.name.capitalize
         if @relic.save
           flash[:success] = "You have successfully added a relic!"
           redirect_to current_link + 'relics/new'

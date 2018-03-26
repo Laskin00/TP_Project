@@ -4,26 +4,18 @@ class ModsController < ApplicationController
     end
 
     def show
-      @mod = Mod.where(mod_type: params[:type])
-      i = 0
-      @mod.each do |w|
-          if i == params[:id].to_i - 1
-              @mod = w
-              break
-          end
-          i += 1
-      end
+      @mod = Mod.find_by(id: params[:id])
       if @mod == nil
             render "404"
       end
     end
 
     def warframe
-      @mods = Mod.where(mod_type: "warframe")
+      @warframe = Mod.where(mod_type: "warframe")
     end
 
-    def weapons
-      @mods = Mod.where(mod_type: "weapon")
+    def weapon
+      @weapon = Mod.where(mod_type: "weapon")
     end
 
     def new
