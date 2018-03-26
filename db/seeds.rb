@@ -8,8 +8,8 @@
 User.create!(name: "Alex Laskin", email: "alex_l13@abv.bg", password: "efu311",
    password_confirmation: "efu311", image_url: "https://www.mobafire.com/images/champion/square/master-yi.png",
    permissions: 3, activated: true, activated_at: Time.zone.now)
-User.create!(name: "ImTheWizzy", email: "Martin_todo9@abv.bg", password: "123",
-      password_confirmation: "123", image_url: "https://www.mobafire.com/images/champion/square/master-yi.png",
+User.create!(name: "ImTheWizzy", email: "Martin_todo9@abv.bg", password: "123123",
+      password_confirmation: "123123", image_url: "https://www.mobafire.com/images/champion/square/master-yi.png",
       permissions: 3, activated: true, activated_at: Time.zone.now)
 99.times do |n|
   name = Faker::Name.name
