@@ -2,5 +2,6 @@
     <div id="header-div">
         <h1 onclick="location.href='/weapons/secondary/<%= secondary.id %>'" id="weapon-h1"> <%= secondary.name %> </h1>
         <img src="<%= secondary.image_url %>" id="weapon-img" alt="<% secondary.name %>">
+        <h1 id="weapon-mr"> MR <%= secondary.mastery_rank %> </h1>
     </div>
 <% end %>
