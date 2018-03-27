@@ -72,23 +72,37 @@
     background-color: #333;
 }
 
-#weapon-h1
+#mod-h1
 {
     display: inline-block;
 
     cursor: pointer;
     text-align: center;
+
+    color: white;
+}
+
+#mod-img
+{
+    margin-left: -10%;
+    margin-right: 2%;
+    width: 7%;
 }
 
 #header-div
 {
+    margin-top: 2%;
     display: block;
 
     text-align: center;
 }
 
-#mod-img
-{
-    margin-left: 2%;
-    width: 5%;
+#image-div {
+    // display: inline;
+    margin: auto;
+    width: 50%;
+}
+
+#mods-show {
+    text-align: center;
 }

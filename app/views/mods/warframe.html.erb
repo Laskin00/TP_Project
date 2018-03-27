@@ -1,6 +1,10 @@
 <% @warframe.each do |warframe| %>
     <div id="header-div">
-        <img src="<%= warframe.image_url %>" id="mod-img" alt="<% warframe.name %>">
-        <h1 onclick="location.href='/mods/warframe/<%= warframe.id %>'" id="weapon-h1"> <%= warframe.name %> </h1>
+        <table class="mods_table" align="center">
+            <tr id="mods-show">
+                <img src="<%= warframe.image_url %>" id="mod-img" alt="<% warframe.name %>">
+                <h1 onclick="location.href='/mods/warframe/<%= warframe.id %>'" id="mod-h1"> <%= warframe.name %> </h1>
+            </tr>
+        </table>
     </div>
 <% end %>

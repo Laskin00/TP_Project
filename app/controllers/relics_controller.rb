@@ -35,7 +35,20 @@ class RelicsController < ApplicationController
 
       def create
         @relic = Relic.new(relic_params)
-        @relic.relic_type = @relic.relic_type.downcase
+        @relic.relic_type = @relic.name.downcase
+        @relic.name = @relic.relic_type.split(' ').first.capitalize + " " + @relic.relic_type.split(' ').second.capitalize
+        @relic.relic_type = @relic.relic_type.split(' ').first
+
+        relic_type = @relic.relic_type
+        if relic_type == "lith"
+            @relic.image_url = "https://image.ibb.co/eBhqXx/lith_wf_wiki.png"
+        elsif relic_type == "meso"
+            @relic.image_url = "https://image.ibb.co/msFusx/meso_wf_wiki.png"
+        elsif relic_type == "neo"
+            @relic.image_url = "https://image.ibb.co/gNQ5zc/neo_wf_wiki.png"
+        elsif relic_type == "axi"
+            @relic.image_url = "https://image.ibb.co/gb4b5H/axi_wf_wiki.png"
+        end
         # @relic.name = @relic.name.capitalize
         if @relic.save
           flash[:success] = "You have successfully added a relic!"
