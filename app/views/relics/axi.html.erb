@@ -1,5 +1,6 @@
 <% @axi.each do |axi| %>
     <div id="header-div">
         <h1 onclick="location.href='/relics/axi/<%= axi.id %>'" id="relics-h1"> <%= axi.name %> </h1>
+        <img src="<%= axi.image_url %>" id="relic-img" alt="<% axi.name %>">
     </div>
 <% end %>
