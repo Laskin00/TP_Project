@@ -34,6 +34,7 @@ class WeaponsController < ApplicationController
       @weapon = Weapon.new(weapon_params)
       @weapon.weapon_type = @weapon.weapon_type.downcase
       @weapon.name = @weapon.name.capitalize
+      @weapon.attack_type = @weapon.attack_type.capitalize
       if @weapon.save
         flash[:success] = "You have successfully added a weapon!"
         # redirect_to current_link + 'weapons/' + @weapon.name ##da se razkomentira Todo kato napravi weapon vu

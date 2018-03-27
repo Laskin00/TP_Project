@@ -1,5 +1,6 @@
 <% @meso.each do |meso| %>
     <div id="header-div">
         <h1 onclick="location.href='/relics/meso/<%= meso.id %>'" id="relics-h1"> <%= meso.name %> </h1>
+        <img src="<%= meso.image_url %>" id="relic-img" alt="<% meso.name %>">
     </div>
 <% end %>
