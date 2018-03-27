@@ -1,6 +1,6 @@
 <% @weapon.each do |weapon| %>
     <div id="header-div">
-        <h1 onclick="location.href='/mods/weapon/<%= weapon.id %>'" id="weapon-h1"> <%= weapon.name %> </h1>
         <img src="<%= weapon.image_url %>" id="mod-img" alt="<% weapon.name %>">
+        <h1 onclick="location.href='/mods/weapon/<%= weapon.id %>'" id="weapon-h1"> <%= weapon.name %> </h1>
     </div>
 <% end %>

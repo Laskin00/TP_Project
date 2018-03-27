@@ -1,6 +1,6 @@
 <% @lith.each do |lith| %>
     <div id="header-div">
-        <h1 onclick="location.href='/relics/lith/<%= lith.id %>'" id="relics-h1"> <%= lith.name %> </h1>
         <img src="<%= lith.image_url %>" id="relic-img" alt="<% lith.name %>">
+        <h1 onclick="location.href='/relics/lith/<%= lith.id %>'" id="relics-h1"> <%= lith.name %> </h1>
     </div>
 <% end %>
