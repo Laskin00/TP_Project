@@ -1,5 +1,6 @@
 <% @melee.each do |melee| %>
     <div id="header-div">
         <h1 onclick="location.href='/weapons/melee/<%= melee.id %>'" id="weapon-h1"> <%= melee.name %> </h1>
+        <img src="<%= melee.image_url %>" id="weapon-img" alt="<% melee.name %>">
     </div>
 <% end %>
