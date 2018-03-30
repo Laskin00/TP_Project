@@ -246,8 +246,16 @@
     display: inline;
 
     max-width: 40%;
-    margin-left: 1%;
+    margin-left: 2%;
 
     color: white;
     text-shadow: 1px 1px black;
+}
+
+#seperator {
+    border-color: #333;
+    border-width: 3px;
+    padding-right: 50.7%;
+    width: 20%;
+    margin-top: -2.1%;
 }

@@ -1,17 +1,22 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-ul {
-    list-style-type: none;
+ul
+{
+    overflow: hidden;
+    /*position: fixed;*/
+
+    width: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+
+    list-style-type: none;
+
     background-color: #333;
-    /*position: fixed;*/
-    width: 100%;
 }
 
-#profile-picture {
+#profile-picture
+{
     display: inline;
     // margin-right: 5px;
 }
@@ -20,47 +25,65 @@ ul {
     float: left;
 }*/
 
-.droppbtn {
-    /* margin-right: 5%; */
-    list-style-type: none;
+.droppbtn
+{
     display: inline-block;
+    /* margin-right: 5%; */
+
+    list-style-type: none;
+
     text-shadow: 1px 1px black;
 }
 
-li a {
+li a
+{
     display: block;
-    color: white;
-    text-align: center;
+
     padding: 5px 25px;
+
+    text-align: center;
     text-decoration: none;
+
+    color: white;
 }
-#sign{
-  float:right;
-  margin-right: 3%;
+#sign
+{
+    float: right;
+
+    margin-right: 3%;
 }
 /*navbar */
-.logoo {
-    float: left;
-    margin-top: 0.5%;
-    margin-left: 10px;
-    text-align: center;
-    padding: 0 5px;
-    font-size: 20px;
-    text-shadow: 2px 2px black;
+.logoo
+{
     /*padding: 15px 20px;*/
-    font-family: "Lato";
+    font-family: 'Lato';
+    font-size: 20px;
+
+    float: left;
+
+    margin-top: .5%;
+    margin-left: 10px;
+    padding: 0 5px;
+
+    text-align: center;
+
     color: #e0e0e0;
+    text-shadow: 2px 2px black;
 }
 
-.logoo:hover {
+.logoo:hover
+{
     background-color: #111;
 }
 
-#landing-page-paragraph_ {
-    color: white;
-    text-align: center;
-    text-shadow: 1px 1px black;
+#landing-page-paragraph_
+{
     font-size: 17px;
+
+    text-align: center;
+
+    color: white;
+    text-shadow: 1px 1px black;
 }
 
 /*
@@ -75,66 +98,88 @@ span {
     display:block;
 }*/
 
-#landing_li {
-    font-family: "Lato";
+#landing_li
+{
+    font-family: 'Lato';
 }
 
 /* Change the link color to #111 (black) on hover */
-#landing_li a:hover {
-    background-color: #111;
-    color: white;
+#landing_li a:hover
+{
     text-decoration: none;
+
+    color: white;
+    background-color: #111;
 }
 
-.navv{
-    text-align:center;
+.navv
+{
+    text-align: center;
 }
-.navv li{
-    display:inline;
+.navv li
+{
+    display: inline;
 }
-.navv a{
-    display:inline-block;
-}
-
-li.droppdown {
-    font-size: 13pt;
-    padding: 9px 0;
+.navv a
+{
     display: inline-block;
 }
 
-.droppdown-content {
-    display: none;
+li.droppdown
+{
+    font-size: 13pt;
+
+    display: inline-block;
+
+    padding: 9px 0;
+}
+
+.droppdown-content
+{
     position: absolute;
-    background-color: #e0e0e0;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    max-height:500px;/* you can change as you need it */
-    overflow:auto;
+
+    display: none;
+    overflow: auto;
+
+    min-width: 160px;
+    max-height: 500px;/* you can change as you need it */
+
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
 }
 
-.droppdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
+.droppdown-content a
+{
     display: block;
+
+    padding: 12px 16px;
+
     text-align: left;
+    text-decoration: none;
+
+    color: black;
 }
 
-.droppdown-content a:hover {
+.droppdown-content a:hover
+{
     background-color: #bdbdbd;
 }
 
-.droppdown:hover .droppdown-content {
+.droppdown:hover .droppdown-content
+{
     display: block;
 }
 
-.fadein {
-    margin: 5% auto;
+.fadein
+{
     position: relative;
+
     width: 640px;
     height: 360px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin: 5% auto;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 }
 
 /* #slideshow {
@@ -156,45 +201,57 @@ li.droppdown {
     top: 0;
     box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
 } */
-#current_user_navbar:hover{
-  background-color: #111;
+#current_user_navbar:hover
+{
+    background-color: #111;
 }
-#current_user_navbar{
-  text-decoration: none;
-  color:white;
+#current_user_navbar
+{
+    text-decoration: none;
+
+    color: white;
 }
-.fadein img {
-    display: block;
+.fadein img
+{
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
+    top: 0;
+    left: 0;
+
+    display: block;
+
     width: 640px;
     height: 360px;
-    left: 0;
-    top: 0;
-    box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
+    margin-right: auto;
+    margin-left: auto;
+
+    box-shadow: 0 0 200px rgba(0, 0, 0, .9) inset;
 }
 
-#landing-page-header_ {
-    color: white;
+#landing-page-header_
+{
     text-align: center;
+
+    color: white;
     text-shadow: 3px 2px black;
 }
 
 /* Index.html.erb of User */
-#all_users_li {
+#all_users_li
+{
     /* float: left; */
     font-size: 15px;
+
     margin: auto;
     /* display: inline-block; */
 }
 
-#user_image_all {
+#user_image_all
+{
+    width: 50%;
+    margin-right: auto;
     /* display: inline; */
     /* float: left; */
     margin-left: auto;
-    margin-right: auto;
-    width: 50%;
 }
 
 /* #user_image_ {
@@ -211,15 +268,18 @@ li.droppdown {
     float: left;
 } */
 
-#users_ul {
+#users_ul
+{
     width: 50%;
-    text-align: center;
     margin: auto;
+
+    text-align: center;
     /* float: left; */
 }
 
-#paginate{
-  text-align: center;
+#paginate
+{
+    text-align: center;
 }
 
 .pagination > .active > a,
@@ -227,115 +287,136 @@ li.droppdown {
 .pagination > .active > a:hover,
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
-.pagination > .active > span:focus {
-  background-color:#333;
-  border-color:#111;
-  color:white;
-  cursor:pointer;
-  z-index:2;
+.pagination > .active > span:focus
+{
+    z-index: 2;
+
+    cursor: pointer;
+
+    color: white;
+    border-color: #111;
+    background-color: #333;
 }
 
 .pagination > li > a,
-.pagination > li > span {
-    position: relative;
-    float: left;
-    padding: 6px 12px;
+.pagination > li > span
+{
     line-height: 1.428571429;
-    text-decoration: none;
-    color: black;
-    background-color: white;
-    border: 1px solid #ddd;
+
+    position: relative;
+
+    float: left;
+
     margin-left: -1px;
+    padding: 6px 12px;
+
+    text-decoration: none;
+
+    color: black;
+    border: 1px solid #ddd;
+    background-color: white;
 }
 
-#index_table{
-  alignment:center;
-  width: 70%;
+#index_table
+{
+    width: 70%;
+
+    alignment: center;
 }
 
-#index_th{
-  text-align: left;
-  text-decoration: none;
-  color: white;
-  border-bottom: 1px solid white;
-  padding-top: 2%;
+#index_th
+{
+    padding-top: 2%;
+
+    text-align: left;
+    text-decoration: none;
+
+    color: white;
+    border-bottom: 1px solid white;
 }
-#index_th a:hover{
-  text-decoration: none;
-  color: white;
-  text-align:center;
-  background-color: #555;
+#index_th a:hover
+{
+    text-align: center;
+    text-decoration: none;
+
+    color: white;
+    background-color: #555;
 }
 /*Show.html.erb of User */
 
-#user_show aside{
-  section.user_info{
-    margin-top: 20px;
-  }
-  section {
-    padding: 10px 0;
-    margin-top: 20px;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
+#user_show aside
+{
+    section.user_info
+    {
+        margin-top: 20px;
     }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
+    section
+    {
+        margin-top: 20px;
+        padding: 10px 0;
+        &:first-child
+        {
+            padding-top: 0;
+
+            border: 0;
+        }
+        span
+        {
+            line-height: 1;
+
+            display: block;
+
+            margin-bottom: 3px;
+        }
+        h1
+        {
+            font-size: 1.4em;
+
+            margin-top: 0;
+            margin-bottom: 3px;
+
+            text-align: left;
+            letter-spacing: -1px;
+
+            color: white;
+        }
     }
-    h1{
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-      color: white;
-    }
-  }
 }
-#profile_name{
-  color:white;
-  alignment:center;
-  text-align: center;
-}
-#show_table{
-  width: 100%;
-}
-#show_th{
-  text-align: center;
-  padding-right: 0;
-  text-decoration: none;
-  color: white;
-  padding-top: 5%;
-}
-#show_th a:hover{
-  text-decoration: none;
-  color: white;
-  background-color: #555;
-}
+#profile_name
+{
+    text-align: center;
 
-
-/* .landing-page-div_ {
-    position: relative;
-    display: inline-block;
-    margin-left: 1.5%;
-    margin-bottom: 1.5%;
-}
-
-.landing-page-span_ {
     color: white;
-    margin-bottom: 5px;
+
+    alignment: center;
+}
+#show_table
+{
+    width: 100%;
+}
+#show_th
+{
+    padding-top: 5%;
+    padding-right: 0;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: white;
+}
+#show_th a:hover
+{
+    text-decoration: none;
+
+    color: white;
+    background-color: #555;
 }
 
-.landing-page-names-span_ {
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    margin-bottom: 2%;
-    margin-left: 5%;
-    font-size: 20px;
-    background: rgba(0,0,0,0.6);
-    padding: 0px 2px;
-    line-height: 15px;
-} */
+#eidolon-clock
+{
+    position: fixed;
+    width: 20%;
+    height: 50%;
+
+    background-color: #333;
+}
