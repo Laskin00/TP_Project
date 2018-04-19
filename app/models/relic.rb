@@ -1,4 +1,4 @@
 class Relic < ApplicationRecord
-  validates :name, presence: true, length: {maximum: 50}
-  validates :whereToGet, presence: true, length: {minimum: 5}
+  has_many :relic_primepart_connections
+  has_many :primeparts, through: :relic_primepart_connections
 end

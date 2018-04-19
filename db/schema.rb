@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180320143230) do
+ActiveRecord::Schema.define(version: 20180419070141) do
 
   create_table "mods", force: :cascade do |t|
     t.string "name"
@@ -20,6 +20,22 @@ ActiveRecord::Schema.define(version: 20180320143230) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "mod_type"
+    t.index ["name"], name: "index_mods_on_name", unique: true
+  end
+
+  create_table "primeparts", force: :cascade do |t|
+    t.string "name"
+    t.integer "rarity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_primeparts_on_name", unique: true
+  end
+
+  create_table "relic_primepart_connections", force: :cascade do |t|
+    t.integer "relic_id"
+    t.integer "primepart_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "relics", force: :cascade do |t|
@@ -27,9 +43,10 @@ ActiveRecord::Schema.define(version: 20180320143230) do
     t.string "image_url"
     t.string "whereToGet"
     t.string "dropChance"
+    t.string "relic_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "relic_type"
+    t.index ["name"], name: "index_relics_on_name", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -63,6 +80,7 @@ ActiveRecord::Schema.define(version: 20180320143230) do
     t.string "health"
     t.string "energy"
     t.string "description"
+    t.index ["name"], name: "index_warframes_on_name", unique: true
   end
 
   create_table "weapons", force: :cascade do |t|
@@ -88,6 +106,7 @@ ActiveRecord::Schema.define(version: 20180320143230) do
     t.string "magnetic"
     t.string "radiation"
     t.string "viral"
+    t.index ["name"], name: "index_weapons_on_name", unique: true
   end
 
 end
