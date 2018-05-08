@@ -1,13 +1,14 @@
 class SearchController < ApplicationController
   def search
     @name = params[:q]
-    @item = nil
+
 
     Warframe.all.each do |w|
       if @name == w.name
         @warframe = w
         render 'warframes/show'
-        @item = w
+        flash[:success]
+        return
       end
     end
 
@@ -15,7 +16,8 @@ class SearchController < ApplicationController
       if @name == w.name
         @weapon = w
         render 'weapons/show'
-        @item = w
+        flash[:success]
+        return
       end
     end
 
@@ -23,7 +25,8 @@ class SearchController < ApplicationController
       if @name == m.name
         @mod = m
         render 'mods/show'
-        @item = m
+        flash[:success]
+        return
       end
     end
 
@@ -31,29 +34,29 @@ class SearchController < ApplicationController
       if @name == r.name
         @relic = r
         render 'relics/show'
-        @item = r
+        flash[:success]
+        return
       end
     end
 
     User.all.each do |u|
-      if logged_in?
         if @name == u.name.split(' ').first
-          @user = u
-          render 'users/show'
-          @item = u
+          if logged_in?
+            @user = u
+            render 'users/show'
+            flash[:success]
+            return
+          else
+          flash[:danger] = "You cannot see other users profiles while not logged in !"
+          render 'users/landingPage'
+          return
         end
-      else
-        @item = u
-        flash[:danger] = "You cannot see other users profiles while not logged in !"
-        render 'users/landingPage'
-        return 
       end
     end
 
-    if @item == nil
-      flash[:danger] = "There is no item or user with such name."
-      render 'users/landingPage'
-    end
+    flash[:danger] = "There is no item or user with such name."
+    render 'users/landingPage'
+
 
   end
 end
