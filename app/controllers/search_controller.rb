@@ -36,10 +36,17 @@ class SearchController < ApplicationController
     end
 
     User.all.each do |u|
-      if @name == u.name.split(' ').first
-        @user = u
-        render 'users/show'
+      if logged_in?
+        if @name == u.name.split(' ').first
+          @user = u
+          render 'users/show'
+          @item = u
+        end
+      else
         @item = u
+        flash[:danger] = "You cannot see other users profiles while not logged in !"
+        render 'users/landingPage'
+        return 
       end
     end
 
