@@ -4,7 +4,7 @@ class SearchController < ApplicationController
 
 
     Warframe.all.each do |w|
-      if @name == w.name
+      if @name.downcase == w.name.downcase
         @warframe = w
         render 'warframes/show'
         flash[:success]
@@ -13,7 +13,7 @@ class SearchController < ApplicationController
     end
 
     Weapon.all.each do |w|
-      if @name == w.name
+      if @name.downcase == w.name.downcase
         @weapon = w
         render 'weapons/show'
         flash[:success]
@@ -22,7 +22,7 @@ class SearchController < ApplicationController
     end
 
     Mod.all.each do |m|
-      if @name == m.name
+      if @name.downcase == m.name.downcase
         @mod = m
         render 'mods/show'
         flash[:success]
@@ -31,7 +31,7 @@ class SearchController < ApplicationController
     end
 
     Relic.all.each do |r|
-      if @name == r.name
+      if @name.downcase == r.name.downcase
         @relic = r
         render 'relics/show'
         flash[:success]
@@ -40,7 +40,7 @@ class SearchController < ApplicationController
     end
 
     User.all.each do |u|
-        if @name == u.name.split(' ').first
+        if @name.downcase == u.name.split(' ').first
           if logged_in?
             @user = u
             render 'users/show'
