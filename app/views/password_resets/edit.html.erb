@@ -1,5 +1,5 @@
 <% provide(:title, 'Reset password') %>
-<h1>Reset password</h1>
+<h1 class = "white">Reset password</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -13,8 +13,9 @@
 
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-      <%= f.submit "Update password", class: "btn btn-primary" %>
+      <div id = "button">
+        <%= f.submit "Update password", class: "btn btn-primary" %>
+      </div>
     <% end %>
   </div>
 </div>
