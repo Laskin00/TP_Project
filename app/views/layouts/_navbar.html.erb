@@ -37,12 +37,14 @@
 	    	<a href="/relics/axi">Axi</a>
 	    </div>
 	</li>
+
 	<li class = "droppdown search_bar" id = "landing_li">
-		<%= form_tag("/search", method: "get") do %>
-		  <%= text_field_tag(:q) %>
-		  <!-- <%= submit_tag("Search") %> -->
+		<%= form_tag("/search", method: "get", :class => "search_form") do %>
+			<%= text_field_tag(:q) %>
+			<!-- <%= submit_tag("Search") %> -->
 		<% end %>
 	</li>
+
 	<%if !logged_in? %>
 		<li class="droppdown" id = "sign">
 			<a href="javascript:void(0)" class="droppbtn" id = "current_user_navbar">Account</a>

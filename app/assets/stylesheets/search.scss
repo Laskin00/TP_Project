@@ -3,9 +3,25 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .search_bar {
-    width: 10%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    width: 3%;
+    margin-bottom: -5%;
+    margin-top: 0.2%;
+    text-align: left;
+    margin-left: 70%;
 }
 
-li:nth-child(2) {
-    margin-left: 6%;
+.search_bar:hover {
+    width: 12%;
+}
+
+.search_form {
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
 }
