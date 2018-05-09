@@ -382,6 +382,7 @@ li.droppdown
         }
     }
 }
+
 #profile_name
 {
     text-align: center;
@@ -390,6 +391,12 @@ li.droppdown
 
     alignment: center;
 }
+
+#profile_picture
+{
+    margin-bottom: 5%;
+}
+
 #show_table
 {
     width: 100%;
@@ -415,8 +422,43 @@ li.droppdown
 #eidolon-clock
 {
     position: fixed;
+
     width: 20%;
     height: 50%;
 
     background-color: #333;
+}
+
+.upgrade_button {
+    display: inline-block;
+    margin-left: 7%;
+    margin-top: 1%;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.5s;
+    cursor: pointer;
+    // margin-left: 7.5%;
+    // margin-top: 1%;
+}
+
+.button1 {
+    background-color: #333;
+    color: white;
+    border: none;
+}
+
+.button1:hover {
+    text-decoration: none;
+    background-color: #444;
+    color: white;
 }

@@ -5,8 +5,10 @@
       <section class = "user_info">
         <h1>
           <div id = "profile_name">
-            <%= image_tag(@user.image_url, width: "40%") %>
-            <br>
+              <div id="profile_picture">
+                  <%= image_tag(@user.image_url, width: "40%") %>
+                  <br>
+              </div>
             <%= @user.name %>
           </div>
 
@@ -29,3 +31,26 @@
     </aside>
   </div>
 </div>
+
+<!-- <div class="upgrade_button">
+    <a href="/upgrade" class="button button1">Upgrade to premium</a>
+</div> -->
+
+<!-- <div class="upgrade_button">
+    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="6UFFDWE75M494">
+        <input type="submit" value="Upgrade to premium" alt="PayPal - The safer, easier way to pay online!" class="button button1">
+        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+</div> -->
+<% if current_user.permissions < 1 %>
+    <div class="upgrade_button">
+        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="6UFFDWE75M494">
+            <input type="submit" value="Upgrade to premium" alt="PayPal - The safer, easier way to pay online!" class="button button1">
+            <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+    </div>
+<%end%>
