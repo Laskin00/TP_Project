@@ -105,9 +105,9 @@ class UsersController < ApplicationController
         render :landingPage
     end
 
-  def favorites
-
-  end
+    def Premium
+        render :premium
+    end
 
   private
 
