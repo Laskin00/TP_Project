@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: Axi A3
   image_url: MyString
   whereToGet: MyString
   dropChance: MyString
 
 two:
-  name: MyString
+  name: Axi A2
   image_url: MyString
   whereToGet: MyString
   dropChance: MyString

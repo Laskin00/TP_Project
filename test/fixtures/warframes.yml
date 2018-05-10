@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: MyString1
   image_url: MyString
   whereToGet: MyString
   neuropticsDropChance:
@@ -10,7 +10,7 @@ one:
   blueprintDropChance:
 
 two:
-  name: MyString
+  name: MyString2
   image_url: MyString
   whereToGet: MyString
   neuropticsDropChance:
