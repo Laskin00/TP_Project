@@ -105,6 +105,10 @@ class UsersController < ApplicationController
         render :landingPage
     end
 
+    def Premium
+        render :premium
+    end
+
   private
 
     def user_params

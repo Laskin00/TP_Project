@@ -74,6 +74,9 @@
 						<%if current_user.permissions == 3 %>
 							<%= link_to "Admin panel", "/admin" %>
 						<%end%>
+						<%if current_user.permissions < 1 %>
+							<%= link_to "Get Premium", "/premium" %>
+						<%end%>
 				</div>
 			</div>
 		</li>

@@ -452,6 +452,7 @@ li.droppdown
 }
 
 .button1 {
+    text-align: center;
     background-color: #333;
     color: white;
     border: none;
@@ -461,4 +462,15 @@ li.droppdown
     text-decoration: none;
     background-color: #444;
     color: white;
+}
+
+h2, h3, h4, h5, h6 {
+    color: white;
+    text-align: center;
+}
+
+.premium_page {
+    margin:0 auto;
+    display: block;
+    width: 17%;
 }

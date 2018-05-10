@@ -17,8 +17,10 @@ Rails.application.routes.draw do
   post '/users/demote/:id', to: 'users#demote'
 
   get '/success', to: 'users#upgrade'
+  
+  get '/premium', to: 'users#premium'
 
-  # get '/admin', to: 'admin#new'
+  get '/admin', to: 'admin#new'
   get '/search', to: 'search#search'
   get '/weapons/melee', to: 'weapons#melee'
   get '/weapons/:type/:id', to: 'weapons#show'
