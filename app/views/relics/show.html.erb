@@ -4,3 +4,15 @@
         <img id="relics-view-image_" src= <%= @relic.image_url %>  alt=<%= @relic.name %> title=<%= @relic.name %> >
     </div>
 </div>
+
+<%= form_for(:user, url: current_link + "relics/" + @relic.relic_type.to_s + "/" + @relic.id.to_s) do |f| %>
+  <% if FavoriteRelic.where(user_id: current_user, relic_id: @relic.id).exists? %>
+    <div class = 'favorites_button'>
+      <%= f.submit "Remove relic from favorites", class: "btn btn-secoundary" %>
+    </div>
+  <%else%>
+    <div class = 'favorites_button'>
+      <%= f.submit "Add relic to favorites", class: "btn btn-secoundary" %>
+    </div>
+  <% end %>
+<% end %>

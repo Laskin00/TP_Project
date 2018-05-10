@@ -67,6 +67,7 @@
 							<%= link_to "Profile", current_user %>
 							<%= link_to "Log out", logout_path, method: :delete %>
 							<%= link_to "Update Profile", '/users/' + current_user.id.to_s + '/edit' %>
+							<%= link_to "Favorites", '/favorites' %>
 							<%= link_to "All Users", users_path %>
 						<%if current_user.permissions == 2  || current_user.permissions == 3%>
 							<%= link_to "Moderator panel", "/moderator" %>

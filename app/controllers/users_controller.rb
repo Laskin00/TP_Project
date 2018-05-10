@@ -105,6 +105,10 @@ class UsersController < ApplicationController
         render :landingPage
     end
 
+  def favorites
+
+  end
+
   private
 
     def user_params

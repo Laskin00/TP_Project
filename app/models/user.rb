@@ -1,4 +1,13 @@
 class User < ApplicationRecord
+  has_many :favorite_mods
+  has_many :mods, through: :favorite_mods
+  has_many :favorite_weapons
+  has_many :weapons, through: :favorite_weapons
+  has_many :favorite_relics
+  has_many :relics, through: :favorite_relics
+  has_many :favorite_warframes
+  has_many :warframes, through: :favorite_warframes
+
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save   :downcase_email
   before_create :create_activation_digest

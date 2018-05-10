@@ -30,6 +30,18 @@ class WeaponsController < ApplicationController
       @melee = Weapon.where(weapon_type: "melee")
     end
 
+
+    def addFavorite
+      if FavoriteWeapon.where(user_id: current_user, weapon_id: params[:id]).exists?
+          FavoriteWeapon.where(user_id: current_user.id, weapon_id: params[:id]).destroy(1)
+      else
+          FavoriteWeapon.create(user_id: current_user.id, weapon_id: params[:id])
+      end
+
+      @weapon = Weapon.find(params[:id])
+      render 'show'
+    end
+
     def create
       @weapon = Weapon.new(weapon_params)
       @weapon.weapon_type = @weapon.weapon_type.downcase
@@ -74,7 +86,7 @@ private
 
     def current_link
         if Rails.env.production?
-          return "https://warframe-loot-wiki.herokuapp.com/"
+          return "https://Weapon-loot-wiki.herokuapp.com/"
         else
           return "http://localhost:3000/"
         end

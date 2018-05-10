@@ -33,6 +33,17 @@ class RelicsController < ApplicationController
         end
       end
 
+      def addFavorite
+        if FavoriteRelic.where(user_id: current_user, relic_id: params[:id]).exists?
+            FavoriteRelic.where(user_id: current_user.id, relic_id: params[:id]).destroy(1)
+        else
+            FavoriteRelic.create(user_id: current_user.id, relic_id: params[:id])
+        end
+
+        @relic = Relic.find(params[:id])
+        render 'show'
+      end
+
       def create
         @relic = Relic.new(relic_params)
         @relic.relic_type = @relic.name.downcase

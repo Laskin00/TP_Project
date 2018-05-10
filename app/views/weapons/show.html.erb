@@ -17,3 +17,15 @@
         </div>
     </div>
 </div>
+
+<%= form_for(:user, url: current_link + "weapons/" + @weapon.weapon_type.to_s + "/" + @weapon.id.to_s) do |f| %>
+  <% if FavoriteWeapon.where(user_id: current_user, weapon_id: @weapon.id).exists? %>
+    <div class = 'favorites_button'>
+      <%= f.submit "Remove weapon from favorites", class: "btn btn-secoundary" %>
+    </div>
+  <%else%>
+    <div class = 'favorites_button'>
+      <%= f.submit "Add weapon to favorites", class: "btn btn-secoundary" %>
+    </div>
+  <% end %>
+<% end %>

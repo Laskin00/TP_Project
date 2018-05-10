@@ -32,6 +32,17 @@ class WarframesController < ApplicationController
       @warframe = Warframe.find(params[:id])
     end
 
+    def addFavorite
+      if FavoriteWarframe.where(user_id: current_user, warframe_id: params[:id]).exists?
+          FavoriteWarframe.where(user_id: current_user.id, warframe_id: params[:id]).destroy(1)
+      else
+          FavoriteWarframe.create(user_id: current_user.id, warframe_id: params[:id])
+      end
+
+      @warframe = Warframe.find(params[:id])
+      render 'show'
+    end
+
     def update
       @warframe = Warframe.find(params[:id])
       if @warframe.update_attributes(warframe_params)

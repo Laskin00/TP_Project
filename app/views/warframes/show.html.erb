@@ -20,3 +20,15 @@
         <%= @warframe.description %>
     </p>
 </div>
+
+<%= form_for(:user, url: current_link + "warframes/" +  @warframe.id.to_s) do |f| %>
+  <% if FavoriteWarframe.where(user_id: current_user, warframe_id: @warframe.id).exists? %>
+    <div class = 'favorites_button'>
+      <%= f.submit "Remove warframe from favorites", class: "btn btn-secoundary" %>
+    </div>
+  <%else%>
+    <div class = 'favorites_button'>
+      <%= f.submit "Add warframe to favorites", class: "btn btn-secoundary" %>
+    </div>
+  <% end %>
+<% end %>

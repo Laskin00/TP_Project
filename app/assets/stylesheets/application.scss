@@ -7,6 +7,11 @@
   color:white;
 }
 
+.center_white{
+  color:white;
+  text-align: center;
+}
+
 body {
     background-color: #1e1e1e;
     font-family: "Lato";
@@ -26,10 +31,17 @@ a{
 }
 
 #current_user_navbar{
-  text-align: left;;
+  text-align: left;
 }
 .no_line li a:hover{
   text-decoration: none;
   color: white;
   background-color: #111;
+}
+.favorites_button{
+  width: 20%;
+  height: 20%;
+  text-align: center;
+  margin-left: 40%;
+  margin-right: 20%;
 }

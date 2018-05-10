@@ -10,7 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180508071705) do
+ActiveRecord::Schema.define(version: 20180510083838) do
+
+  create_table "favorite_mods", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "mod_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "favorite_relics", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "relic_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "favorite_warframes", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "warframe_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "favorite_weapons", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "weapon_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "mods", force: :cascade do |t|
     t.string "name"

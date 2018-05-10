@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   post '/users/demote/:id', to: 'users#demote'
 
   get '/success', to: 'users#upgrade'
-
+  get '/favorites', to: 'favorites#index'
   # get '/admin', to: 'admin#new'
   get '/search', to: 'search#search'
   get '/weapons/melee', to: 'weapons#melee'
@@ -25,11 +25,13 @@ Rails.application.routes.draw do
   get '/weapons/primary', to: 'weapons#primary'
   get '/weapons/secondary', to: 'weapons#secondary'
   post '/weapons/new', to: 'weapons#create'
+  post '/weapons/:type/:id', to: 'weapons#addFavorite'
 
   get '/mods/weapon', to: 'mods#weapon'
   get '/mods/:type/:id', to: 'mods#show'
   get '/mods/warframe', to: 'mods#warframe'
   post '/mods/new', to: 'mods#create'
+  post '/mods/:type/:id', to: 'mods#addFavorite'
 
   get '/relics/neo', to: 'relics#neo'
   get '/relics/axi', to: 'relics#axi'
@@ -37,10 +39,12 @@ Rails.application.routes.draw do
   get '/relics/meso', to: 'relics#meso'
   get '/relics/:type/:id', to: 'relics#show'
   post '/relics/new', to: 'relics#create'
+  post '/relics/:type/:id', to: 'relics#addFavorite'
 
   get '/moderator', to: 'moderator#new'
 
   post '/warframes/new', to: 'warframes#create'
+  post '/warframes/:id', to: 'warframes#addFavorite'
 
   resources :users
   resources :warframes

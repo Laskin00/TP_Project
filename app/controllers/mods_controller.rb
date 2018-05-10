@@ -60,6 +60,17 @@ class ModsController < ApplicationController
       render current_link + '/mods'
     end
 
+    def addFavorite
+      if FavoriteMod.where(user_id: current_user, mod_id: params[:id]).exists?
+          FavoriteMod.where(user_id: current_user.id, mod_id: params[:id]).destroy(1)
+      else
+          FavoriteMod.create(user_id: current_user.id, mod_id: params[:id])
+      end
+
+      @mod = Mod.find(params[:id])
+      render 'show'
+    end
+
 
 private
     def mod_params
