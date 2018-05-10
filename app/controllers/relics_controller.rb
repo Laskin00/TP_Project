@@ -35,7 +35,8 @@ class RelicsController < ApplicationController
 
       def addFavorite
         if FavoriteRelic.where(user_id: current_user, relic_id: params[:id]).exists?
-            FavoriteRelic.where(user_id: current_user.id, relic_id: params[:id]).destroy(1)
+            relic = FavoriteRelic.find_by(user_id: current_user.id, relic_id: params[:id])
+            FavoriteRelic.destroy(relic.id)
         else
             FavoriteRelic.create(user_id: current_user.id, relic_id: params[:id])
         end

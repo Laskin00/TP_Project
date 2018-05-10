@@ -62,7 +62,8 @@ class ModsController < ApplicationController
 
     def addFavorite
       if FavoriteMod.where(user_id: current_user, mod_id: params[:id]).exists?
-          FavoriteMod.where(user_id: current_user.id, mod_id: params[:id]).destroy(1)
+          mod = FavoriteMod.find_by(user_id: current_user.id, mod_id: params[:id])
+          FavoriteMod.destroy(mod.id)
       else
           FavoriteMod.create(user_id: current_user.id, mod_id: params[:id])
       end

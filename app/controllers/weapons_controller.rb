@@ -33,7 +33,8 @@ class WeaponsController < ApplicationController
 
     def addFavorite
       if FavoriteWeapon.where(user_id: current_user, weapon_id: params[:id]).exists?
-          FavoriteWeapon.where(user_id: current_user.id, weapon_id: params[:id]).destroy(1)
+          weapon = FavoriteWeapon.find_by(user_id: current_user.id, weapon_id: params[:id])
+          FavoriteWeapon.destroy(weapon.id)
       else
           FavoriteWeapon.create(user_id: current_user.id, weapon_id: params[:id])
       end

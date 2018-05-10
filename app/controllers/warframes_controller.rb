@@ -34,7 +34,8 @@ class WarframesController < ApplicationController
 
     def addFavorite
       if FavoriteWarframe.where(user_id: current_user, warframe_id: params[:id]).exists?
-          FavoriteWarframe.where(user_id: current_user.id, warframe_id: params[:id]).destroy(1)
+          warframe = FavoriteWarframe.find_by(user_id: current_user.id, warframe_id: params[:id])
+          FavoriteWarframe.destroy(warframe.id)
       else
           FavoriteWarframe.create(user_id: current_user.id, warframe_id: params[:id])
       end
