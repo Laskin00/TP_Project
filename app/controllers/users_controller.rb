@@ -93,6 +93,18 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+    def upgrade
+        user = User.find(current_user.id)
+        if user.permissions == 0
+            user.permissions = 1
+            user.save
+            flash[:success] = "Congratulations! You are now Premium"
+        else
+            flash[:danger] = "Oops, " + user.name + " is already Premium."
+        end
+        render :landingPage
+    end
+
   private
 
     def user_params

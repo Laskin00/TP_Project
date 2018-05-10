@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   post '/users/:id', to: 'users#promote'
   post '/users/demote/:id', to: 'users#demote'
 
+  get '/success', to: 'users#upgrade'
+
   # get '/admin', to: 'admin#new'
   get '/search', to: 'search#search'
   get '/weapons/melee', to: 'weapons#melee'
