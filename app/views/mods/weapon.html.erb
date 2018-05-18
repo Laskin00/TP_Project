@@ -1,6 +1,8 @@
 <% @weapon.each do |weapon| %>
-    <div id="header-div">
-        <img src="<%= weapon.image_url %>" id="mod-img" alt="<% weapon.name %>">
-        <h1 onclick="location.href='/mods/weapon/<%= weapon.id %>'" id="mod-h1"> <%= weapon.name %> </h1>
-    </div>
+  <table id = "index_table" align = "center">
+    <tr id = "index_tr">
+        <th id = "index_th"><%= image_tag(weapon.image_url, width: '125' ,height: '181', id: 'mod-image') %><th>
+        <th id = "index_th"><p class = "left_white"><%= link_to weapon.name, weapon %></p><th>
+    </tr>
+  </table>
 <% end %>

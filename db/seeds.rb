@@ -86,6 +86,127 @@ Warframe.create!(name: "Excalibur",
 Relic.create!(name: "Axi A3", image_url: "https://image.ibb.co/gb4b5H/axi_wf_wiki.png",
   whereToGet: "Sedna Hydron", relic_type: "axi")
 
-Mod.create!(name: "Maiming Strike", whereToGet: "Once a year event", image_url: "https://vignette.wikia.nocookie.net/warframe/images/d/d6/MaimingStrikeMod.png/revision/latest?cb=20171007152935", mod_type: "weapon")
-Weapon.create!(name: "Atterax", whereToGet: "Market", weapon_type: "melee", image_url: "https://vignette.wikia.nocookie.net/warframe/images/4/4e/GrineerWhip.png/revision/latest/scale-to-width-down/220?cb=20140918035809",
-   attack_type: "Whip", mastery_rank: 2, impact: 2 , puncture: 2, viral: 2, toxin: 3)
+Relic.create!(name: "Axi A2", image_url: "https://image.ibb.co/gb4b5H/axi_wf.png",
+  whereToGet: "Sedna Hydron" , relic_type: "axi")
+
+Relic.create!(name: "Axi S7", image_url: "https://image.ibb.co/gb4b5H/axi_wf.png",
+  whereToGet: "Sedna Hydron" , relic_type: "axi")
+
+Relic.create!(name:"Lith F2", image_url: "https://image.ibb.co/eBhqXx/lith_wf_wiki.png",
+  whereToGet: "Derelict Deffense or Saturn Rhea" , relic_type: "lith")
+
+Relic.create!(name:"Lith S6", image_url: "https://image.ibb.co/eBhqXx/lith_wf_wiki.png",
+  whereToGet: "Derelict Deffense or Saturn Rhea" , relic_type: "lith")
+
+Relic.create!(name:"Lith A2", image_url: "https://image.ibb.co/eBhqXx/lith_wf_wiki.png",
+  whereToGet: "Derelict Deffense or Saturn Rhea" , relic_type: "lith")
+
+Relic.create!(name:"Meso N3", image_url: "https://image.ibb.co/msFusx/meso_wf_wiki.png",
+  whereToGet: "Saturn Helene or Jupiter Io", relic_type: "meso")
+
+Relic.create!(name:"Meso M2", image_url: "https://image.ibb.co/msFusx/meso_wf_wiki.png",
+  whereToGet: "Saturn Helene or Jupiter Io", relic_type: "meso")
+
+Relic.create!(name:"Meso M3", image_url: "https://image.ibb.co/msFusx/meso_wf_wiki.png",
+  whereToGet: "Saturn Helene or Jupiter Io", relic_type: "meso")
+
+Relic.create!(name:"Neo F3", image_url: "https://image.ibb.co/gNQ5zc/neo_wf_wiki.png",
+  whereToGet: "Eris Kala-azar", relic_type: "neo")
+
+Relic.create!(name:"Neo F2", image_url: "https://image.ibb.co/gNQ5zc/neo_wf_wiki.png",
+  whereToGet: "Eris Kala-azar", relic_type: "neo")
+
+Relic.create!(name:"Neo A3", image_url: "https://image.ibb.co/gNQ5zc/neo_wf_wiki.png",
+  whereToGet: "Eris Kala-azar", relic_type: "neo")
+
+Mod.create!(name: "Maiming Strike",
+  whereToGet: "Once a year event",
+  image_url: "https://vignette.wikia.nocookie.net/warframe/images/d/d6/MaimingStrikeMod.png/revision/latest?cb=20171007152935",
+  mod_type: "weapon")
+
+Mod.create!(name: "Primed Point Blank",
+  whereToGet: "Baro Ki'Teer",
+  image_url: "https://vignette.wikia.nocookie.net/warframe/images/8/87/PrimedPointBlank.png/revision/latest?cb=20171007153753",
+  mod_type: "weapon")
+
+Mod.create!(name: "Magnum Force",
+  whereToGet: "Orokin vaults(Derelict)",
+  image_url: "https://vignette.wikia.nocookie.net/warframe/images/9/9f/MagnumForceModU145.png/revision/latest?cb=20171007152932",
+  mod_type: "weapon")
+
+Mod.create!(name: "Primed Flow",
+  whereToGet: "Baro Ki'Teer",
+  image_url: "https://vignette.wikia.nocookie.net/warframe/images/b/b8/PrimedFlow.png/revision/latest?cb=20171007153729",
+  mod_type: "warframe")
+
+Mod.create!(name: "Narrow Minded",
+  whereToGet: "Orokin vaults(Derelict)",
+  image_url: "https://vignette.wikia.nocookie.net/warframe/images/0/01/NarrowMindedModU145.png/revision/latest?cb=20171007153247",
+  mod_type: "warframe")
+
+Mod.create!(name: "Vitality",
+  whereToGet: "Almost every mission",
+  image_url: "https://vignette.wikia.nocookie.net/warframe/images/b/bc/VitalityModU145.png/revision/latest?cb=20171007155821",
+  mod_type: "warframe")
+
+Weapon.create!(name: "Atterax", whereToGet: "Market",
+   weapon_type: "melee",
+   image_url: "https://vignette.wikia.nocookie.net/warframe/images/4/4e/GrineerWhip.png/revision/latest/scale-to-width-down/220?cb=20140918035809",
+   attack_type: "Whip", mastery_rank: 2,
+   impact: 2 , puncture: 2,
+   viral: 2, toxin: 3)
+
+Weapon.create!(name: "Broken War",
+  whereToGet:"The secound dream Quest", weapon_type: "melee",
+  image_url: "https://vignette.wikia.nocookie.net/warframe/images/b/b2/StalkerTwoSword.png/revision/latest/scale-to-width-down/220?cb=20151204013307",
+  attack_type:"Sword" , mastery_rank: 10,
+  impact: 9, puncture: 9,
+  slash: 72)
+
+Weapon.create!(name: "Galatine",
+  whereToGet:"Market", weapon_type: "melee",
+  image_url: "https://vignette.wikia.nocookie.net/warframe/images/d/df/Galatine_o.png/revision/latest/scale-to-width-down/220?cb=20130928190402",
+  attack_type:"Sword" , mastery_rank: 3,
+  impact: 3.1, puncture:3.1,
+  slash: 118.9)
+
+Weapon.create!(name: "Dread",
+  whereToGet:"It is dropped by stalkers", weapon_type: "primary",
+  image_url: "https://vignette.wikia.nocookie.net/warframe/images/2/20/Dread2.png/revision/latest/scale-to-width-down/220?cb=20180418151352",
+  attack_type:"Bow" , mastery_rank: 5,
+  impact:6.5, puncture:6.5,
+  slash:117)
+
+Weapon.create!(name: "Soma",
+  whereToGet:"Market", weapon_type: "primary",
+  image_url: "https://vignette.wikia.nocookie.net/warframe/images/a/a5/U10DesignCouncilTennoAR.png/revision/latest/scale-to-width-down/220?cb=20130914111405",
+  attack_type:"Rifle" , mastery_rank: 6,
+  impact:1.2, puncture:4.8,
+  slash:6)
+
+Weapon.create!(name: "Corinth",
+  whereToGet:"Market", weapon_type: "primary",
+  image_url: "https://vignette.wikia.nocookie.net/warframe/images/3/32/TnHeavyShotgun.png/revision/latest/scale-to-width-down/220?cb=20171221214433",
+  attack_type:"Shotgun" , mastery_rank: 10,
+  impact:151, puncture:226,
+  slash:162)
+
+Weapon.create!(name: "Akstiletto",
+  whereToGet:"Market", weapon_type: "secondary",
+  image_url: "https://vignette.wikia.nocookie.net/warframe/images/e/ef/TennoUzi.png/revision/latest/scale-to-width-down/220?cb=20140206061957",
+  attack_type:"Dual pistols" , mastery_rank: 8,
+  impact:16.8, puncture:2.8,
+  slash:8.4)
+
+Weapon.create!(name: "Akbolto",
+  whereToGet:"Market", weapon_type: "secondary",
+  image_url: "https://vignette.wikia.nocookie.net/warframe/images/0/0e/Akbolto.png/revision/latest/scale-to-width-down/220?cb=20130426075511",
+  attack_type:"Dual pistols" , mastery_rank: 9,
+  impact:4, puncture:36)
+
+Weapon.create!(name: "Spira",
+  whereToGet:"Market", weapon_type: "secondary",
+  image_url: "https://vignette.wikia.nocookie.net/warframe/images/c/c5/LiDagger.png/revision/latest/scale-to-width-down/220?cb=20150924014336",
+  attack_type:"Thrown" , mastery_rank:8,
+  impact:8.2, puncture:49.2,
+  slash:24.6)

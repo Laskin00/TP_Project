@@ -7,10 +7,16 @@
             <div id="weapon-view-stats-div_">
             <h4 class="weapon-view-stats_">Mastery Rank: <%= @weapon.mastery_rank %> </h4>
                 <h4 class="weapon-view-stats_">Type: <%= @weapon.attack_type %> </h4>
-                <h4 class="weapon-view-stats_">Impact: <%= @weapon.impact %> </h4>
-                <h4 class="weapon-view-stats_">Puncture: <%= @weapon.puncture %> </h4>
-                <h4 class="weapon-view-stats_">Slash: <%= @weapon.slash %> </h4>
-                <% if @weapon.viral != "" %>
+                <% if @weapon.impact != nil %>
+                  <h4 class="weapon-view-stats_">Impact: <%= @weapon.impact %> </h4>
+                <% end %>
+                <% if @weapon.puncture != nil %>
+                  <h4 class="weapon-view-stats_">Puncture: <%= @weapon.puncture %> </h4>
+                <% end %>
+                <% if @weapon.slash != nil %>
+                  <h4 class="weapon-view-stats_">Slash: <%= @weapon.slash %> </h4>
+                <% end %>
+                <% if @weapon.viral != nil %>
                     <h4 class="weapon-view-stats_">Viral: <%= @weapon.viral %> </h4>
                 <% end %>
             </div>
