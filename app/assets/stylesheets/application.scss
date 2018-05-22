@@ -4,55 +4,73 @@
 */
 
 
-.search-bar{
-  margin-left: 4%;
+.search-bar
+{
+    margin-left: 4%;
 }
-.white{
-  color:white;
+.white
+{
+    color: white;
 }
-.left_white{
-  color:white;
-  text-align: left;
-  align-items: center;
-  font-size: 150%;
+.left_white
+{
+    font-size: 150%;
 
+    text-align: left;
+
+    color: white;
+
+    align-items: center;
 }
 
-.center_white{
-  color:white;
-  text-align: center;
+.center_white
+{
+    text-align: center;
+
+    color: white;
 }
 
-body {
+body
+{
+    font-family: 'Lato';
+
     background-color: #1e1e1e;
-    font-family: "Lato";
 }
 
-#flash{
-  color: black;
+#flash
+{
+    color: black;
 }
 
-a{
-  color: white;
-  text-decoration: none;
+a
+{
+    text-decoration: none;
+
+    color: white;
 }
 
-#button{
-  margin-top: 1%;
+#button
+{
+    margin-top: 1%;
 }
 
-#current_user_navbar{
-  text-align: left;
+#current_user_navbar
+{
+    text-align: left;
 }
-.no_line li a:hover{
-  text-decoration: none;
-  color: white;
-  background-color: #111;
+.no_line li a:hover
+{
+    text-decoration: none;
+
+    color: white;
+    background-color: #111;
 }
-.favorites_button{
-  width: 20%;
-  height: 20%;
-  text-align: center;
-  margin-left: 40%;
-  margin-right: 20%;
+.favorites_button
+{
+    width: 20%;
+    height: 20%;
+    margin-right: 20%;
+    margin-left: 40%;
+
+    text-align: center;
 }

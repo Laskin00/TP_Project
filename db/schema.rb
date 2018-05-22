@@ -59,6 +59,13 @@ ActiveRecord::Schema.define(version: 20180510083838) do
     t.index ["name"], name: "index_primeparts_on_name", unique: true
   end
 
+  create_table "relic_primepart_connections", force: :cascade do |t|
+    t.integer "relic_id"
+    t.integer "primepart_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "relics", force: :cascade do |t|
     t.string "name"
     t.string "image_url"
