@@ -1,0 +1,32 @@
+  <h1 class = "center_white"> Search results </h1>
+  <table id = "index_table" align = "left">
+    <% @mods.each do |mod| %>
+      <tr id = "index_tr">
+        <th id = "index_th"><%= image_tag(mod.image_url, height: '124', width: '124', id: 'user_image_') %></th>
+        <th id = "index_th"><h1 class = 'white'><a href = "/mods/<%= mod.mod_type %>/<%= mod.id %>"> <%= mod.name %> </a></h1></th>
+      </tr>
+    <% end %>
+
+
+    <% @weapons.each do |weapon| %>
+      <tr id = "index_tr">
+        <th id = "index_th">  <%= image_tag(weapon.image_url, height: '124' , weight: '124', id: 'user_image_') %></th>
+        <th id = "index_th"><h1 class = 'white'><a href = "/weapons/<%= weapon.weapon_type %>/<%= weapon.id %>"> <%= weapon.name %> </a></h1></th>
+      </tr>
+    <% end %>
+
+
+    <% @relics.each do |relic| %>
+      <tr id = "index_tr">
+        <th id = "index_th">  <%= image_tag(relic.image_url, height: '124', width: '124', id: 'user_image_') %></th>
+        <th id = "index_th"><h1 class = 'white'><a href = "/relics/<%=relic.relic_type%>/<%= relic.id %>"> <%= relic.name %> </a></h1></th>
+      </tr>
+    <% end %>
+
+    <% @warframes.each do |warframe| %>
+      <tr id = "index_tr">
+        <th id = "index_th">  <%= image_tag(warframe.image_url, height: '124', width: '124', id: 'user_image_') %></th>
+        <th id = "index_th"><h1 class = 'white'><a href = "/warframes/<%= warframe.id %>"> <%= warframe.name %> </a></h1></th>
+      </tr>
+    <% end %>
+</table>
