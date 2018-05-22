@@ -1,6 +1,7 @@
 class SearchController < ApplicationController
   def search
         name = params[:q]
+        name = name.downcase
         if name != nil && name != ""
           @mods = Mod.where("name like ?" , "%#{name}%")
           @weapons = Weapon.where("name like ?" , "%#{name}%")
