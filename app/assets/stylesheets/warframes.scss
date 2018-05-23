@@ -1,262 +1,211 @@
 // Place all the styles related to the Warframes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#warframe-view-header_
-{
-    font-size: 50px;
+// #warframe-view-header_ {
+// 	font-size: 50px;
+// 	text-align: left;
+// 	text-shadow: 2px 2px black;
+// }
+//
+// #warframe-view-image_ {
+// 	display: inline;
+// 	width: 25%;
+// 	margin-right: auto;
+// 	margin-left: auto;
+// 	padding-right: 1%;
+// 	padding-left: 1%;
+// 	background-color: #333333;
+// }
+//
+// #warframe-view-stats-div_ {
+// 	display: inline-block;
+// 	width: 17%;
+// 	margin-bottom: 5%;
+// 	padding-right: 1%;
+// 	padding-left: 1%;
+// 	text-align: left;
+// 	background-color: #333333;
+// }
+//
+// #warframe-view-wrapper_ {
+// 	display: inline;
+// 	margin-left: 5%;
+// 	text-align: center;
+// 	// margin-bottom: 50%;
+// }
+//
+// .warframe-view-stats_ {
+// 	padding: 3%;
+// 	color: white;
+// 	background-color: #111111;
+// }
 
-    text-align: left;
-
-    text-shadow: 2px 2px black;
+.warframes-header_ {
+	font-size: 4rem;
+	margin-bottom: 2.5%;
+	text-align: center;
+	// color: white;
 }
 
-#warframe-view-image_
-{
-    display: inline;
-
-    width: 25%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 1%;
-    padding-left: 1%;
-
-    background-color: #333;
+.warframes-div_ {
+	position: relative;
+	display: inline-block;
+	width: 12.8rem;
+	margin-bottom: 1.5%;
+	margin-left: 4.5%;
 }
 
-#warframe-view-stats-div_
-{
-    display: inline-block;
-
-    width: 17%;
-    margin-bottom: 5%;
-    padding-right: 1%;
-    padding-left: 1%;
-
-    text-align: left;
-
-    background-color: #333;
+.warframes-span_ {
+	margin-bottom: 0.5rem;
+	color: white;
 }
 
-#warframe-view-wrapper_
-{
-    display: inline;
-
-    margin-left: 5%;
-
-    text-align: center;
-    // margin-bottom: 50%;
+.warframes-names-span_ {
+	font-size: 2rem;
+	line-height: 3rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin-bottom: 2%;
+	margin-left: 4.5%;
+	padding: 0 2px;
+	background: rgba(0,0,0,0.6);
 }
 
-.warframe-view-stats_
-{
-    padding: 3%;
-
-    color: white;
-    background-color: #111;
+.warframes-paragraph_ {
+	margin-top: 5%;
+	text-align: center;
+	// color: white;
 }
 
-.warframes-header_
-{
-    margin-bottom: 2.5%;
-
-    text-align: center;
-
-    color: white;
+.warframes-list_ {
+	overflow: hidden;
+	width: 20%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	background-color: #333333;
 }
 
-.warframes-div_
-{
-    position: relative;
-
-    display: inline-block;
-
-    width: 64px;
-    margin-bottom: 1.5%;
-    margin-left: 1.5%;
+.warframes-list-element_ {
+	font-size: 2rem;
+	display: block;
+	padding: 0.5rem 2.5rem;
+	text-align: center;
+	text-decoration: none;
+	// color: white;
 }
 
-.warframes-span_
-{
-    margin-bottom: 5px;
-
-    color: white;
+.warframe-image_ {
+	// display: inline;
+	// float: right;
+	width: 14.55rem;
+	height: 25rem;
+	margin-left: 1.5%;
+	background-color: #333333;
+	box-shadow: 0 0 10rem rgba(0, 0, 0, 0.5) inset;
+	border: 2px solid #e0e0e0;
+	// margin-bottom: 1.5%;
+	border-radius: 0.5rem;
 }
 
-.warframes-names-span_
-{
-    font-size: 11px;
-    line-height: 15px;
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    margin-bottom: 2%;
-    margin-left: 5%;
-    padding: 0 2px;
-
-    background: rgba(0,0,0,.6);
+#warframe_data {
+	font-size: 3.33rem;
+	display: inline;
+	color: white;
 }
 
-.warframes-paragraph_
-{
-    margin-top: 5%;
+// #warframe-description_ {
+// 	display: inline;
+// 	margin-top: 5%;
+// }
 
-    text-align: center;
+// #warframe-description-paragraph_ {
+// 	font-size: 115%;
+// 	position: absolute;
+// 	display: inline;
+// 	max-width: 50%;
+// 	margin-left: 1%;
+// 	color: white;
+// 	text-shadow: 1px 1px black;
+// }
 
-    color: white;
+#wf-header {
+	font-size: 5rem;
+	text-align: left;
+	color: white;
+	text-shadow: 2px 2px black;
+    margin-top: 0.5%;
 }
 
-.warframes-list_
-{
-    overflow: hidden;
-
-    width: 20%;
-    margin: 0;
-    padding: 0;
-
-    list-style-type: none;
-
-    background-color: #333;
+#wf-image {
+	display: inline-block;
+	width: 25%;
+	// margin-right: auto;
+	// margin-left: auto;
+	padding-right: 1%;
+	padding-left: 1%;
+	background-color: #333333;
+    box-shadow: 0 0 20rem rgba(0, 0, 0, 0.4) inset;
 }
 
-.warframes-list-element_
-{
-    font-size: 20px;
-
-    display: block;
-
-    padding: 5px 25px;
-
-    text-align: center;
-    text-decoration: none;
-
-    color: white;
-}
-
-.warframe-image_
-{
-    // display: inline;
-    // float: right;
-    width: 64px;
-    height: 65px;
-    margin-left: 1.5%;
-    // background-color: #333;
-    // border:2px dashed #e0e0e0;
-
-    border: 2px solid #e0e0e0;
-    // margin-bottom: 1.5%;
-    border-radius: 5px;
-}
-
-#warframe_data
-{
-    font-size: 25pt;
-
-    display: inline;
-
-    color: white;
-}
-
-#warframe-description_
-{
-    display: inline;
-
-    margin-top: 5%;
-}
-
-#warframe-description-paragraph_
-{
-    font-size: 115%;
-
-    position: absolute;
-
-    display: inline;
-
-    max-width: 50%;
-    margin-left: 1%;
-
-    color: white;
-    text-shadow: 1px 1px black;
-}
-
-#wf-header
-{
-    font-size: 50px;
-
-    text-align: left;
-
-    color: white;
-
-    text-shadow: 2px 2px black;
-}
-
-#wf-image
-{
-    display: inline-block;
-
-    width: 25%;
-    // margin-right: auto;
-    // margin-left: auto;
-    padding-right: 1%;
-    padding-left: 1%;
-
-    background-color: #333;
-}
-
-.wf-stats
-{
-    padding: 3%;
-
-    text-align: left;
-
-    color: white;
-    background-color: #111;
+.wf-stats {
+	padding: 3%;
+	text-align: left;
+	color: white;
+    box-shadow: 0 0 7.5rem rgba(0, 0, 0, 0.7) inset;
 }
 
 
-#wf-stats-div
-{
-    display: inline-block;
-
-    width: 25%;
-    margin-bottom: 5%;
-    padding-right: 1%;
-    padding-left: 1%;
-
-    text-align: left;
-
-    background-color: #333;
+#wf-stats-div {
+	display: inline-block;
+	width: 25%;
+	margin-bottom: 5%;
+	padding-right: 1%;
+	padding-left: 1%;
+	text-align: left;
+	background-color: #333333;
 }
 
-#wf-wrapper
-{
-    display: inline;
-
-    margin-left: 2%;
-
-    text-align: center;
+#wf-wrapper {
+	display: inline;
+	margin-left: 2%;
+	text-align: center;
 }
 
 #wf-description-paragraph {
-    margin-top: 5%;
-    font-size: 115%;
-
-    position: absolute;
-
-    display: inline;
-
-    max-width: 40%;
-    margin-left: 2%;
-
-    color: white;
-    text-shadow: 1px 1px black;
+	// margin-top: 3.5%;
+	font-size: 1.6rem;
+	position: absolute;
+	display: inline;
+	max-width: 40%;
+	margin-left: 2%;
+	color: white;
+	text-shadow: 1px 1px black;
 }
 
 #seperator {
-    border-color: #333;
-    border-width: 3px;
-    padding-right: 50.7%;
-    width: 20%;
-    margin-top: -2.1%;
+	border-color: #333333;
+	border-width: 0.3rem;
+	padding-right: 50.7%;
+	width: 20%;
+	margin-top: -2.1%;
+}
+
+.favorites_button {
+	display: block;
+	position: relative;
+	left: -40%;
+    margin-top: 17.5%;
+}
+
+.btn {
+    width: 125%;
+    background-color: #333;
+    box-shadow: 0 0 5rem rgba(0, 0, 0, 0.5) inset;
+}
+
+.btn:hover {
+    background-color: #1e1e1e;
+    color: white;
 }

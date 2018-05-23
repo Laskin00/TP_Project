@@ -11,18 +11,32 @@
 
 <h1 id="landing-page-header_" class = "white"> Welcome to WarframeLootWiki! </h1>
 
-
 <div class="fadein">
-    <img src="https://n8k6e2y6.ssl.hwcdn.net/images/_newsImages/2017/Aug/22/HydroidPrime_1080p.jpg" title="Warframes" onclick="location.href='/warframes'">
-    <img src="https://image.ibb.co/gcfbtS/warframe_Loot_Wiki_weapons.png" title="Weapons" onclick="location.href='/weapons'">
-    <img src="https://image.ibb.co/byOqL7/warframe_Loot_Wiki_mods3.png" title="Mods" onclick="location.href='/mods'">
-    <img src="https://image.ibb.co/j6Dknn/warframe_Loot_Wiki_relics.png" title="Relics" onclick="location.href='/relics'">
+    <img src="https://n8k6e2y6.ssl.hwcdn.net/images/_newsImages/2017/Aug/22/HydroidPrime_1080p.jpg" title="Warframes" alt="Warfames" onclick="location.href='/warframes'">
+    <img src="https://image.ibb.co/gcfbtS/warframe_Loot_Wiki_weapons.png" title="Weapons" alt="Weapons" onclick="location.href='/weapons'">
+    <img src="https://image.ibb.co/byOqL7/warframe_Loot_Wiki_mods3.png" title="Mods" alt="Mods" onclick="location.href='/mods'">
+    <img src="https://image.ibb.co/j6Dknn/warframe_Loot_Wiki_relics.png" title="Relics" alt="Relics" onclick="location.href='/relics'">
 </div>
 <div class="shadow"></div>
 
 <!-- <div id="eidolon-clock">
     <h1 id="clock">1hr 54m 14s</h1>
 </div> -->
+
+
+<div class="most-viewed left">
+    <h4 class="most-popular-header">Most popular Warframes</h4>
+    <img src="<%= Warframe.find(1).image_url %>" class="most-popular-image warframe first" title="<%= Warframe.find(1).name %>" alt="<%= Warframe.find(1).name %>" onclick="location.href='/warframes/<%= Warframe.find(1).id %>'">
+    <img src="<%= Warframe.find(2).image_url %>" class="most-popular-image warframe second" title="<%= Warframe.find(2).name %>" alt="<%= Warframe.find(2).name %>" onclick="location.href='/warframes/<%= Warframe.find(2).id %>'">
+    <img src="<%= Warframe.find(3).image_url %>" class="most-popular-image warframe third" title="<%= Warframe.find(3).name %>" alt="<%= Warframe.find(3).name %>" onclick="location.href='/warframes/<%= Warframe.find(3).id %>'">
+</div>
+
+<div class="most-viewed right">
+    <h4>Most popular Weapons</h4>
+    <img src="<%= Weapon.find(1).image_url %>" class="most-popular-image weapon first" title="<%= Weapon.find(1).name %>" alt="<%= Weapon.find(1).name %>" onclick="location.href='/warframes/<%= Weapon.find(1).id %>'">
+    <img src="<%= Weapon.find(2).image_url %>" class="most-popular-image weapon second" title="<%= Weapon.find(2).name %>" alt="<%= Weapon.find(2).name %>" onclick="location.href='/warframes/<%= Weapon.find(2).id %>'">
+    <img src="<%= Weapon.find(3).image_url %>" class="most-popular-image weapon third-weapon" title="<%= Weapon.find(3).name %>" alt="<%= Weapon.find(3).name %>" onclick="location.href='/warframes/<%= Weapon.find(3).id %>'">
+</div>
 
 <p id="landing-page-paragraph_">
     Our mission is to help all Warframe players - from veterans to newbies.

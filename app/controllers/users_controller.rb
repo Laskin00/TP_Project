@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def landing
-    render :landingPage
+      render :landingPage
   end
 
   def create

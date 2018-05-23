@@ -2,108 +2,104 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .mods_table {
-    margin-top: 5%;
-    width: 83.5%;
-    // border: 1px solid black;
-    text-align: center;
+	margin-top: 5%;
+	width: 83.5%;
+	// border: 1px solid black;
+	text-align: center;
 }
 
 .mods_table td {
-    padding: 1%;
+	padding: 1%;
 }
 
 .mods_table th {
-    background-color: #333;
-    padding: 1%;
-    color: white;
-    font-family: "Lato";
-    padding: 2%;
-    font-size: 250%;
-    text-shadow: 2px 2px black;
-    text-align: center;
-    border-right: 2px solid #111;
+	background-color: #333333;
+	padding: 1%;
+	color: white;
+	font-family: 'Lato';
+	padding: 2%;
+	font-size: 250%;
+	text-shadow: 2px 2px black;
+	text-align: center;
+	border-right: 2px solid #111111;
 }
 
 .mods_table th:last-child {
-    border-right: none;
+	border-right: none;
 }
 
 .mods_table td:hover {
-    cursor: pointer;
-    // background-color: #111;
+	cursor: pointer;
+	// background-color: #111;
 }
 
 .mods_table th:hover {
-    cursor: pointer;
-    background-color: #111;
+	cursor: pointer;
+	background-color: #111111;
 }
 
 .mods_table img {
-    width: 60%;
+	width: 60%;
 }
 
 #mods_paragraph_ {
-    margin-top: 4%;
-    text-align: center;
-    color: white;
+	margin-top: 4%;
+	text-align: center;
+	color: white;
 }
 
-#mods-view-header_
-{
-    font-size: 50px;
-
-    text-align: center;
-
-    text-shadow: 2px 2px black;
-
-    color: white;
+#mods-view-header_ {
+	font-size: 50px;
+	text-align: center;
+	text-shadow: 2px 2px black;
+	color: white;
 }
 
-#mods-view-image_
-{
-    display: block;
-
-    width: 20%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 1%;
-    padding-left: 1%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-
-    background-color: #333;
+#mods-view-image_ {
+	display: block;
+	width: 25%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 3%;
+	padding-left: 3%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	// background-color: #333333;
+	// box-shadow: 0 0 15rem rgba(0, 0, 0, 0.4) inset;
 }
 
-#mod-h1
-{
-    display: inline-block;
-
-    cursor: pointer;
-    text-align: center;
-    color: white;
+#mod-h1 {
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	color: white;
 }
 
-#mod-img
-{
-    margin-left: -10%;
-    margin-right: 2%;
-    width: 7%;
+#mod-img {
+	margin-left: -10%;
+	margin-right: 2%;
+	width: 7%;
 }
 
-#header-div
-{
-    margin-top: 2%;
-    display: block;
-
-    text-align: center;
+#header-div {
+	margin-top: 2%;
+	display: block;
+	text-align: center;
 }
 
 #image-div {
-    // display: inline;
-    margin: auto;
-    width: 50%;
+	// display: inline;
+	margin: auto;
+	width: 50%;
 }
 
 #mods-show {
-    text-align: center;
+	text-align: center;
+}
+
+.favorites_button_mods {
+	display: inline-block;
+	position: relative;
+	left: 40.5%;
+	width: 15%;
 }

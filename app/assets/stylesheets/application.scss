@@ -2,75 +2,63 @@
 *=require_tree .
 *=require_self
 */
-
-
-.search-bar
-{
-    margin-left: 4%;
-}
-.white
-{
-    color: white;
-}
-.left_white
-{
-    font-size: 150%;
-
-    text-align: left;
-
-    color: white;
-
-    align-items: center;
+html, body {
+	font-family: 'Lato';
+	color: white;
 }
 
-.center_white
-{
-    text-align: center;
+// .search_bar {
+// 	margin-left: 4%;
+// }
 
-    color: white;
+.white {
+	color: white;
 }
 
-body
-{
-    font-family: 'Lato';
-
-    background-color: #1e1e1e;
+.left_white {
+	font-size: 150%;
+	text-align: left;
+	color: white;
+	align-items: center;
 }
 
-#flash
-{
-    color: black;
+.center_white {
+	text-align: center;
+	color: white;
 }
 
-a
-{
-    text-decoration: none;
-
-    color: white;
+body {
+	font-family: 'Lato';
+	background-color: #1e1e1e;
 }
 
-#button
-{
-    margin-top: 1%;
+#flash {
+	color: black;
 }
 
-#current_user_navbar
-{
-    text-align: left;
+a {
+	text-decoration: none;
+	color: white;
 }
-.no_line li a:hover
-{
-    text-decoration: none;
 
-    color: white;
-    background-color: #111;
+#button {
+	margin-top: 1%;
 }
-.favorites_button
-{
-    width: 20%;
-    height: 20%;
-    margin-right: 20%;
-    margin-left: 40%;
 
-    text-align: center;
+#current_user_navbar {
+	text-align: left;
+}
+
+.no_line li a:hover {
+	text-decoration: none;
+	color: white;
+	background-color: #111111;
+}
+
+.favorites_button {
+	width: 20%;
+	height: 20%;
+	margin-right: 20%;
+	margin-left: 40%;
+	text-align: center;
 }
