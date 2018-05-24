@@ -51,4 +51,12 @@ module SessionsHelper
   def store_location
     session[:forwarding_url] = request.original_url if request.get?
   end
+
+  def not_free?
+    if current_user.permissions > 0
+      return true
+    end
+    return false
+  end
+
 end

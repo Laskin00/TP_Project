@@ -50,11 +50,10 @@ class WeaponsController < ApplicationController
       @weapon.attack_type = @weapon.attack_type.capitalize
       if @weapon.save
         flash[:success] = "You have successfully added a weapon!"
-        # redirect_to current_link + 'weapons/' + @weapon.name ##da se razkomentira Todo kato napravi weapon vu
-        redirect_to current_link + "weapons/new" #a tva da se mahne
+        redirect_to @weapon
       else
         flash[:danger] = "You have entered something wrong. Try again."
-        redirect_to current_link + "weapons/new"
+        redirect_to root_url
       end
     end
 
@@ -76,7 +75,7 @@ class WeaponsController < ApplicationController
     def destroy
       Weapon.find(params[:id]).destroy
       flash[:success] = "Weapon deleted"
-      render current_link + '/weapons'
+      redirect_to root_url
     end
 
 
@@ -85,11 +84,4 @@ private
           params.require(:weapon).permit(:weapon_type, :name, :image_url, :whereToGet, :dropChance, :mastery_rank, :attack_type, :impact, :puncture, :slash, :elecricity, :fire, :toxin, :cold, :blast, :corrosive, :gas, :magnetic, :radiation, :viral)
     end
 
-    def current_link
-        if Rails.env.production?
-          return "https://Weapon-loot-wiki.herokuapp.com/"
-        else
-          return "http://localhost:3000/"
-        end
-    end
 end

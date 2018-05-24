@@ -5,14 +5,23 @@
     </div>
 </div>
 
-<%= form_for(:user, url: current_link + "relics/" + @relic.relic_type.to_s + "/" + @relic.id.to_s) do |f| %>
-  <% if FavoriteRelic.where(user_id: current_user, relic_id: @relic.id).exists? %>
-    <div class = 'favorites_button'>
-      <%= f.submit "Remove relic from favorites", class: "btn btn-secoundary" %>
-    </div>
-  <%else%>
-    <div class = 'favorites_button'>
-      <%= f.submit "Add relic to favorites", class: "btn btn-secoundary" %>
-    </div>
+<% if logged_in? && not_free? %>
+  <%= form_for(:user, url: current_link + "relics/" + @relic.relic_type.to_s + "/" + @relic.id.to_s) do |f| %>
+    <% if FavoriteRelic.where(user_id: current_user, relic_id: @relic.id).exists? %>
+      <div class = 'favorites_button_center'>
+        <%= f.submit "Remove relic from favorites", class: "btn btn-secoundary" %>
+      </div>
+    <%else%>
+      <div class = 'favorites_button_center'>
+        <%= f.submit "Add relic to favorites", class: "btn btn-secoundary" %>
+      </div>
+    <% end %>
   <% end %>
+<% end %>
+
+<% if current_user.permissions  > 1 %>
+  <div class = 'favorites_button_mods'>
+    <p style = "font-size: 150%;"><%= link_to "• Delete", @relic, method: :delete, data: { confirm: "You sure?"}%></p>
+    <p style = "font-size: 150%;"><%= link_to "• Edit", @relic, method: :edit %> </p>
+  </div>
 <% end %>

@@ -64,9 +64,9 @@ class RelicsController < ApplicationController
         # @relic.name = @relic.name.capitalize
         if @relic.save
           flash[:success] = "You have successfully added a relic!"
-          redirect_to current_link + 'relics/new'
+          redirect_to @relic
         else
-          redirect_to current_link + 'relics/new'
+          redirect_to new_relic_url
         end
       end
 
@@ -81,6 +81,7 @@ class RelicsController < ApplicationController
         flash[:success] = "Relic updated"
         redirect_to @relic
       else
+        flash[:danger] = "There was an error updating that relic."
         render 'edit'
       end
     end
@@ -88,7 +89,7 @@ class RelicsController < ApplicationController
     def destroy
       Relic.find(params[:id]).destroy
       flash[:success] = "Relic deleted"
-      render current_link + '/relics'
+      redirect_to root_url
     end
 
   private
@@ -96,11 +97,4 @@ class RelicsController < ApplicationController
             params.require(:relic).permit(:name, :image_url, :whereToGet, :dropChance, :relic_type)
       end
 
-      def current_link
-          if Rails.env.production?
-            return "https://warframe-loot-wiki.herokuapp.com/"
-          else
-            return "http://localhost:3000/"
-          end
-      end
 end

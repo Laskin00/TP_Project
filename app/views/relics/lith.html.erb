@@ -2,5 +2,8 @@
     <div id="header-div">
         <img src="<%= lith.image_url %>" id="relic-img" alt="<% lith.name %>">
         <h1 onclick="location.href='/relics/lith/<%= lith.id %>'" id="relics-h1"> <%= lith.name %> </h1>
+        <% if current_user.permissions  > 1 %>
+          <h2 style = "color: white; text-align: center; font-size:100%;"><%= link_to "• Delete", lith, method: :delete, data: { confirm: "You sure?"}%></h2>
+        <% end %>
     </div>
 <% end %>

@@ -6,7 +6,7 @@ class ModsController < ApplicationController
     def show
       @mod = Mod.find_by(id: params[:id])
       if @mod == nil
-            render "404"
+            render "shared/404"
       end
     end
 
@@ -20,7 +20,7 @@ class ModsController < ApplicationController
 
     def new
         if current_user.permissions < 2
-          render "Error"
+          render "shared/404"
         else
           @mod = Mod.new
         end
@@ -32,11 +32,10 @@ class ModsController < ApplicationController
       @mod.name = @mod.name.capitalize
       if @mod.save
         flash[:success] = "You have successfully added a mod!"
-        # redirect_to current_link + 'mods/' + @mod.name ##da se razkomentira Todo kato napravi mod vu
-        redirect_to current_link + "mods/new"
+        redirect_to @mod
       else
         flash[:danger] = "You have entered something wrong. Try again."
-        redirect_to current_link + "mods/new"
+        redirect_to new_mod_url
       end
     end
 
@@ -57,7 +56,7 @@ class ModsController < ApplicationController
     def destroy
       Mod.find(params[:id]).destroy
       flash[:success] = "Mod deleted"
-      render current_link + '/mods'
+      redirect_to root_url
     end
 
     def addFavorite
@@ -69,7 +68,7 @@ class ModsController < ApplicationController
       end
 
       @mod = Mod.find(params[:id])
-      render 'show'
+      redirect_to @mod
     end
 
 
@@ -78,11 +77,4 @@ private
           params.require(:mod).permit(:name, :mod_type, :image_url, :whereToGet, :dropChance)
     end
 
-    def current_link
-        if Rails.env.production?
-          return "https://warframe-loot-wiki.herokuapp.com/"
-        else
-          return "http://localhost:3000/"
-        end
-    end
 end

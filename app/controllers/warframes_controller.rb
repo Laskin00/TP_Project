@@ -6,13 +6,13 @@ class WarframesController < ApplicationController
     def show
       @warframe = Warframe.find(params[:id])
       if @warframe == nil
-        render '404'
+        render 'shared/404'
       end
     end
 
     def new
       if current_user.permissions < 2
-        render "Error"
+        render "shared/404"
       else
         @warframe = Warframe.new
       end
@@ -22,8 +22,9 @@ class WarframesController < ApplicationController
       @warframe = Warframe.new(warframe_params)
       if @warframe.save
         flash[:success] = "You have successfully added a warframe!"
-        redirect_to current_link + 'warframes/' + @warframe.id.to_s
+        redirect_to @warframe
       else
+        flash[:danger] = "There were mistakes in the form."
         render 'new'
       end
     end
@@ -58,7 +59,7 @@ class WarframesController < ApplicationController
     def destroy
       Warframe.find(params[:id]).destroy
       flash[:success] = "Warframe deleted"
-      render current_link + '/warframes'
+      redirect_to root_url
     end
 
 
@@ -67,11 +68,4 @@ class WarframesController < ApplicationController
       params.require(:warframe).permit(:name, :image_url, :neuropticsDropChance,:systemsDropChance, :blueprintDropChance, :chassisDropChance,:armor, :energy, :health, :shield, :mastery_rank,:description, :whereToGet)
     end
 
-    def current_link
-      if Rails.env.production?
-          return "https://warframe-loot-wiki.herokuapp.com/"
-      else
-          return "http://localhost:3000/"
-      end
-    end
 end

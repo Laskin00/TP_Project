@@ -4,6 +4,7 @@
         <img id="mods-view-image_" src= <%= @mod.image_url %>  alt=<%= @mod.name %> title=<%= @mod.name %> >
     </div>
 
+  <% if logged_in? && not_free? %>
     <%= form_for(:user, url: current_link + "mods/" + @mod.mod_type.to_s + "/" + @mod.id.to_s) do |f| %>
       <% if FavoriteMod.where(user_id: current_user, mod_id: @mod.id).exists? %>
         <div class = 'favorites_button_mods'>
@@ -15,5 +16,13 @@
         </div>
       <% end %>
     <% end %>
+  <% end %>
+
+  <% if current_user.permissions  > 1 %>
+    <div class = 'favorites_button_mods'>
+      <p style = "font-size: 150%;"><%= link_to "• Delete", @mod, method: :delete, data: { confirm: "You sure?"}%></p>
+      <p style = "font-size: 150%;"><%= link_to "• Edit", @mod, method: :edit %> </p>
+    </div>
+  <% end %>
 
 </div>

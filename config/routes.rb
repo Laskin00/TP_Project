@@ -30,12 +30,14 @@ Rails.application.routes.draw do
   get '/weapons/secondary', to: 'weapons#secondary'
   post '/weapons/new', to: 'weapons#create'
   post '/weapons/:type/:id', to: 'weapons#addFavorite'
+  post '/weapons/:id', to: 'weapons#edit'
 
   get '/mods/weapon', to: 'mods#weapon'
   get '/mods/:type/:id', to: 'mods#show'
   get '/mods/warframe', to: 'mods#warframe'
   post '/mods/new', to: 'mods#create'
   post '/mods/:type/:id', to: 'mods#addFavorite'
+  post 'mods/:id', to: 'mods#edit'
 
   get '/relics/neo', to: 'relics#neo'
   get '/relics/axi', to: 'relics#axi'
@@ -44,11 +46,13 @@ Rails.application.routes.draw do
   get '/relics/:type/:id', to: 'relics#show'
   post '/relics/new', to: 'relics#create'
   post '/relics/:type/:id', to: 'relics#addFavorite'
+  post 'relics/:id', to: 'relics#edit'
 
   get '/moderator', to: 'moderator#new'
 
   post '/warframes/new', to: 'warframes#create'
-  post '/warframes/:id', to: 'warframes#addFavorite'
+  post '/warframes/favorite/:id', to: 'warframes#addFavorite'
+  post '/warframes/:id', to: 'warframes#edit'
 
   resources :users
   resources :warframes
