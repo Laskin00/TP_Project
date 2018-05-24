@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
 
+  get 'sitemap', to: 'sitemap#sitemap'
   root'users#landing'
   get '/signup', to: 'users#new'
   post '/signup',  to: 'users#create'
