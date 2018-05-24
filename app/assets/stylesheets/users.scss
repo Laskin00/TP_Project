@@ -12,13 +12,19 @@ ul {
 
 #profile-picture {
 	display: inline;
-	padding-right: 1rem;
+	padding-left: 2rem;
+}
+
+.profile-picture-img {
+	width: 3.2rem;
 }
 
 .droppbtn {
 	display: inline-block;
 	list-style-type: none;
 	text-shadow: 1px 1px black;
+	// margin-top: 1%;
+	margin-bottom: -3%;
 }
 
 li a {
@@ -31,13 +37,13 @@ li a {
 
 #sign {
 	float: right;
-	margin-right: 3%;
+	margin-right: 2%;
 }
 
 .logoo {
 	font-size: 2rem;
 	float: left;
-	margin-top: 0.5%;
+	margin-top: 0.7%;
 	margin-left: 1rem;
 	padding: 0 0.6rem;
 	text-align: center;
