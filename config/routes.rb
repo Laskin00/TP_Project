@@ -31,7 +31,6 @@ Rails.application.routes.draw do
   post '/weapons/new', to: 'weapons#create'
   post '/weapons/:type/:id', to: 'weapons#addFavorite'
   post '/weapons/:id', to: 'weapons#edit'
-  get '/google440eeb45e9043295.html', to: 'google#sitemap_verification'
   get '/mods/weapon', to: 'mods#weapon'
   get '/mods/:type/:id', to: 'mods#show'
   get '/mods/warframe', to: 'mods#warframe'
