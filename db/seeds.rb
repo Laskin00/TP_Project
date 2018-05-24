@@ -8,8 +8,8 @@
 User.create!(name: "Alex Laskin", email: "alex_l13@abv.bg", password: "efu311",
    password_confirmation: "efu311", image_url: "https://www.mobafire.com/images/champion/square/master-yi.png",
    permissions: 3, activated: true, activated_at: Time.zone.now)
-User.create!(name: "ImTheWizzy", email: "Martin_todo9@abv.bg", password: "123123",
-      password_confirmation: "123123", image_url: "https://www.mobafire.com/images/champion/square/master-yi.png",
+User.create!(name: "ImTheWizzy", email: "martin_todo9@abv.bg", password: "123456",
+      password_confirmation: "123456", image_url: "https://www.mobafire.com/images/avatars/master-yi-project.png",
       permissions: 3, activated: true, activated_at: Time.zone.now)
 
 Warframe.create!(name: "Ash",
@@ -71,6 +71,51 @@ Warframe.create!(name: "Excalibur",
     armor: "225", energy: "100 (150 at rank 30)", health: "100 (300 at rank 30)",
     shield: "100 (300 at rank 30)", mastery_rank: "0",
     description: "Excalibur is a sword-themed Warframe. With the power to channel energy into his summoned blade, he is a mobile swordsman with potent methods of execution. Excalibur is one of three starter options for new players."
+)
+Warframe.create!(name: "Frost",
+    image_url: "https://vignette.wikia.nocookie.net/warframe/images/5/5a/FrostNewLook.png/revision/latest/scale-to-width-down/291?cb=20141124023059",
+    whereToGet: "Frost's component blueprints drop from Lieutenant Lech Kril & Captain Vor on Exta, Ceres.",
+    neuropticsDropChance: "38.72%" , systemsDropChance: "22.56%",
+    blueprintDropChance: "", chassisDropChance: "38.72%",
+    armor: "300", energy: "100 (150 at rank 30)", health: "100 (300 at rank 30)",
+    shield: "150 (450 at rank 30)", mastery_rank: "0",
+    description: "Frost is a slow and heavily-armored Warframe that is able to utilize offensive and defensive skills to both his own and his team's advantage. He commands furious blizzards that pummel and freeze his enemies while providing respite and solace for his allies."
+)
+Warframe.create!(name: "Gara",
+    image_url: "https://vignette.wikia.nocookie.net/warframe/images/2/2c/GaraNewLook.png/revision/latest/scale-to-width-down/280?cb=20171026104236",
+    whereToGet: "Gara's main blueprint will be awarded upon completion of the Saya's Vigil quest.",
+    neuropticsDropChance: "8.51% or 20.51%" , systemsDropChance: "9.52% or 21.82%",
+    blueprintDropChance: "", chassisDropChance: "7.52% or 30.56%",
+    armor: "125", energy: "150 (225 at rank 30)", health: "100 (300 at rank 30)",
+    shield: "100 (300 at rank 30)", mastery_rank: "0",
+    description: "Clad in lustrous vitrum, Gara sunders her foes with adamantine shards, reflects enemy attacks through enchanted mirrors, and reshapes the landscape with molten crystal."
+)
+Warframe.create!(name: "Harrow",
+    image_url: "https://vignette.wikia.nocookie.net/warframe/images/4/4d/Harrow.png/revision/latest/scale-to-width-down/278?cb=20180121173742",
+    whereToGet: "Harrow's main blueprint is awarded upon completion of the Chains of Harrow quest.",
+    neuropticsDropChance: "11.28%" , systemsDropChance: "7.52% or 11.28%",
+    blueprintDropChance: "", chassisDropChance: "3.00%",
+    armor: "150", energy: "100 (150 at rank 30)", health: "100 (300 at rank 30)",
+    shield: "150 (450 at rank 30)", mastery_rank: "0",
+    description: "Dauntless and devout, the dark priest Harrow bestows upon his coven three virtues: salvation through sacrifice, redemption through vengeance, and ascension through defiance."
+)
+Warframe.create!(name: "Hydroid",
+    image_url: "https://vignette.wikia.nocookie.net/warframe/images/9/9f/HydroidNewLook.png/revision/latest/scale-to-width-down/291?cb=20141124023113",
+    whereToGet: "Component blueprints are rewarded from Councilor Vay Hek assassinations (Oro, Earth).",
+    neuropticsDropChance: "38.72%" , systemsDropChance: "22.56%",
+    blueprintDropChance: "", chassisDropChance: "38.72%",
+    armor: "200", energy: "125 (188 at rank 30)", health: "100 (300 at rank 30)",
+    shield: "125 (375 at rank 30)", mastery_rank: "0",
+    description: "With the wrathful seas at his command, Hydroid lurks beneath raging tides to plunge his foes into the abyss. Unleashing salvos of cannon barrage and tentacled ocean horrors to rend foes asunder, Hydroid is reminiscent of the age of corsairs."
+)
+Warframe.create!(name: "Inaros",
+    image_url: "https://vignette.wikia.nocookie.net/warframe/images/3/3a/InarosNewLook.png/revision/latest/scale-to-width-down/291?cb=20160308025219",
+    whereToGet: "Inaros' main and component blueprints are obtainable from the Sands of Inaros quest.",
+    neuropticsDropChance: "" , systemsDropChance: "",
+    blueprintDropChance: "", chassisDropChance: "",
+    armor: "200", energy: "100 (150 at rank 30)", health: "550 (2200 at rank 30)",
+    shield: "0", mastery_rank: "0",
+    description: "Once entombed, Inaros ravages, consumes and conquers all life swept up in his cursed sandstorms, leaving only the barren and drained desert of death in his wake. "
 )
 # Warframe.create!(name: "",
 #     image_url: "",

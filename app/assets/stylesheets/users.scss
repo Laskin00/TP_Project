@@ -1,476 +1,381 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-ul
-{
-    overflow: hidden;
-    /*position: fixed;*/
-
-    width: 100%;
-    margin: 0;
-    padding: 0;
-
-    list-style-type: none;
-
-    background-color: #333;
+ul {
+	overflow: hidden;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	background-color: #333333;
 }
 
-#profile-picture
-{
-    display: inline;
-    // margin-right: 5px;
+#profile-picture {
+	display: inline;
+	padding-right: 1rem;
 }
 
-/*li {
-    float: left;
-}*/
-
-.droppbtn
-{
-    display: inline-block;
-    /* margin-right: 5%; */
-
-    list-style-type: none;
-
-    text-shadow: 1px 1px black;
+.droppbtn {
+	display: inline-block;
+	list-style-type: none;
+	text-shadow: 1px 1px black;
 }
 
-li a
-{
-    display: block;
-
-    padding: 5px 25px;
-
-    text-align: center;
-    text-decoration: none;
-
-    color: white;
-}
-#sign
-{
-    float: right;
-
-    margin-right: 3%;
-}
-/*navbar */
-.logoo
-{
-    /*padding: 15px 20px;*/
-    font-family: 'Lato';
-    font-size: 20px;
-
-    float: left;
-
-    margin-top: .5%;
-    margin-left: 10px;
-    padding: 0 5px;
-
-    text-align: center;
-
-    color: #e0e0e0;
-    text-shadow: 2px 2px black;
+li a {
+	display: block;
+	padding: 0.6rem 3rem;
+	text-align: center;
+	text-decoration: none;
+	color: white;
 }
 
-.logoo:hover
-{
-    background-color: #111;
+#sign {
+	float: right;
+	margin-right: 3%;
 }
 
-#landing-page-paragraph_
-{
-    font-size: 17px;
-
-    text-align: center;
-
-    color: white;
-    text-shadow: 1px 1px black;
+.logoo {
+	font-size: 2rem;
+	float: left;
+	margin-top: 0.5%;
+	margin-left: 1rem;
+	padding: 0 0.6rem;
+	text-align: center;
+	color: #e0e0e0;
+	text-shadow: 2px 2px black;
 }
 
-/*
-.logo {
-    background-color:#fff;
+.logoo:hover {
+	background-color: #111111;
 }
 
-span {
-    background-color: #333;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    display:block;
-}*/
-
-#landing_li
-{
-    font-family: 'Lato';
+#landing-page-paragraph_ {
+	font-size: 1.6rem;
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px black;
 }
 
-/* Change the link color to #111 (black) on hover */
-#landing_li a:hover
-{
-    text-decoration: none;
-
-    color: white;
-    background-color: #111;
+#landing_li a:hover {
+	color: white;
+	text-decoration: none;
+	background-color: #111111;
 }
 
-.navv
-{
-    text-align: center;
-}
-.navv li
-{
-    display: inline;
-}
-.navv a
-{
-    display: inline-block;
+.navv {
+	text-align: center;
 }
 
-li.droppdown
-{
-    font-size: 13pt;
-
-    display: inline-block;
-
-    padding: 9px 0;
+.navv li {
+	display: inline;
 }
 
-.droppdown-content
-{
-    position: absolute;
-    z-index: 1;
-
-    display: none;
-    overflow: auto;
-
-    min-width: 160px;
-    max-height: 500px;/* you can change as you need it */
-
-    background-color: #e0e0e0;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
+.navv a {
+	display: inline-block;
 }
 
-.droppdown-content a
-{
-    display: block;
-
-    padding: 12px 16px;
-
-    text-align: left;
-    text-decoration: none;
-
-    color: black;
+li.droppdown {
+	font-size: 1.8rem;
+	display: inline-block;
+	padding: 1rem 0;
 }
 
-.droppdown-content a:hover
-{
-    background-color: #bdbdbd;
+.droppdown-content {
+	position: absolute;
+	z-index: 1;
+	display: none;
+	overflow: auto;
+	min-width: 16rem;
+	max-height: 50rem;
+	background-color: #e0e0e0;
+	box-shadow: 0 0.8rem 1.6rem 0 rgba(0,0,0,0.2);
 }
 
-.droppdown:hover .droppdown-content
-{
-    display: block;
+.droppdown-content a {
+	padding: 1.2rem 1.6rem;
+	text-decoration: none;
+	text-align: left;
+	display: block;
+	color: black;
 }
 
-.fadein
-{
-    position: relative;
-
-    width: 640px;
-    height: 360px;
-    margin: 5% auto;
-
-    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+.droppdown-content a:hover {
+	background-color: #bdbdbd;
 }
 
-/* #slideshow {
-    margin: 5% auto;
-    position: relative;
-    width: 640px;
-    height: 360px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+.droppdown:hover .droppdown-content {
+	display: block;
 }
 
-#slideshow img {
-    display: block;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    width: 640px;
-    height: 360px;
-    left: 0;
-    top: 0;
-    box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
-} */
-#current_user_navbar:hover
-{
-    background-color: #111;
-}
-#current_user_navbar
-{
-    text-decoration: none;
-
-    color: white;
-}
-.fadein img
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    display: block;
-
-    width: 640px;
-    height: 360px;
-    margin-right: auto;
-    margin-left: auto;
-
-    box-shadow: 0 0 200px rgba(0, 0, 0, .9) inset;
+.fadein {
+	box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+	position: relative;
+	margin: 5% auto;
+	height: 36rem;
+	width: 64rem;
 }
 
-#landing-page-header_
-{
-    text-align: center;
-
-    color: white;
-    text-shadow: 3px 2px black;
+#current_user_navbar:hover {
+	background-color: #111111;
 }
 
-/* Index.html.erb of User */
-#all_users_li
-{
-    /* float: left; */
-    font-size: 15px;
-
-    margin: auto;
-    /* display: inline-block; */
+#current_user_navbar {
+	text-decoration: none;
+	color: white;
 }
 
-#user_image_all
-{
-    width: 50%;
-    margin-right: auto;
-    /* display: inline; */
-    /* float: left; */
-    margin-left: auto;
+.fadein img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 64rem;
+	height: 36rem;
+	margin-right: auto;
+	margin-left: auto;
+	box-shadow: 0 0 20rem rgba(0, 0, 0, 0.9) inset;
 }
 
-/* #user_image_ {
-    float: left;
-} */
-
-/* #username_ {
-    display: block;
-    margin-left: 25%;
-    float: right;
-} */
-
-/* .users {
-    float: left;
-} */
-
-#users_ul
-{
-    width: 50%;
-    margin: auto;
-
-    text-align: center;
-    /* float: left; */
+#landing-page-header_ {
+	text-align: center;
+	margin-top: 4rem;
+	color: white;
+	text-shadow: 0.3rem 0.2rem black;
 }
 
-#paginate
-{
-    text-align: center;
+#all_users_li {
+	font-size: 1.5rem;
+	margin: auto;
 }
 
-.pagination > .active > a,
-.pagination > .active > span,
-.pagination > .active > a:hover,
-.pagination > .active > span:hover,
-.pagination > .active > a:focus,
-.pagination > .active > span:focus
-{
-    z-index: 2;
-
-    cursor: pointer;
-
-    color: white;
-    border-color: #111;
-    background-color: #333;
+#user_image_all {
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
-.pagination > li > a,
-.pagination > li > span
-{
-    line-height: 1.428571429;
-
-    position: relative;
-
-    float: left;
-
-    margin-left: -1px;
-    padding: 6px 12px;
-
-    text-decoration: none;
-
-    color: black;
-    border: 1px solid #ddd;
-    background-color: white;
+#users_ul {
+	width: 50%;
+	margin: auto;
+	text-align: center;
 }
 
-#index_table
-{
-    width: 70%;
-
-    alignment: center;
+#paginate {
+	text-align: center;
 }
 
-#index_th
-{
-    padding-top: 2%;
-
-    text-align: left;
-    text-decoration: none;
-
-    color: white;
-    border-bottom: 1px solid white;
-}
-#index_th a:hover
-{
-    text-align: center;
-    text-decoration: none;
-
-    color: white;
-    background-color: #555;
-}
-/*Show.html.erb of User */
-
-#user_show aside
-{
-    section.user_info
-    {
-        margin-top: 20px;
-    }
-    section
-    {
-        margin-top: 20px;
-        padding: 10px 0;
-        &:first-child
-        {
-            padding-top: 0;
-
-            border: 0;
-        }
-        span
-        {
-            line-height: 1;
-
-            display: block;
-
-            margin-bottom: 3px;
-        }
-        h1
-        {
-            font-size: 1.4em;
-
-            margin-top: 0;
-            margin-bottom: 3px;
-
-            text-align: left;
-            letter-spacing: -1px;
-
-            color: white;
-        }
-    }
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+	z-index: 2;
+	cursor: pointer;
+	color: white;
+	border-color: #111111;
+	background-color: #333333;
 }
 
-#profile_name
-{
-    text-align: center;
-
-    color: white;
-
-    alignment: center;
+.pagination > li > a, .pagination > li > span {
+	line-height: 1.428571429;
+	position: relative;
+	float: left;
+	margin-left: -1px;
+	padding: 6px 12px;
+	text-decoration: none;
+	color: black;
+	border: 1px solid #dddddd;
+	background-color: white;
 }
 
-#profile_picture
-{
-    margin-bottom: 5%;
+#index_table {
+	width: 70%;
+	alignment: center;
 }
 
-#show_table
-{
-    width: 100%;
-}
-#show_th
-{
-    padding-top: 5%;
-    padding-right: 0;
-
-    text-align: center;
-    text-decoration: none;
-
-    color: white;
-}
-#show_th a:hover
-{
-    text-decoration: none;
-
-    color: white;
-    background-color: #555;
+#index_th {
+	padding-top: 2%;
+	text-align: left;
+	text-decoration: none;
+	color: white;
+	border-bottom: 1px solid white;
 }
 
-#eidolon-clock
-{
-    position: fixed;
-
-    width: 20%;
-    height: 50%;
-
-    background-color: #333;
+#index_th a:hover {
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	background-color: #555555;
 }
+
+#user_show aside {
+	section.user_info {
+		margin-top: 2.0rem;
+	}
+	section {
+		margin-top: 2.0rem;
+		padding: 1rem 0;
+		&:first-child {
+			padding-top: 0;
+			border: 0;
+		}
+		span {
+			line-height: 1;
+			display: block;
+			margin-bottom: 3px;
+		}
+		h1 {
+			font-size: 1.4em;
+			margin-top: 0;
+			margin-bottom: 3px;
+			text-align: left;
+			letter-spacing: -1px;
+			color: white;
+		}
+	}
+}
+
+#profile_name {
+	text-align: center;
+	color: white;
+	alignment: center;
+}
+
+#profile_picture {
+	margin-bottom: 5%;
+}
+
+#show_table {
+	width: 100%;
+}
+
+#show_th {
+	padding-top: 5%;
+	padding-right: 0;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+}
+
+#show_th a:hover {
+	color: white;
+	text-decoration: none;
+	background-color: #555555;
+}
+
+// #eidolon-clock
+// {
+//     position: absolute;
+//     width: 20%;
+//     height: 13%;
+//     top: 50%;
+//     left: 3%;
+//     background-color: #111;
+//     border-style: solid;
+//     border-width: 0.2rem;
+//     border-color: white;
+// }
 
 .upgrade_button {
-    display: inline-block;
-    margin-left: 7%;
-    margin-top: 1%;
+	display: inline-block;
+	margin-left: 7%;
+	margin-top: 1%;
 }
 
 .button {
-    border: none;
-    color: white;
-    padding: 12px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.5s; /* Safari */
-    transition-duration: 0.5s;
-    cursor: pointer;
-    // margin-left: 7.5%;
-    // margin-top: 1%;
+	border: none;
+	color: white;
+	padding: 1.2rem 2rem;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1.6rem;
+	margin: 0.4rem 0.2rem;
+	-webkit-transition-duration: 0.5s;
+	        transition-duration: 0.5s;
+	cursor: pointer;
+	// margin-left: 7.5%;
+	// margin-top: 1%;
 }
 
 .button1 {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    border: none;
+	text-align: center;
+	background-color: #333333;
+	border: none;
 }
 
 .button1:hover {
-    text-decoration: none;
-    background-color: #444;
-    color: white;
+	text-decoration: none;
+	background-color: #444444;
 }
 
 h2, h3, h4, h5, h6 {
-    color: white;
-    text-align: center;
+	text-align: center;
 }
 
 .premium_page {
-    margin:0 auto;
-    display: block;
-    width: 17%;
+	margin: 0 auto;
+	display: block;
+	width: 17%;
+}
+
+// Containers for most viewed / ad panels
+.most-viewed {
+	// background-color: #333333;
+    box-shadow: 0 0 10rem rgba(0, 0, 0, 0.3) inset;
+    border: 0.5rem solid #333;
+	position: absolute;
+	width: 17.5rem;
+	height: 36rem;
+	top: 29.7%;
+}
+
+.left {
+	left: 6.5%;
+}
+
+.right {
+	left: 80.5%;
+}
+
+.most-popular-header {
+    font-size: 1.8rem;
+}
+
+.most-popular-image {
+    position: relative;
+    background-color: #1e1e1e;
+    width: 100%;
+    box-shadow: 0 0 10rem rgba(0, 0, 0, 0.3) inset;
+    // border: 0.5rem solid #333;
+}
+
+.warframe {
+    -webkit-clip-path: inset(0 0 66.5% 0);
+            clip-path: inset(0 0 66.5% 0);
+}
+
+.weapon {
+}
+
+.first {
+    border-top: 0.5rem solid #333;
+    // border-top: none;
+    position: absolute;
+    top: 17.5%;
+}
+
+.second {
+    border-top: 0.5rem solid #333;
+    position: absolute;
+    top: 45%;
+}
+
+.third {
+    border-top: 0.5rem solid #333;
+    position: absolute;
+    top: 72.5%;
+}
+
+.third-weapon {
+    border-top: 0.5rem solid #333;
+    border-bottom: none;
+    position: absolute;
+    top: 73%;
 }

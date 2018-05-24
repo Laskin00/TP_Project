@@ -6,11 +6,11 @@
 
     <%= form_for(:user, url: current_link + "mods/" + @mod.mod_type.to_s + "/" + @mod.id.to_s) do |f| %>
       <% if FavoriteMod.where(user_id: current_user, mod_id: @mod.id).exists? %>
-        <div class = 'favorites_button'>
+        <div class = 'favorites_button_mods'>
           <%= f.submit "Remove mod from favorites", class: "btn btn-secoundary" %>
         </div>
       <%else%>
-        <div class = 'favorites_button'>
+        <div class = 'favorites_button_mods'>
           <%= f.submit "Add mod to favorites", class: "btn btn-secoundary" %>
         </div>
       <% end %>
