@@ -17,11 +17,10 @@
       </div>
     <% end %>
   <% end %>
-<% end %>
-
-<% if current_user.permissions  > 1 %>
-  <div class = 'favorites_button_mods'>
-    <p style = "font-size: 150%;"><%= link_to "• Delete", @relic, method: :delete, data: { confirm: "You sure?"}%></p>
-    <p style = "font-size: 150%;"><%= link_to "• Edit", @relic, method: :edit %> </p>
-  </div>
+  <% if current_user.permissions  > 1 %>
+    <div class = 'favorites_button_mods'>
+      <p style = "font-size: 150%;"><%= link_to "• Delete", @relic, method: :delete, data: { confirm: "You sure?"}%></p>
+      <p style = "font-size: 150%;"><%= link_to "• Edit", @relic, method: :edit %> </p>
+    </div>
+  <% end %>
 <% end %>

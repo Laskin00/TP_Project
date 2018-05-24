@@ -16,13 +16,11 @@
         </div>
       <% end %>
     <% end %>
+    <% if current_user.permissions  > 1 %>
+      <div class = 'favorites_button_center'>
+        <p style = "font-size: 150%;"><%= link_to "• Delete", @mod, method: :delete, data: { confirm: "You sure?"}%></p>
+        <p style = "font-size: 150%;"><%= link_to "• Edit", @mod, method: :edit %> </p>
+      </div>
+    <% end %>
   <% end %>
-
-  <% if current_user.permissions  > 1 %>
-    <div class = 'favorites_button_mods'>
-      <p style = "font-size: 150%;"><%= link_to "• Delete", @mod, method: :delete, data: { confirm: "You sure?"}%></p>
-      <p style = "font-size: 150%;"><%= link_to "• Edit", @mod, method: :edit %> </p>
-    </div>
-  <% end %>
-
 </div>
