@@ -5,6 +5,8 @@ class WarframesController < ApplicationController
 
     def show
       @warframe = Warframe.find(params[:id])
+      current_views = @warframe.views
+      @warframe.update_attributes(views: current_views+1)
       if @warframe == nil
         render 'shared/404'
       end
@@ -20,6 +22,7 @@ class WarframesController < ApplicationController
 
     def create
       @warframe = Warframe.new(warframe_params)
+      @warframe.views = 0
       if @warframe.save
         flash[:success] = "You have successfully added a warframe!"
         redirect_to @warframe
@@ -65,7 +68,7 @@ class WarframesController < ApplicationController
 
     private
     def warframe_params
-      params.require(:warframe).permit(:name, :image_url, :neuropticsDropChance,:systemsDropChance, :blueprintDropChance, :chassisDropChance,:armor, :energy, :health, :shield, :mastery_rank,:description, :whereToGet)
+      params.require(:warframe).permit(:name, :image_url, :neuropticsDropChance,:systemsDropChance, :blueprintDropChance, :chassisDropChance,:armor, :energy, :health, :shield, :mastery_rank,:description, :whereToGet, :views)
     end
 
 end

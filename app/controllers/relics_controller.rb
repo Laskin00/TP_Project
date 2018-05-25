@@ -3,7 +3,9 @@ class RelicsController < ApplicationController
         render :relicView
     end
     def show
-        @relic = Relic.find_by(id: params[:id])
+      @relic = Relic.find(params[:id])
+      current_views = @relic.views
+      @relic.update_attributes(views: current_views+1)
         if @relic == nil
               render "404"
         end
@@ -47,6 +49,7 @@ class RelicsController < ApplicationController
 
       def create
         @relic = Relic.new(relic_params)
+        @relic.views = 0
         @relic.relic_type = @relic.name.downcase
         @relic.name = @relic.relic_type.split(' ').first.capitalize + " " + @relic.relic_type.split(' ').second.capitalize
         @relic.relic_type = @relic.relic_type.split(' ').first

@@ -24,3 +24,18 @@
     <% end %>
   <% end %>
 </div>
+
+<!-- <h4 style = "text-align: center">Most popular Mods</h4>
+
+  <% @mods = Mod.where(mod_type: @mod.mod_type).order("views DESC") %>
+  <% @mFirst = @mods[0]%>
+  <% @mSecond = @mods[1] %>
+  <% @mThird = @mods[1] %>
+
+<div class = "most-viewed-bot" >
+  <ul>
+    <li><img src="<%= @mFirst.image_url %>" class="most-popular-image weapon first" title="<%= @mFirst.name %>" alt="<%= @mFirst.name %>" onclick="location.href='/mods/<%= @mFirst.id %>'"></li>
+    <li><img src="<%= @mSecond.image_url %>" class="most-popular-image weapon first" title="<%= @mSecond.name %>" alt="<%= @mSecond .name %>" onclick="location.href='/mods/<%= @mSecond.id %>'"></li>
+    <li><img src="<%= @mThird.image_url %>" class="most-popular-image weapon first" title="<%= @mThird.name %>" alt="<%= @mThird.name %>" onclick="location.href='/mods/<%= @mThird.id %>'"></li>
+  </ul>
+</div> -->

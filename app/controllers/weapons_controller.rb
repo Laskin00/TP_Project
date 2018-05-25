@@ -4,7 +4,9 @@ class WeaponsController < ApplicationController
     end
 
     def show
-      @weapon = Weapon.find_by(id: params[:id])
+      @weapon = Weapon.find(params[:id])
+      current_views = @weapon.views
+      @weapon.update_attributes(views: current_views+1)
       if @weapon == nil
             render "Error"
       end
@@ -45,6 +47,7 @@ class WeaponsController < ApplicationController
 
     def create
       @weapon = Weapon.new(weapon_params)
+      @weapon.views = 0
       @weapon.weapon_type = @weapon.weapon_type.downcase
       @weapon.name = @weapon.name.capitalize
       @weapon.attack_type = @weapon.attack_type.capitalize

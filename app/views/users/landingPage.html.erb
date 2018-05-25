@@ -23,19 +23,26 @@
     <h1 id="clock">1hr 54m 14s</h1>
 </div> -->
 
-
+<% @warframes = Warframe.order("views DESC") %>
 <div class="most-viewed left">
     <h4 class="most-popular-header">Most popular Warframes</h4>
-    <img src="<%= Warframe.find(1).image_url %>" class="most-popular-image warframe first" title="<%= Warframe.find(1).name %>" alt="<%= Warframe.find(1).name %>" onclick="location.href='/warframes/<%= Warframe.find(1).id %>'">
-    <img src="<%= Warframe.find(2).image_url %>" class="most-popular-image warframe second" title="<%= Warframe.find(2).name %>" alt="<%= Warframe.find(2).name %>" onclick="location.href='/warframes/<%= Warframe.find(2).id %>'">
-    <img src="<%= Warframe.find(3).image_url %>" class="most-popular-image warframe third" title="<%= Warframe.find(3).name %>" alt="<%= Warframe.find(3).name %>" onclick="location.href='/warframes/<%= Warframe.find(3).id %>'">
+    <% @Wfirst = @warframes[0]%>
+    <% @Wsecond = @warframes[1] %>
+    <%  @Wthird = @warframes[2] %>
+    <img src="<%= @Wfirst.image_url %>" class="most-popular-image warframe first" title="<%= @Wfirst.name %>" alt="<%= @Wfirst.name %>" onclick="location.href='/warframes/<%= @Wfirst.id %>'">
+    <img src="<%= @Wsecond.image_url %>" class="most-popular-image warframe second" title="<%= @Wsecond.name %>" alt="<%= @Wsecond.name %>" onclick="location.href='/warframes/<%= @Wsecond.id %>'">
+    <img src="<%= @Wthird.image_url %>" class="most-popular-image warframe third" title="<%= @Wthird.name %>" alt="<%= @Wthird.name %>" onclick="location.href='/warframes/<%= @Wthird.id %>'">
 </div>
 
+<% @weapons = Weapon.order("views DESC") %>
 <div class="most-viewed right">
     <h4>Most popular Weapons</h4>
-    <img src="<%= Weapon.find(1).image_url %>" class="most-popular-image weapon first" title="<%= Weapon.find(1).name %>" alt="<%= Weapon.find(1).name %>" onclick="location.href='/weapons/<%= Weapon.find(1).id %>'">
-    <img src="<%= Weapon.find(2).image_url %>" class="most-popular-image weapon second" title="<%= Weapon.find(2).name %>" alt="<%= Weapon.find(2).name %>" onclick="location.href='/weapons/<%= Weapon.find(2).id %>'">
-    <img src="<%= Weapon.find(3).image_url %>" class="most-popular-image weapon third-weapon" title="<%= Weapon.find(3).name %>" alt="<%= Weapon.find(3).name %>" onclick="location.href='/weapons/<%= Weapon.find(3).id %>'">
+    <% @Wefirst = @weapons[0]%>
+    <% @Wesecond = @weapons[1] %>
+    <% @Wethird = @weapons[2] %>
+    <img src="<%= @Wefirst.image_url %>" class="most-popular-image weapon first" title="<%= @Wefirst .name %>" alt="<%= @Wefirst .name %>" onclick="location.href='/weapons/<%= @Wefirst .id %>'">
+    <img src="<%= @Wesecond.image_url %>" class="most-popular-image weapon second" title="<%= @Wesecond.name %>" alt="<%= @Wesecond.name %>" onclick="location.href='/weapons/<%= @Wesecond.id %>'">
+    <img src="<%= @Wethird.image_url %>" class="most-popular-image weapon third-weapon" title="<%= @Wethird.name %>" alt="<%= @Wethird.name %>" onclick="location.href='/weapons/<%= @Wethird.id %>'">
 </div>
 
 <p id="landing-page-paragraph_">

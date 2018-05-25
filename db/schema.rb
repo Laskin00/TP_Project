@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180510083838) do
+ActiveRecord::Schema.define(version: 20180525085730) do
 
   create_table "favorite_mods", force: :cascade do |t|
     t.integer "user_id"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20180510083838) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "mod_type"
+    t.integer "views", default: 0
     t.index ["name"], name: "index_mods_on_name", unique: true
   end
 
@@ -67,6 +68,7 @@ ActiveRecord::Schema.define(version: 20180510083838) do
     t.string "relic_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "views", default: 0
     t.index ["name"], name: "index_relics_on_name", unique: true
   end
 
@@ -103,6 +105,7 @@ ActiveRecord::Schema.define(version: 20180510083838) do
     t.string "health"
     t.string "energy"
     t.string "description"
+    t.integer "views", default: 0
     t.index ["name"], name: "index_warframes_on_name", unique: true
   end
 
@@ -129,6 +132,7 @@ ActiveRecord::Schema.define(version: 20180510083838) do
     t.string "magnetic"
     t.string "radiation"
     t.string "viral"
+    t.integer "views", default: 0
     t.index ["name"], name: "index_weapons_on_name", unique: true
   end
 

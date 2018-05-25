@@ -18,7 +18,8 @@ Warframe.create!(name: "Ash",
    blueprintDropChance: "Can be bought from the shop." , chassisDropChance: "38.72%",
    armor: "65", energy: "100 (150 at rank 30)", health: "150 (450 at rank 30)",
    shield: "100 (300 at rank 30)" , mastery_rank: 0,
-   description: "Ash is a fast, maneuverable Warframe that possesses a high degree of survivability in the field. Fleet movement complements deadly tools of assassination, making Ash a perfect balance between killing potency and stealth.")
+   description: "Ash is a fast, maneuverable Warframe that possesses a high degree of survivability in the field. Fleet movement complements deadly tools of assassination, making Ash a perfect balance between killing potency and stealth.",
+   views: 0)
 
 Warframe.create!(name: "Atlas",
    image_url: "https://vignette.wikia.nocookie.net/warframe/images/7/7f/AtlasNewLook.png/revision/latest/scale-to-width-down/291?cb=20151002032553",
@@ -27,6 +28,7 @@ Warframe.create!(name: "Atlas",
    blueprintDropChance: "100%", chassisDropChance: "38.72%",
     armor: "450", energy: "150 (225 at rank 30)", health: "100 (300 at rank 30)",
    shield: "100 (300 at rank 30)", mastery_rank: "0",
+   views: 0,
    description:"With stone cold fists and a titan's physique, Atlas bends rock to encrust and bulldoze through all challengers in his brawl. Champion of elemental earth, he manifests formidable ramparts, crushing boulders, and golem brethren to rampage his stomping grounds."
 )
 Warframe.create!(name: "Banshee",
@@ -35,6 +37,7 @@ Warframe.create!(name: "Banshee",
     blueprintDropChance: "", chassisDropChance: "",
     armor: "15", energy: "150 (225 at rank 30)", health: "100 (300 at rank 30)",
     shield: "100 (300 at rank 30)", mastery_rank: "0",
+    views: 0,
     description:"Banshee is a sound-themed Warframe. Sophisticated acoustic powers enable Banshee to pinpoint enemy positions and weak spots, suppress gunfire sounds in her surrounding environment, and even emit trembling vibrations to topple her foes"
 )
 Warframe.create!(name: "Chroma",
@@ -43,6 +46,7 @@ Warframe.create!(name: "Chroma",
     blueprintDropChance: "", chassisDropChance: "",
     armor: "350", energy: "150 (225 at rank 30)", health: "100 (300 at rank 30)",
     shield: "100 (300 at rank 30)", mastery_rank: "0",
+    views: 0,
     description: "The bestial avatar of the primal forces of nature, Chroma, confounds his foes and strengthens his allies with elemental caprice."
 )
 Warframe.create!(name: "Ember",
@@ -52,6 +56,7 @@ Warframe.create!(name: "Ember",
     blueprintDropChance: "", chassisDropChance: "38.72%",
     armor: "100", energy: "150 (225 at rank 30)", health: "100 (300 at rank 30)",
     shield: "100 (300 at rank 30)", mastery_rank: "0",
+    views: 0,
     description: "Ember is a fire-based Warframe that relies on almost purely offensive skills. Ember's fire abilities make her very effective against the Infested."
 )
 Warframe.create!(name: "Equinox",
@@ -61,6 +66,7 @@ Warframe.create!(name: "Equinox",
     blueprintDropChance: "12.91%", chassisDropChance: "12.91%",
     armor: "100", energy: "150 (225 at rank 30)", health: "100 (300 at rank 30)",
     shield: "100 (300 at rank 30)", mastery_rank: "0",
+    views: 0,
     description: "A duality of contrasting forces in a single entity, Equinox unleashes wrath like the onset of daybreak, or draws life to a close like dusk's approach. Shifting between two forms allows her to bolster Tenno strength in light or provide recuperative respite in darkness."
 )
 Warframe.create!(name: "Excalibur",
@@ -70,6 +76,7 @@ Warframe.create!(name: "Excalibur",
     blueprintDropChance: "", chassisDropChance: "38.72%",
     armor: "225", energy: "100 (150 at rank 30)", health: "100 (300 at rank 30)",
     shield: "100 (300 at rank 30)", mastery_rank: "0",
+    views: 0,
     description: "Excalibur is a sword-themed Warframe. With the power to channel energy into his summoned blade, he is a mobile swordsman with potent methods of execution. Excalibur is one of three starter options for new players."
 )
 Warframe.create!(name: "Frost",
@@ -79,6 +86,7 @@ Warframe.create!(name: "Frost",
     blueprintDropChance: "", chassisDropChance: "38.72%",
     armor: "300", energy: "100 (150 at rank 30)", health: "100 (300 at rank 30)",
     shield: "150 (450 at rank 30)", mastery_rank: "0",
+    views: 0,
     description: "Frost is a slow and heavily-armored Warframe that is able to utilize offensive and defensive skills to both his own and his team's advantage. He commands furious blizzards that pummel and freeze his enemies while providing respite and solace for his allies."
 )
 Warframe.create!(name: "Gara",
@@ -88,6 +96,7 @@ Warframe.create!(name: "Gara",
     blueprintDropChance: "", chassisDropChance: "7.52% or 30.56%",
     armor: "125", energy: "150 (225 at rank 30)", health: "100 (300 at rank 30)",
     shield: "100 (300 at rank 30)", mastery_rank: "0",
+    views: 0,
     description: "Clad in lustrous vitrum, Gara sunders her foes with adamantine shards, reflects enemy attacks through enchanted mirrors, and reshapes the landscape with molten crystal."
 )
 Warframe.create!(name: "Harrow",
@@ -97,6 +106,7 @@ Warframe.create!(name: "Harrow",
     blueprintDropChance: "", chassisDropChance: "3.00%",
     armor: "150", energy: "100 (150 at rank 30)", health: "100 (300 at rank 30)",
     shield: "150 (450 at rank 30)", mastery_rank: "0",
+    views: 0,
     description: "Dauntless and devout, the dark priest Harrow bestows upon his coven three virtues: salvation through sacrifice, redemption through vengeance, and ascension through defiance."
 )
 Warframe.create!(name: "Hydroid",
@@ -106,6 +116,7 @@ Warframe.create!(name: "Hydroid",
     blueprintDropChance: "", chassisDropChance: "38.72%",
     armor: "200", energy: "125 (188 at rank 30)", health: "100 (300 at rank 30)",
     shield: "125 (375 at rank 30)", mastery_rank: "0",
+    views: 0,
     description: "With the wrathful seas at his command, Hydroid lurks beneath raging tides to plunge his foes into the abyss. Unleashing salvos of cannon barrage and tentacled ocean horrors to rend foes asunder, Hydroid is reminiscent of the age of corsairs."
 )
 Warframe.create!(name: "Inaros",
@@ -115,6 +126,7 @@ Warframe.create!(name: "Inaros",
     blueprintDropChance: "", chassisDropChance: "",
     armor: "200", energy: "100 (150 at rank 30)", health: "550 (2200 at rank 30)",
     shield: "0", mastery_rank: "0",
+    views: 0,
     description: "Once entombed, Inaros ravages, consumes and conquers all life swept up in his cursed sandstorms, leaving only the barren and drained desert of death in his wake. "
 )
 # Warframe.create!(name: "",
@@ -129,76 +141,76 @@ Warframe.create!(name: "Inaros",
 
 
 Relic.create!(name: "Axi A3", image_url: "https://image.ibb.co/gb4b5H/axi_wf_wiki.png",
-  whereToGet: "Sedna Hydron", relic_type: "axi")
+  whereToGet: "Sedna Hydron", relic_type: "axi",views: 0)
 
 Relic.create!(name: "Axi A2", image_url: "https://image.ibb.co/gb4b5H/axi_wf.png",
-  whereToGet: "Sedna Hydron" , relic_type: "axi")
+  whereToGet: "Sedna Hydron" , views: 0, relic_type: "axi")
 
 Relic.create!(name: "Axi S7", image_url: "https://image.ibb.co/gb4b5H/axi_wf.png",
-  whereToGet: "Sedna Hydron" , relic_type: "axi")
+  whereToGet: "Sedna Hydron" , views: 0, relic_type: "axi")
 
-Relic.create!(name:"Lith F2", image_url: "https://image.ibb.co/eBhqXx/lith_wf_wiki.png",
+Relic.create!(name:"Lith F2", views: 0, image_url: "https://image.ibb.co/eBhqXx/lith_wf_wiki.png",
   whereToGet: "Derelict Deffense or Saturn Rhea" , relic_type: "lith")
 
 Relic.create!(name:"Lith S6", image_url: "https://image.ibb.co/eBhqXx/lith_wf_wiki.png",
-  whereToGet: "Derelict Deffense or Saturn Rhea" , relic_type: "lith")
+  whereToGet: "Derelict Deffense or Saturn Rhea" , views: 0, relic_type: "lith")
 
 Relic.create!(name:"Lith A2", image_url: "https://image.ibb.co/eBhqXx/lith_wf_wiki.png",
-  whereToGet: "Derelict Deffense or Saturn Rhea" , relic_type: "lith")
+  whereToGet: "Derelict Deffense or Saturn Rhea" , views: 0, relic_type: "lith")
 
 Relic.create!(name:"Meso N3", image_url: "https://image.ibb.co/msFusx/meso_wf_wiki.png",
-  whereToGet: "Saturn Helene or Jupiter Io", relic_type: "meso")
+  whereToGet: "Saturn Helene or Jupiter Io", views: 0, relic_type: "meso")
 
 Relic.create!(name:"Meso M2", image_url: "https://image.ibb.co/msFusx/meso_wf_wiki.png",
-  whereToGet: "Saturn Helene or Jupiter Io", relic_type: "meso")
+  whereToGet: "Saturn Helene or Jupiter Io", views: 0, relic_type: "meso")
 
 Relic.create!(name:"Meso M3", image_url: "https://image.ibb.co/msFusx/meso_wf_wiki.png",
-  whereToGet: "Saturn Helene or Jupiter Io", relic_type: "meso")
+  whereToGet: "Saturn Helene or Jupiter Io", views: 0, relic_type: "meso")
 
 Relic.create!(name:"Neo F3", image_url: "https://image.ibb.co/gNQ5zc/neo_wf_wiki.png",
-  whereToGet: "Eris Kala-azar", relic_type: "neo")
+  whereToGet: "Eris Kala-azar", views: 0, relic_type: "neo")
 
 Relic.create!(name:"Neo F2", image_url: "https://image.ibb.co/gNQ5zc/neo_wf_wiki.png",
-  whereToGet: "Eris Kala-azar", relic_type: "neo")
+  whereToGet: "Eris Kala-azar", views: 0, relic_type: "neo")
 
 Relic.create!(name:"Neo A3", image_url: "https://image.ibb.co/gNQ5zc/neo_wf_wiki.png",
-  whereToGet: "Eris Kala-azar", relic_type: "neo")
+  whereToGet: "Eris Kala-azar", views: 0, relic_type: "neo")
 
 Mod.create!(name: "Maiming Strike",
   whereToGet: "Once a year event",
   image_url: "https://vignette.wikia.nocookie.net/warframe/images/d/d6/MaimingStrikeMod.png/revision/latest?cb=20171007152935",
-  mod_type: "weapon")
+  views: 0, mod_type: "weapon")
 
 Mod.create!(name: "Primed Point Blank",
   whereToGet: "Baro Ki'Teer",
   image_url: "https://vignette.wikia.nocookie.net/warframe/images/8/87/PrimedPointBlank.png/revision/latest?cb=20171007153753",
-  mod_type: "weapon")
+  views: 0, mod_type: "weapon")
 
 Mod.create!(name: "Magnum Force",
   whereToGet: "Orokin vaults(Derelict)",
   image_url: "https://vignette.wikia.nocookie.net/warframe/images/9/9f/MagnumForceModU145.png/revision/latest?cb=20171007152932",
-  mod_type: "weapon")
+  views: 0, mod_type: "weapon")
 
 Mod.create!(name: "Primed Flow",
   whereToGet: "Baro Ki'Teer",
   image_url: "https://vignette.wikia.nocookie.net/warframe/images/b/b8/PrimedFlow.png/revision/latest?cb=20171007153729",
-  mod_type: "warframe")
+  views: 0, mod_type: "warframe")
 
 Mod.create!(name: "Narrow Minded",
   whereToGet: "Orokin vaults(Derelict)",
   image_url: "https://vignette.wikia.nocookie.net/warframe/images/0/01/NarrowMindedModU145.png/revision/latest?cb=20171007153247",
-  mod_type: "warframe")
+  views: 0, mod_type: "warframe")
 
 Mod.create!(name: "Vitality",
   whereToGet: "Almost every mission",
   image_url: "https://vignette.wikia.nocookie.net/warframe/images/b/bc/VitalityModU145.png/revision/latest?cb=20171007155821",
-  mod_type: "warframe")
+  views: 0, mod_type: "warframe")
 
 Weapon.create!(name: "Atterax", whereToGet: "Market",
    weapon_type: "melee",
    image_url: "https://vignette.wikia.nocookie.net/warframe/images/4/4e/GrineerWhip.png/revision/latest/scale-to-width-down/220?cb=20140918035809",
    attack_type: "Whip", mastery_rank: 2,
-   impact: 2 , puncture: 2,
+   impact: 2 , views: 0, puncture: 2,
    viral: 2, toxin: 3)
 
 Weapon.create!(name: "Broken War",
@@ -206,52 +218,52 @@ Weapon.create!(name: "Broken War",
   image_url: "https://vignette.wikia.nocookie.net/warframe/images/b/b2/StalkerTwoSword.png/revision/latest/scale-to-width-down/220?cb=20151204013307",
   attack_type:"Sword" , mastery_rank: 10,
   impact: 9, puncture: 9,
-  slash: 72)
+  views: 0, slash: 72)
 
 Weapon.create!(name: "Galatine",
   whereToGet:"Market", weapon_type: "melee",
   image_url: "https://vignette.wikia.nocookie.net/warframe/images/d/df/Galatine_o.png/revision/latest/scale-to-width-down/220?cb=20130928190402",
   attack_type:"Sword" , mastery_rank: 3,
   impact: 3.1, puncture:3.1,
-  slash: 118.9)
+  views: 0, slash: 118.9)
 
 Weapon.create!(name: "Dread",
   whereToGet:"It is dropped by stalkers", weapon_type: "primary",
   image_url: "https://vignette.wikia.nocookie.net/warframe/images/2/20/Dread2.png/revision/latest/scale-to-width-down/220?cb=20180418151352",
   attack_type:"Bow" , mastery_rank: 5,
   impact:6.5, puncture:6.5,
-  slash:117)
+  views: 0, slash:117)
 
 Weapon.create!(name: "Soma",
   whereToGet:"Market", weapon_type: "primary",
   image_url: "https://vignette.wikia.nocookie.net/warframe/images/a/a5/U10DesignCouncilTennoAR.png/revision/latest/scale-to-width-down/220?cb=20130914111405",
   attack_type:"Rifle" , mastery_rank: 6,
   impact:1.2, puncture:4.8,
-  slash:6)
+  views: 0, slash:6)
 
 Weapon.create!(name: "Corinth",
   whereToGet:"Market", weapon_type: "primary",
   image_url: "https://vignette.wikia.nocookie.net/warframe/images/3/32/TnHeavyShotgun.png/revision/latest/scale-to-width-down/220?cb=20171221214433",
   attack_type:"Shotgun" , mastery_rank: 10,
   impact:151, puncture:226,
-  slash:162)
+  views: 0, slash:162)
 
 Weapon.create!(name: "Akstiletto",
   whereToGet:"Market", weapon_type: "secondary",
   image_url: "https://vignette.wikia.nocookie.net/warframe/images/e/ef/TennoUzi.png/revision/latest/scale-to-width-down/220?cb=20140206061957",
   attack_type:"Dual pistols" , mastery_rank: 8,
   impact:16.8, puncture:2.8,
-  slash:8.4)
+  views: 0, slash:8.4)
 
 Weapon.create!(name: "Akbolto",
   whereToGet:"Market", weapon_type: "secondary",
   image_url: "https://vignette.wikia.nocookie.net/warframe/images/0/0e/Akbolto.png/revision/latest/scale-to-width-down/220?cb=20130426075511",
   attack_type:"Dual pistols" , mastery_rank: 9,
-  impact:4, puncture:36)
+  views: 0, impact:4, puncture:36)
 
 Weapon.create!(name: "Spira",
   whereToGet:"Market", weapon_type: "secondary",
   image_url: "https://vignette.wikia.nocookie.net/warframe/images/c/c5/LiDagger.png/revision/latest/scale-to-width-down/220?cb=20150924014336",
   attack_type:"Thrown" , mastery_rank:8,
   impact:8.2, puncture:49.2,
-  slash:24.6)
+  views: 0, slash:24.6)

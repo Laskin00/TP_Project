@@ -4,7 +4,9 @@ class ModsController < ApplicationController
     end
 
     def show
-      @mod = Mod.find_by(id: params[:id])
+      @mod = Mod.find(params[:id])
+      current_views = @mod.views
+      @mod.update_attributes(views: current_views+1)
       if @mod == nil
             render "shared/404"
       end
@@ -30,6 +32,7 @@ class ModsController < ApplicationController
       @mod = Mod.new(mod_params)
       @mod.mod_type = @mod.mod_type.downcase
       @mod.name = @mod.name.capitalize
+      @mod.views = 0
       if @mod.save
         flash[:success] = "You have successfully added a mod!"
         redirect_to @mod

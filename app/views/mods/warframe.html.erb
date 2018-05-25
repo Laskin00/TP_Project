@@ -3,7 +3,7 @@
       <tr id = "index_tr">
           <th id = "index_th"><%= image_tag(warframe.image_url, width: '125' ,height: '181', id: 'mod-image') %><th>
           <th id = "index_th"><h2 class = 'white'><%= link_to warframe.name, warframe %> </h2><th>
-            <% if current_user.permissions  > 1 %>
+            <% if logged_in? && current_user.permissions  > 1 %>
               <th id = "index_th"><h2 class = 'white'><%= link_to "• Delete", warframe, method: :delete, data: { confirm: "You sure?"}%></h2></th>
             <% end %>
       </tr>
