@@ -2,7 +2,7 @@
     <div id="header-div">
         <img src="<%= axi.image_url %>" id="relic-img" alt="<% axi.name %>">
         <h1 onclick="location.href='/relics/axi/<%= axi.id %>'" id="relics-h1"> <%= axi.name %>  </h1>
-        <% if current_user.permissions  > 1 %>
+        <% if logged_in? && current_user.permissions  > 1 %>
           <h2 style = "color: white; text-align: center; font-size:100%;"><%= link_to "• Delete", axi, method: :delete, data: { confirm: "You sure?"}%></h2>
         <% end %>
 

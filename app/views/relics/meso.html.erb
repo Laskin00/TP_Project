@@ -2,7 +2,7 @@
     <div id="header-div">
         <img src="<%= meso.image_url %>" id="relic-img" alt="<% meso.name %>">
         <h1 onclick="location.href='/relics/meso/<%= meso.id %>'" id="relics-h1"> <%= meso.name %> </h1>
-        <% if current_user.permissions  > 1 %>
+        <% if logged_in? && current_user.permissions  > 1 %>
           <h2 style = "color: white; text-align: center; font-size:100%;"><%= link_to "• Delete", meso, method: :delete, data: { confirm: "You sure?"}%></h2>
         <% end %>
     </div>
