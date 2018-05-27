@@ -26,3 +26,12 @@
     </div>
   <% end %>
 <% end %>
+
+<% if current_user.permissions < 1 %>
+    <div class="most-viewed left ad">
+        <img src="https://i.imgur.com/5PTE30E.png" class="image-ad" title="the brand new corinth" alt="the brand new corinth" onclick="location.href='http://warframe.wikia.com/wiki/Corinth'">
+    </div>
+    <div class="most-viewed right ad">
+        <img src="https://i.imgur.com/c9572sZ.png" class="image-ad" title="hot singles near you" alt="hot singles near you" onclick="location.href='http://warframe.wikia.com/wiki/Ember/Prime'">
+    </div>
+<% end %>
