@@ -244,7 +244,7 @@ li.droppdown {
 }
 
 #profile_picture {
-	margin-bottom: 5%;
+	margin-bottom: 2rem;
 }
 
 #show_table {
@@ -264,18 +264,27 @@ li.droppdown {
 	background-color: #555555;
 }
 
-// #eidolon-clock
-// {
-//     position: absolute;
-//     width: 20%;
-//     height: 13%;
-//     top: 50%;
-//     left: 3%;
-//     background-color: #111;
-//     border-style: solid;
-//     border-width: 0.2rem;
-//     border-color: white;
-// }
+#eidolon-clock {
+	box-shadow: 0 0 7.5rem rgba(0, 0, 0, 0.5) inset;
+	border: 0.2rem solid white;
+	margin-top: 4.5rem;
+	margin-left: 10.5rem;
+	position: relative;
+	height: 6rem;
+	width: 15rem;
+}
+
+.eidolon-h1 {
+	font-size: 2rem;
+	position: absolute;
+	margin-top: 0.25rem;
+	margin-left: 10.25rem;
+}
+
+#clock {
+	font-size: 2.5rem;
+	margin-top: 9%;
+}
 
 .upgrade_button {
 	display: inline-block;
@@ -322,8 +331,8 @@ h2, h3, h4, h5, h6 {
 
 // Containers for most viewed / ad panels
 .most-viewed {
-    box-shadow: 0 0 10rem rgba(0, 0, 0, 0.3) inset;
-    border: 0.5rem solid #333;
+	box-shadow: 0 0 10rem rgba(0, 0, 0, 0.3) inset;
+	border: 0.5rem solid #333333;
 	position: absolute;
 	width: 17.5rem;
 	height: 36rem;
@@ -382,15 +391,15 @@ h2, h3, h4, h5, h6 {
 // 	margin-left: 30%;
 // }
 .most-popular-header {
-    font-size: 1.8rem;
+	font-size: 1.8rem;
 }
 
 .most-popular-image {
-    position: relative;
-    background-color: #1e1e1e;
-    width: 100%;
-    box-shadow: 0 0 10rem rgba(0, 0, 0, 0.3) inset;
-    // border: 0.5rem solid #333;
+	position: relative;
+	background-color: #1e1e1e;
+	width: 100%;
+	box-shadow: 0 0 10rem rgba(0, 0, 0, 0.3) inset;
+	// border: 0.5rem solid #333;
 }
 
 .ad {
@@ -404,8 +413,8 @@ h2, h3, h4, h5, h6 {
 }
 
 .warframe {
-    -webkit-clip-path: inset(0 0 66.5% 0);
-            clip-path: inset(0 0 66.5% 0);
+	-webkit-clip-path: inset(0 0 66.5% 0);
+	        clip-path: inset(0 0 66.5% 0);
 }
 
 .weapon {
@@ -413,16 +422,16 @@ h2, h3, h4, h5, h6 {
 }
 
 .first {
-    border-top: 0.5rem solid #333;
-    // border-top: none;
-    position: absolute;
-    top: 17.5%;
+	border-top: 0.5rem solid #333333;
+	// border-top: none;
+	position: absolute;
+	top: 17.5%;
 }
 
 .second {
-    border-top: 0.5rem solid #333;
-    position: absolute;
-    top: 45%;
+	border-top: 0.5rem solid #333333;
+	position: absolute;
+	top: 45%;
 }
 
 .weapon.first {
@@ -434,14 +443,14 @@ h2, h3, h4, h5, h6 {
 }
 
 .third {
-    border-top: 0.5rem solid #333;
-    position: absolute;
-    top: 72.5%;
+	border-top: 0.5rem solid #333333;
+	position: absolute;
+	top: 72.5%;
 }
 
 .third-weapon {
-    border-top: 0.5rem solid #333;
-    border-bottom: none;
-    position: absolute;
-    top: 73%;
+	border-top: 0.5rem solid #333333;
+	border-bottom: none;
+	position: absolute;
+	top: 73%;
 }

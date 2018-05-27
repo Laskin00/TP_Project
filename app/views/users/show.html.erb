@@ -1,3 +1,30 @@
+<script>
+    function startTimer(duration, display) {
+    var timer = duration, hours, minutes, seconds;
+    setInterval(function () {
+        hours = parseInt(timer / 3600, 10)
+        minutes = parseInt(timer / 120, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = hours + ":" + minutes + ":" + seconds;
+
+        if(--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+    }
+
+    window.onload = function () {
+    var minutes = 60 * 120,
+        display = document.querySelector('#clock');
+    startTimer(minutes, display);
+    };
+</script>
+
 <% provide(:title, @user.name) %>
 <div class = "user_show">
   <div class = "row" >
@@ -38,5 +65,11 @@
     </div>
     <div class="most-viewed right ad">
         <img src="https://i.imgur.com/c9572sZ.png" class="image-ad" title="hot singles near you" alt="hot singles near you" onclick="location.href='http://warframe.wikia.com/wiki/Ember/Prime'">
+    </div>
+<% else %>
+    <h1 class="eidolon-h1">Time until Eidolon</h1>
+
+    <div id="eidolon-clock">
+        <h1 id="clock">0hr 00m 00s</h1>
     </div>
 <%end%>
