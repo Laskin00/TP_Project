@@ -5,6 +5,8 @@
     </div>
 </div>
 
+  <h3 class = "center_white"> Where to get : <br> <%= @relic.whereToGet %></h3>
+
 <% if logged_in? && not_free? %>
   <%= form_for(:user, url: current_link + "relics/" + @relic.relic_type.to_s + "/" + @relic.id.to_s) do |f| %>
     <% if FavoriteRelic.where(user_id: current_user, relic_id: @relic.id).exists? %>

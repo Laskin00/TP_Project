@@ -44,3 +44,13 @@
     </div>
   <% end %>
 <% end %>
+
+<% @vWarframe = Warframe.order("views DESC").first %>
+<% if @vWarframe == @warframe %>
+  <%@vWarframe = Warframe.order("views DESC")[2] %>
+<% end %>
+
+<div class = "most-viewed right" >
+  <h4 style = "text-align: center">Most popular Warframe</h4>
+  <img  src="<%= @vWarframe.image_url %>" class="most-popular-image weapon first" title="<%= @vWarframe.name %>" alt="<%= @vWarframe .name %>" onclick="location.href='/warframes/<%= @vWarframe.id %>'">
+</div>

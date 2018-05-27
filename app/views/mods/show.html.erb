@@ -4,6 +4,8 @@
         <img id="mods-view-image_" src= <%= @mod.image_url %>  alt=<%= @mod.name %> title=<%= @mod.name %> >
     </div>
 
+    <h3 class = "center_white"> Where to get : <br> <%= @mod.whereToGet %></h3>
+
   <% if logged_in? && not_free? %>
     <%= form_for(:user, url: current_link + "mods/" + @mod.mod_type.to_s + "/" + @mod.id.to_s) do |f| %>
       <% if FavoriteMod.where(user_id: current_user, mod_id: @mod.id).exists? %>
@@ -25,17 +27,29 @@
   <% end %>
 </div>
 
-<!-- <h4 style = "text-align: center">Most popular Mods</h4>
+  <% @mods = Mod.order("views DESC") %>
 
-  <% @mods = Mod.where(mod_type: @mod.mod_type).order("views DESC") %>
-  <% @mFirst = @mods[0]%>
-  <% @mSecond = @mods[1] %>
-  <% @mThird = @mods[1] %>
+  <% @mods.each do |m| %>
+    <% if @mFirst != nil && @mSecond != nil && @mThird != nil %>
+      <% break %>
+    <% end %>
 
-<div class = "most-viewed-bot" >
-  <ul>
-    <li><img src="<%= @mFirst.image_url %>" class="most-popular-image weapon first" title="<%= @mFirst.name %>" alt="<%= @mFirst.name %>" onclick="location.href='/mods/<%= @mFirst.id %>'"></li>
-    <li><img src="<%= @mSecond.image_url %>" class="most-popular-image weapon first" title="<%= @mSecond.name %>" alt="<%= @mSecond .name %>" onclick="location.href='/mods/<%= @mSecond.id %>'"></li>
-    <li><img src="<%= @mThird.image_url %>" class="most-popular-image weapon first" title="<%= @mThird.name %>" alt="<%= @mThird.name %>" onclick="location.href='/mods/<%= @mThird.id %>'"></li>
-  </ul>
-</div> -->
+    <% if @mod != m && @mFirst != nil && @mSecond == nil%>
+      <% @mSecond = m %>
+    <% end %>
+
+    <% if @mod != m && @mFirst == nil%>
+      <% @mFirst = m%>
+    <% end %>
+  <% end %>
+
+
+<div class = "most-viewed left" >
+  <h4 style = "text-align: center">Most popular Mods</h4>
+  <img  src="<%= @mFirst.image_url %>" class="most-popular-image weapon first" title="<%= @mFirst.name %>" alt="<%= @mFirst.name %>" onclick="location.href='/mods/<%= @mFirst.id %>'">
+</div>
+
+<div class = "most-viewed right" >
+  <h4 style = "text-align: center">Most popular Mods</h4>
+  <img  src="<%= @mSecond.image_url %>" class="most-popular-image weapon first" title="<%= @mSecond.name %>" alt="<%= @mSecond .name %>" onclick="location.href='/mods/<%= @mSecond.id %>'">
+</div>

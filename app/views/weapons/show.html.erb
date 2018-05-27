@@ -24,6 +24,8 @@
     </div>
 </div>
 
+  <h3 class = "center_white"> Where to get : <br> <%= @weapon.whereToGet %></h3>
+
 <% if logged_in? && not_free? %>
   <%= form_for(:user, url: current_link + "weapons/" + @weapon.weapon_type.to_s + "/" + @weapon.id.to_s) do |f| %>
     <% if FavoriteWeapon.where(user_id: current_user, weapon_id: @weapon.id).exists? %>
@@ -43,3 +45,50 @@
     </div>
   <% end %>
 <% end %>
+
+<% @weapons = Weapon.order("views DESC") %>
+
+<% @weapons.each do |m| %>
+  <% if @mFirst != nil && @mSecond != nil && @mThird != nil && @mForth != nil && @mFifth != nil && @mSixth != nil%>
+    <% break %>
+  <% end %>
+
+  <% if @weapon != m && @mFirst != nil && @mSecond != nil && @mThird != nil  && @mForth != nil && @mFifth != nil && @mSixth == nil%>
+    <% @mSixth = m %>
+  <%end %>
+
+  <% if @weapon != m && @mFirst != nil && @mSecond != nil && @mThird != nil  && @mForth != nil && @mFifth == nil%>
+    <% @mFifth = m %>
+  <%end %>
+
+  <% if @weapon != m && @mFirst != nil && @mSecond != nil && @mThird != nil  && @mForth == nil%>
+    <% @mForth = m %>
+  <%end %>
+
+  <% if @weapon != m && @mFirst != nil && @mSecond != nil && @mThird == nil %>
+    <% @mThird = m %>
+  <%end %>
+
+  <% if @weapon != m && @mFirst != nil && @mSecond == nil%>
+    <% @mSecond = m %>
+  <% end %>
+
+  <% if @weapon != m && @mFirst == nil%>
+    <% @mFirst = m%>
+  <% end %>
+<% end %>
+
+
+<div class = "most-viewed left" >
+<h4 style = "text-align: center">Most popular weapons</h4>
+<img  src="<%= @mFirst.image_url %>" class="most-popular-image weapon first" title="<%= @mFirst.name %>" alt="<%= @mFirst.name %>" onclick="location.href='/weapons/<%= @mFirst.id %>'">
+<img  src="<%= @mForth.image_url %>" class="most-popular-image weapon second" title="<%= @mForth.name %>" alt="<%= @mForth.name %>" onclick="location.href='/weapons/<%= @mForth.id %>'">
+<img  src="<%= @mSixth.image_url %>" class="most-popular-image weapon third" title="<%= @mSixth.name %>" alt="<%= @mSixth.name %>" onclick="location.href='/weapons/<%= @mSixth.id %>'">
+</div>
+
+<div class = "most-viewed right" >
+<h4 style = "text-align: center">Most popular weapons</h4>
+<img  src="<%= @mSecond.image_url %>" class="most-popular-image weapon first" title="<%= @mSecond.name %>" alt="<%= @mSecond .name %>" onclick="location.href='/weapons/<%= @mSecond.id %>'">
+<img  src="<%= @mThird.image_url %>" class="most-popular-image weapon second" title="<%= @mThird.name %>" alt="<%= @mThird .name %>" onclick="location.href='/weapons/<%= @mThird.id %>'">
+<img  src="<%= @mFifth.image_url %>" class="most-popular-image weapon third" title="<%= @mFifth.name %>" alt="<%= @mFifth .name %>" onclick="location.href='/weapons/<%= @mFifth.id %>'">
+</div>

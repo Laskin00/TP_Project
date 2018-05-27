@@ -5,9 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create!(name: "Alex Laskin", email: "alex_l13@abv.bg", password: "efu311",
-   password_confirmation: "efu311", image_url: "https://www.mobafire.com/images/champion/square/master-yi.png",
+User.create!(name: "Test", email: "test@abv.bg", password: "123123",
+   password_confirmation: "123123", image_url: "https://scontent.fsof2-1.fna.fbcdn.net/v/t1.0-9/32592889_984037258431345_8232303690443128832_n.jpg?_nc_cat=0&oh=0ba00c7f589edfa33679f03cbd2a5f43&oe=5B8A4211",
+   permissions: 0, activated: true, activated_at: Time.zone.now
+)
+
+User.create!(name: "Alex Laskin", email: "alex_l13@abv.bg", password: "123123",
+   password_confirmation: "123123", image_url: "https://www.mobafire.com/images/champion/square/master-yi.png",
    permissions: 3, activated: true, activated_at: Time.zone.now)
+
 User.create!(name: "ImTheWizzy", email: "martin_todo9@abv.bg", password: "123456",
       password_confirmation: "123456", image_url: "https://www.mobafire.com/images/avatars/master-yi-project.png",
       permissions: 3, activated: true, activated_at: Time.zone.now)
