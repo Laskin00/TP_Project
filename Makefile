@@ -1,4 +1,6 @@
 all:
+	
+github:
 	git pull
 	git add .
 	git commit
@@ -14,3 +16,8 @@ heroku:
 	git add .
 	git commit
 	git push heroku master
+
+heroku_database:
+	heroku pg:reset --confirm warframe-loot-wiki
+	heroku run rails db:migrate
+	heroku run rails db:seed
