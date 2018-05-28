@@ -9,4 +9,6 @@
       </tr>
   <% end %>
 </table>
-<%= render 'layouts/ads' %>
+<% if !logged_in? || current_user.permissions < 1 %>
+  <%= render 'layouts/ads' %>
+<% end %>
