@@ -4,11 +4,16 @@ class ModsController < ApplicationController
     end
 
     def show
-      @mod = Mod.find(params[:id])
-      current_views = @mod.views
-      @mod.update_attributes(views: current_views+1)
+      if params[:id].to_f.to_s == params[:id].to_s || params[:id].to_i.to_s == params[:id].to_s
+        @mod = Mod.find(params[:id])
+      else
+        @mod = Mod.find_by(name: params[:id])
+      end
       if @mod == nil
-            render "shared/404"
+        render "shared/404"
+      else
+        current_views = @mod.views
+        @mod.update_attributes(views: current_views+1)
       end
     end
 
@@ -79,5 +84,4 @@ private
     def mod_params
           params.require(:mod).permit(:name, :mod_type, :image_url, :whereToGet, :dropChance)
     end
-
 end

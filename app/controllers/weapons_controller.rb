@@ -4,11 +4,16 @@ class WeaponsController < ApplicationController
     end
 
     def show
-      @weapon = Weapon.find(params[:id])
-      current_views = @weapon.views
-      @weapon.update_attributes(views: current_views+1)
+      if params[:id].to_f.to_s == params[:id].to_s || params[:id].to_i.to_s == params[:id].to_s
+        @weapon = Weapon.find(params[:id])
+      else
+        @weapon = Weapon.find_by(name: params[:id])
+      end
       if @weapon == nil
-            render "Error"
+        render "shared/404"
+      else
+        current_views = @weapon.views
+        @weapon.update_attributes(views: current_views+1)
       end
     end
 

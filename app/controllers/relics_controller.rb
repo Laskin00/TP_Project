@@ -2,14 +2,20 @@ class RelicsController < ApplicationController
     def index
         render :relicView
     end
+
     def show
-      @relic = Relic.find(params[:id])
-      current_views = @relic.views
-      @relic.update_attributes(views: current_views+1)
-        if @relic == nil
-              render "404"
-        end
+      if params[:id].to_f.to_s == params[:id].to_s || params[:id].to_i.to_s == params[:id].to_s
+        @relic = Relic.find(params[:id])
+      else
+        @relic = Relic.find_by(name: params[:id])
       end
+      if @relic == nil
+        render "shared/404"
+      else
+        current_views = @relic.views
+        @relic.update_attributes(views: current_views+1)
+      end
+    end
 
       def lith
         @lith = Relic.where(relic_type: "lith")

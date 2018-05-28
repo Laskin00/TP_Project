@@ -4,11 +4,16 @@ class WarframesController < ApplicationController
     end
 
     def show
-      @warframe = Warframe.find(params[:id])
-      current_views = @warframe.views
-      @warframe.update_attributes(views: current_views+1)
+      if params[:id].to_f.to_s == params[:id].to_s || params[:id].to_i.to_s == params[:id].to_s
+        @warframe = Warframe.find(params[:id])
+      else
+        @warframe = Warframe.find_by(name: params[:id])
+      end
       if @warframe == nil
-        render 'shared/404'
+        render "shared/404"
+      else
+        current_views = @warframe.views
+        @warframe.update_attributes(views: current_views+1)
       end
     end
 
