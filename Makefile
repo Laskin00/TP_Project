@@ -1,5 +1,5 @@
 all:
-	
+
 github:
 	git pull
 	git add .
@@ -15,6 +15,13 @@ heroku:
 	git pull
 	git add .
 	git commit
+	git push heroku master
+
+githubandheroku:
+	git pull
+	git add .
+	git commit
+	git push origin master
 	git push heroku master
 
 heroku_database:
