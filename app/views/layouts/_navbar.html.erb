@@ -40,7 +40,9 @@
 
 	<li class = "droppdown search_bar" id = "landing_li">
 		<%= form_tag("/search", method: "get", :class => "search_form") do %>
-			<%= text_field_tag(:q) %>
+			<div id = "text_field">
+				<%= text_field_tag(:q) %>
+			</div>
 			<!-- <%= submit_tag("Search") %> -->
 		<% end %>
 	</li>
