@@ -103,3 +103,30 @@
 	left: 40.5%;
 	width: 15%;
 }
+
+@media (max-width: 1200px) {
+	.mods_table th {
+		font-size: 2.5rem;
+	}
+}
+
+@media (max-width: 1000px) {
+	.mods_table th {
+		font-size: 2.25rem;
+	}
+}
+
+@media (max-width: 775px) {
+	.mods_table th {
+		font-size: 2rem;
+	}
+	#index_th h2 {
+		font-size: 2.5rem;
+	}
+}
+
+@media (max-width: 650px) {
+	#index_th h2 {
+		font-size: 2rem;
+	}
+}

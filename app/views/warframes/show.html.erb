@@ -56,7 +56,7 @@
     </div>
 <% else %>
     <div class = "most-viewed right" >
-      <h4 style = "text-align: center">Most popular Warframe</h4>
+      <h4 class="most-popular-header">Most popular Warframe</h4>
       <img  src="<%= @vWarframe.image_url %>" class="most-popular-image ad first" title="<%= @vWarframe.name %>" alt="<%= @vWarframe .name %>" onclick="location.href='/warframes/<%= @vWarframe.id %>'">
     </div>
 <% end %>

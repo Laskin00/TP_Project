@@ -2,102 +2,115 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .relics_table {
-    margin-top: 5%;
-    width: 83.5%;
-    // border: 1px solid black;
-    text-align: center;
+	margin-top: 5%;
+	width: 83.5%;
+	// border: 1px solid black;
+	text-align: center;
 }
 
 .relics_table td {
-    padding: 1%;
+	padding: 1%;
 }
 
 .relics_table th {
-    background-color: #333;
-    padding: 1%;
-    color: white;
-    font-family: "Lato";
-    padding: 2%;
-    font-size: 250%;
-    text-shadow: 2px 2px black;
-    text-align: center;
-    border-right: 2px solid #111;
+	background-color: #333333;
+	padding: 1%;
+	color: white;
+	font-family: 'Lato';
+	padding: 2%;
+	font-size: 250%;
+	text-shadow: 2px 2px black;
+	text-align: center;
+	border-right: 2px solid #111111;
 }
 
 .relics_table th:last-child {
-    border-right: none;
+	border-right: none;
 }
 
 .relics_table td {
-    // border-right: 2px solid #111;
-    // border-bottom: 2px solid #111;
+	// border-right: 2px solid #111;
+	// border-bottom: 2px solid #111;
 }
 
 .relics_table td:last-child {
-    border-right: none;
+	border-right: none;
 }
 
 .relics_table td:hover {
-    cursor: pointer;
-    // background-color: #111;
+	cursor: pointer;
+	// background-color: #111;
 }
 
 .relics_table th:hover {
-    cursor: pointer;
-    background-color: #111;
+	cursor: pointer;
+	background-color: #111111;
 }
 
 .relics_table img {
-    width: 100%;
+	width: 100%;
 }
 
 #relics_paragraph_ {
-    margin-top: 4%;
-    text-align: center;
-    color: white;
+	margin-top: 4%;
+	text-align: center;
+	color: white;
 }
 
-#relics-view-image_
-{
-    display: block;
-
-    width: 20%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 1%;
-    padding-left: 1%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-
-    background-color: #333;
+#relics-view-image_ {
+	display: block;
+	width: 20%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 1%;
+	padding-left: 1%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	background-color: #333333;
+    box-shadow: 0 0 20rem rgba(0, 0, 0, 0.5) inset;
+    border: 0.5rem solid #333;
 }
 
-#relics-h1
-{
-    display: inline-block;
-
-    cursor: pointer;
-    text-align: center;
-
-    color:white;
+#relics-h1 {
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	color: white;
 }
 
-#relic-img
-{
-    margin-right: 2%;
-    margin-left: -10%;
-    width: 10%;
+#relic-img {
+	margin-right: 2%;
+	margin-left: -10%;
+	width: 10%;
 }
 
-#header-div
-{
-    display: block;
-
-    text-align: center;
-
-    color:white;
+#header-div {
+	display: block;
+	text-align: center;
+	color: white;
 }
 
-#relics-view-header_{
-  color:white;
+#relics-view-header_ {
+	color: white;
+}
+
+@media (max-width: 1200px) {
+	.relics_table th {
+		font-size: 2.5rem;
+	}
+}
+
+@media (max-width: 1000px) {
+	.relics_table th {
+		font-size: 2.25rem;
+	}
+}
+
+@media (max-width: 775px) {
+	.relics_table th {
+		font-size: 2rem;
+	}
+	#index_th h2 {
+		font-size: 2.5rem;
+	}
 }

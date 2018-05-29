@@ -35,7 +35,7 @@
 
     <% @weapons = Weapon.order("views DESC") %>
     <div class="most-viewed right">
-        <h4>Most popular Weapons</h4>
+        <h4 class="most-popular-header">Most popular Weapons</h4>
         <% @Wefirst = @weapons[0]%>
         <% @Wesecond = @weapons[1] %>
         <% @Wethird = @weapons[2] %>
