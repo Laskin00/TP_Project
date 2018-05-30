@@ -70,10 +70,9 @@ class WarframesController < ApplicationController
       redirect_to root_url
     end
 
-
     private
     def warframe_params
-      params.require(:warframe).permit(:name, :image_url, :neuropticsDropChance,:systemsDropChance, :blueprintDropChance, :chassisDropChance,:armor, :energy, :health, :shield, :mastery_rank,:description, :whereToGet, :views)
+      params.require(:warframe).permit(:name, :image_url, :neuropticsDropChance,:systemsDropChance, :blueprintDropChance, :chassisDropChance,:armor, :energy, :health, :shield, :mastery_rank, :description, :whereToGet, :views)
     end
 
 end

@@ -393,10 +393,10 @@ h2, h3, h4, h5, h6 {
 }
 
 .most-popular-image {
-	position: relative;
-	background-color: #1e1e1e;
-	width: 100%;
 	box-shadow: 0 0 10rem rgba(0, 0, 0, 0.3) inset;
+	background-color: #1e1e1e;
+	position: relative;
+	width: 100%;
 }
 
 .ad {
@@ -423,6 +423,13 @@ h2, h3, h4, h5, h6 {
 	position: absolute;
 	top: 17.5%;
 }
+
+.first2 {
+	border-top: 0.5rem solid #333333;
+	position: absolute;
+	top: 16.5%;
+}
+
 
 .second {
 	border-top: 0.5rem solid #333333;
