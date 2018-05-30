@@ -29,7 +29,11 @@
 	</li>
 
 	<li class="droppdown" id = "landing_li">
-    <a href="/relics" class="droppbtn">Relics</a>
+	<%if !logged_in? %>
+		<a href="/relics" class="droppbtn not-logged">Relics</a>
+	<% else %>
+    	<a href="/relics" class="droppbtn">Relics</a>
+	<% end %>
 	    <div class="droppdown-content">
 	    	<a href="/relics/lith">Lith</a>
 	    	<a href="/relics/meso">Meso</a>
@@ -53,7 +57,7 @@
 	<%if !logged_in? %>
 		<li class="droppdown" id = "sign">
 			<a href="javascript:void(0)" class="droppbtn" id = "current_user_navbar">Account</a>
-			<div class = "droppdown-content">
+			<div class="droppdown-content sign">
 				<div id = "sign_dropdown">
 						<a href ="/signup">Sign up</a>
 						<a href ="/login">Log in</a>
@@ -67,7 +71,7 @@
 				<div id="profile-picture"><%= image_tag(current_user.image_url, class: 'profile-picture-img') %></div>
 			</a>
 
-			<div class = "droppdown-content">
+			<div class="droppdown-content sign">
 				<div id = "sign_dropdown">
 							<%= link_to "Profile", current_user %>
 							<%= link_to "Log out", logout_path, method: :delete %>
