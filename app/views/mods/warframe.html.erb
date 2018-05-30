@@ -1,5 +1,5 @@
 <table id = "index_table" align = "center">
-  <% @warframe.each do |warframe| %>
+  <% @warframe.order("name ASC").each do |warframe| %>
       <tr id = "index_tr">
           <th id = "index_th"><%= image_tag(warframe.image_url, width: '125' ,height: '181', id: 'mod-image') %><th>
           <th id = "index_th"><h2 class = 'white'><%= link_to warframe.name, warframe %> </h2><th>

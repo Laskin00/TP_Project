@@ -5,7 +5,7 @@
 	<li class="droppdown" id = "landing_li">
     <a href="/warframes" class="droppbtn">Warframes</a>
 	    <div class="droppdown-content">
-				<% Warframe.all.each do |warframe| %>
+				<% Warframe.order("name ASC").all.each do |warframe| %>
 					<a href= <%=current_warframe_link(warframe)%>><%= warframe.name %></a>
 				<%end%>
 	    </div>

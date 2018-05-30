@@ -1,4 +1,4 @@
-<% @neo.each do |neo| %>
+<% @neo.order("name ASC").each do |neo| %>
     <div id="header-div">
         <img src="<%= neo.image_url %>" id="relic-img" alt="<% neo.name %>">
         <h1 onclick="location.href='/relics/neo/<%= neo.id %>'" id="relics-h1"> <%= neo.name %> </h1>

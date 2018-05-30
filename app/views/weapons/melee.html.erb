@@ -1,4 +1,4 @@
-<% @melee.each do |melee| %>
+<% @melee.order("name ASC").each do |melee| %>
     <div id="header-div">
         <img src="<%= melee.image_url %>" id="weapon-img" alt="<% melee.name %>">
         <h1 onclick="location.href='/weapons/melee/<%= melee.id %>'" id="weapon-h1"> <%= melee.name %> </h1>

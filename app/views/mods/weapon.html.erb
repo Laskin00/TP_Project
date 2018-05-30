@@ -1,5 +1,5 @@
 <table id = "index_table" align = "center">
-  <% @weapon.each do |weapon| %>
+  <% @weapon.order("name ASC").each do |weapon| %>
       <tr id = "index_tr">
           <th id = "index_th"><%= image_tag(weapon.image_url, width: '125' ,height: '181', id: 'mod-image') %><th>
           <th id = "index_th"><h2 class = 'white'><%= link_to weapon.name, weapon %></h2><th>

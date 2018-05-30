@@ -1,4 +1,4 @@
-<% @primary.each do |primary| %>
+<% @primary.order("name ASC").each do |primary| %>
     <div id="header-div">
         <img src="<%= primary.image_url %>" id="weapon-img" alt="<% primary.name %>">
         <h1 onclick="location.href='/weapons/primary/<%= primary.id %>'" id="weapon-h1"> <%= primary.name %> </h1>
