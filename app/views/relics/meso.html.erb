@@ -8,5 +8,10 @@
     </div>
 <% end %>
 <% if !logged_in? || current_user.permissions < 1 %>
-  <%= render 'layouts/ads' %>
+    <div class="most-viewed small-left ad small">
+        <img src="/images/corinth-ad.png" class="image-ad" title="the brand new corinth" alt="the brand new corinth" onclick="location.href='/weapons/primary/Corinth'">
+    </div>
+    <div class="most-viewed small-right ad small">
+        <img src="/images/ember-ad.png" class="image-ad" title="hot singles near you" alt="hot singles near you" onclick="location.href='/warframes/Ember'">
+    </div>
 <% end %>

@@ -346,7 +346,7 @@ h2, h3, h4, h5, h6 {
 }
 
 .search_not_logged {
-	margin-left: 75%;
+	margin-left: 74%;
 }
 
 .search_bar:hover {
@@ -359,9 +359,22 @@ h2, h3, h4, h5, h6 {
 	box-shadow: 0 0 10rem rgba(0, 0, 0, 0.3) inset;
 	border: 0.5rem solid #333333;
 	position: absolute;
-	height: 36rem;
 	width: 17.75rem;
+	height: 36rem;
 	top: 29.25%;
+}
+
+.small {
+	width: 0.75 * 17.75rem;
+	height: 0.75 * 36rem;
+}
+
+.small-left {
+	left: 5%;
+}
+
+.small-right {
+	left: 85%;
 }
 
 .left {
