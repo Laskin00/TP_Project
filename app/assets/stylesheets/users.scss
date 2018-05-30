@@ -117,7 +117,7 @@ li.droppdown {
 	position: relative;
 	margin: 5% auto;
 	height: 36rem;
- 	width: 64rem;
+	width: 64rem;
 }
 
 #current_user_navbar:hover {
@@ -293,19 +293,17 @@ li.droppdown {
 }
 
 .button {
-	border: none;
-	color: white;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	display: inline-block;
+	text-decoration: none;
+	margin: 0.4rem 0.2rem;
 	padding: 1.2rem 2rem;
 	text-align: center;
-	text-decoration: none;
-	display: inline-block;
 	font-size: 1.6rem;
-	margin: 0.4rem 0.2rem;
-	-webkit-transition-duration: 0.5s;
-	        transition-duration: 0.5s;
+	border: none;
+	color: white;
 	cursor: pointer;
-	// margin-left: 7.5%;
-	// margin-top: 1%;
 }
 
 .button1 {
@@ -341,8 +339,6 @@ h2, h3, h4, h5, h6 {
 	margin-top: 0.35%;
 	text-align: left;
 	margin-left: 70%;
-	// margin-left: 5%;
-	// position: relative;
 }
 
 .search_not_logged {
@@ -351,7 +347,6 @@ h2, h3, h4, h5, h6 {
 
 .search_bar:hover {
 	width: 11%;
-
 }
 
 // Containers for most viewed / ad panels
@@ -361,7 +356,7 @@ h2, h3, h4, h5, h6 {
 	position: absolute;
 	width: 17.75rem;
 	height: 36rem;
-	top: 29.25%;
+	top: 29.8%;
 }
 
 .small {
@@ -461,18 +456,17 @@ h2, h3, h4, h5, h6 {
 		margin-left: 72.5%;
 	}
 
-	.warframe {
-		-webkit-clip-path: inset(0 0 62.5% 0);
-		        clip-path: inset(0 0 62.5% 0);
-	}
-
 	.fadein {
 		height: 0.95 * 36rem;
- 		width: 0.95 * 64rem;
+		width: 0.95 * 64rem;
+	}
+
+	.left {
+		left: 4%;
 	}
 }
 
-@media (max-width: 1015px) {
+@media (max-width: 1050px) {
 	.search_bar {
 		margin-left: 70%;
 	}
@@ -489,14 +483,25 @@ h2, h3, h4, h5, h6 {
 		font-size: 1.5rem;
 	}
 
-	.warframe {
-		-webkit-clip-path: inset(0 0 55.5% 0);
-		        clip-path: inset(0 0 55.5% 0);
+	.most-viewed {
+		width: 0.8 * 17.75rem;
+		height: 0.8 * 36rem;
 	}
 
 	.fadein {
 		height: 0.85 * 36rem;
 		width: 0.85 * 64rem;
+	}
+}
+
+@media (max-width: 925px) {
+	.most-viewed {
+		width: 0.7 * 17.75rem;
+		height: 0.7 * 36rem;
+	}
+
+	.right {
+		left: 83.5%;
 	}
 }
 
@@ -517,9 +522,13 @@ h2, h3, h4, h5, h6 {
 		width: 3%;
 	}
 
-	.warframe {
-		-webkit-clip-path: inset(0 0 48.5% 0);
-		        clip-path: inset(0 0 48.5% 0);
+	.most-viewed {
+		width: 0.6 * 17.75rem;
+		height: 0.6 * 36rem;
+	}
+
+	.most-popular-header {
+		font-size: 1rem;
 	}
 
 	.fadein {
@@ -548,13 +557,9 @@ h2, h3, h4, h5, h6 {
 		width: 0.65 * 64rem;
 	}
 
-	.most-popular-header {
-		font-size: 1.25rem;
-	}
-
-	.warframe {
-		-webkit-clip-path: inset(0 0 40% 0);
-		        clip-path: inset(0 0 40% 0);
+	.most-viewed {
+		width: 0.5 * 17.75rem;
+		height: 0.5 * 36rem;
 	}
 
 	#landing-page-header_ {
@@ -586,11 +591,6 @@ h2, h3, h4, h5, h6 {
 		font-size: 1.15rem;
 	}
 
-	.warframe {
-		-webkit-clip-path: inset(0 0 25% 0);
-		        clip-path: inset(0 0 25% 0);
-	}
-
 	#landing-page-header_ {
 		font-size: 2.25rem;
 	}
@@ -616,11 +616,6 @@ h2, h3, h4, h5, h6 {
 
 	.most-popular-header {
 		font-size: 0.75rem;
-	}
-
-	.warframe {
-		-webkit-clip-path: inset(0 0 0% 0);
-		        clip-path: inset(0 0 0% 0);
 	}
 
 	.most-viewed {

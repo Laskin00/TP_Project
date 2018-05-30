@@ -62,7 +62,7 @@
 		</li>
 	<%else%>
 		<li class="droppdown" id = "sign">
-			<a href="javascript:void(0)" class="droppbtn" id = "current_user_navbar">
+			<a href="/users/<%= current_user.id %>" class="droppbtn" id = "current_user_navbar">
 				<%= current_user.name.split.first %>
 				<div id="profile-picture"><%= image_tag(current_user.image_url, class: 'profile-picture-img') %></div>
 			</a>

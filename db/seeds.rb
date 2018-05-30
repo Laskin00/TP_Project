@@ -247,12 +247,20 @@ Weapon.create!(name: "Soma",
   impact:1.2, puncture:4.8,
   views: 0, slash:6)
 
-Weapon.create!(name: "Corinth",
-  whereToGet:"Market", weapon_type: "primary",
-  image_url: "https://vignette.wikia.nocookie.net/warframe/images/3/32/TnHeavyShotgun.png/revision/latest/scale-to-width-down/220?cb=20171221214433",
-  attack_type:"Shotgun" , mastery_rank: 10,
-  impact:151, puncture:226,
-  views: 0, slash:162)
+  Weapon.create!(name: "Corinth",
+    whereToGet:"Market", weapon_type: "primary",
+    image_url: "https://vignette.wikia.nocookie.net/warframe/images/3/32/TnHeavyShotgun.png/revision/latest/scale-to-width-down/220?cb=20171221214433",
+    attack_type:"Shotgun" , mastery_rank: 10,
+    impact:151, puncture:226,
+    views: 0, slash:162)
+
+    Weapon.create!(name: "Lenz",
+      whereToGet:"Corpus Lab research", weapon_type: "primary",
+      image_url: "https://vignette.wikia.nocookie.net/warframe/images/8/89/Lenz.png/revision/latest/scale-to-width-down/220?cb=20170803215404",
+      attack_type:"Bow" , mastery_rank: 8,
+      impact:50, puncture:5,  slash:8, elecricity:15, fire:10, toxin:7,
+      cold:25, blast:55, corrosive:74, gas:9, magnetic:20, radiation:30,
+      viral:5, views: 0)
 
 Weapon.create!(name: "Akstiletto",
   whereToGet:"Market", weapon_type: "secondary",
