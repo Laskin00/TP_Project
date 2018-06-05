@@ -11,6 +11,8 @@
 
     <h4>All of that for only 4.99 EUR</h4>
 
+<% if Rails.env.development? %>
+
     <div class="upgrade_button premium_page">
         <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
@@ -19,6 +21,20 @@
             <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
         </form>
     </div>
+
+<% else %>
+
+<div class="upgrade_button premium_page">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="FWZEARSFNPDQE">
+        <input type="submit" value="Upgrade to premium" alt="PayPal - The safer, easier way to pay online!" class="button button1">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+</div>
+
+<% end %>
+
 <% else %>
 
     <h1>You already have Premium. Thank you for supporting us!</h1>
