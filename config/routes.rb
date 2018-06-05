@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   # get '/admin', to: 'admin#new'
 
   get '/premium', to: 'users#premium'
-
+  get '/about' , to: 'about#text'
   get '/admin', to: 'admin#new'
   get '/search', to: 'search#search'
   get '/weapons/melee', to: 'weapons#melee'
